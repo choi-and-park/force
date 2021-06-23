@@ -4,6 +4,7 @@ import {
   Image,
   Shelf,
   Spacer,
+  Skeleton,
   SkeletonBox,
   SkeletonText,
   Text,
@@ -62,6 +63,12 @@ export const HomeFeaturedCategoriesRail: React.FC<HomeFeaturedCategoriesRailProp
             <Spacer mt={2} />
 
             <Text variant="lg">{collection.title}</Text>
+
+            <Spacer mt={0.5} />
+
+            <Text variant="md" overflowEllipsis width={325}>
+              {SUBTITLES[collection.slug]}
+            </Text>
           </RouterLink>
         )
       })}
@@ -87,7 +94,8 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
   return (
     <>
       <Flex justifyContent="space-between">
-        <Text variant="lg">Featured Categories</Text>
+        <Text variant="xl">Featured Categories</Text>
+
         <Text variant="md">
           <RouterLink to="/categories">View all categories</RouterLink>
         </Text>
@@ -102,19 +110,27 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
 
 const HomeFeaturedCategoriesRailPlaceholder: React.FC = () => {
   return (
-    <Shelf>
-      {[...new Array(8)].map((_, i) => {
-        return (
-          <React.Fragment key={i}>
-            <SkeletonBox width={325} height={244} />
+    <Skeleton>
+      <Shelf>
+        {[...new Array(8)].map((_, i) => {
+          return (
+            <React.Fragment key={i}>
+              <SkeletonBox width={325} height={244} />
 
-            <Spacer mt={2} />
+              <Spacer mt={2} />
 
-            <SkeletonText variant="lg">Collection Title</SkeletonText>
-          </React.Fragment>
-        )
-      })}
-    </Shelf>
+              <SkeletonText variant="lg">Collection Title</SkeletonText>
+
+              <Spacer mt={0.5} />
+
+              <SkeletonText variant="md" overflowEllipsis width={325}>
+                Collection description which happens to be longer.
+              </SkeletonText>
+            </React.Fragment>
+          )
+        })}
+      </Shelf>
+    </Skeleton>
   )
 }
 
@@ -124,7 +140,7 @@ const PLACEHOLDER = (
   </HomeFeaturedCategories>
 )
 
-export const HomeFeaturedCategoriesRailQueryRenderer = () => {
+export const HomeFeaturedCategoriesRailQueryRenderer: React.FC = () => {
   const { relayEnvironment } = useSystemContext()
 
   return (
@@ -157,7 +173,18 @@ export const HomeFeaturedCategoriesRailQueryRenderer = () => {
             </HomeFeaturedCategories>
           )
         }
+
+        return null
       }}
     />
   )
+}
+
+const SUBTITLES = {
+  contemporary: "Today’s leading artists and emerging talents",
+  "post-war": "From Abstract Expressionism to Pop Art",
+  "impressionist-and-modern": "The birth of abstraction, Surrealism, and Dada",
+  "pre-20th-century": "Ancient Rome, the Renaissance, Baroque, and more",
+  photography: "Through the lens—from daguerreotypes to digital",
+  "street-art": "The rise of graffiti, vinyl toys, and skate culture",
 }
