@@ -117,7 +117,11 @@ export class LoginForm extends Component<FormProps, LoginFormState> {
           }
 
           return (
-            <Form onSubmit={handleSubmit} data-test="LoginForm">
+            <Form
+              onSubmit={handleSubmit}
+              data-test="LoginForm"
+              name="loginForm"
+            >
               <QuickInput
                 block
                 error={
@@ -157,7 +161,10 @@ export class LoginForm extends Component<FormProps, LoginFormState> {
                 globalError !== "missing two-factor authentication code" && (
                   <Error show>{globalError}</Error>
                 )}
-              <SubmitButton loading={isSubmitting || this.state.isLoading}>
+              <SubmitButton
+                loading={isSubmitting || this.state.isLoading}
+                name="loginSubmit"
+              >
                 Log in
               </SubmitButton>
               <Footer
