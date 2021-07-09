@@ -3131,6 +3131,7 @@ type CommerceLineItem {
   order: CommerceOrder!
   priceCents: Int! @deprecated(reason: "switch to use listPriceCents")
   quantity: Int!
+  shipment: CommerceShipment
   shippingQuoteOptions(
     # Returns the elements in the list that come after the specified cursor.
     after: String
@@ -3982,6 +3983,30 @@ type CommerceShipArta {
   phoneNumber: String
   postalCode: String
   region: String
+}
+
+# A shipment
+type CommerceShipment {
+  bookedAt: String
+  carrierName: String
+  createdAt(
+    format: String
+
+    # A tz database time zone, otherwise falls back to `X-TIMEZONE` header
+    timezone: String
+  ): String!
+  id: ID!
+  priceCents: Int!
+  priceCurrency: String!
+  status: String
+  trackingNumber: String
+  trackingUrl: String
+  updatedAt(
+    format: String
+
+    # A tz database time zone, otherwise falls back to `X-TIMEZONE` header
+    timezone: String
+  ): String!
 }
 
 # Shipping information
@@ -9597,6 +9622,7 @@ type Query {
   # A list of Articles
   articles(
     auctionID: String
+    featured: Boolean
 
     #
     #         Only return articles matching specified ids.
@@ -10266,6 +10292,7 @@ type Query {
     ids: [String]
     last: Int
     sort: ShowSorts
+    status: EventStatus
   ): ShowConnection
 
   # Content for a specific page or view
@@ -12290,6 +12317,7 @@ type Viewer {
   # A list of Articles
   articles(
     auctionID: String
+    featured: Boolean
 
     #
     #         Only return articles matching specified ids.
@@ -12763,6 +12791,7 @@ type Viewer {
     ids: [String]
     last: Int
     sort: ShowSorts
+    status: EventStatus
   ): ShowConnection
 
   # Content for a specific page or view
