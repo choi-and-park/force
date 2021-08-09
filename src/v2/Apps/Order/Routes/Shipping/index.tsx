@@ -77,6 +77,8 @@ import { compact } from "lodash"
 import { selectShippingOption } from "../../Mutations/SelectShippingOption"
 import { updateUserAddress } from "../../Mutations/UpdateUserAddress"
 import { deleteUserAddress } from "../../Mutations/DeleteUserAddress"
+import { CreateUserAddressMutationResponse } from "v2/__generated__/CreateUserAddressMutation.graphql"
+import { UpdateUserAddressMutationResponse } from "v2/__generated__/UpdateUserAddressMutation.graphql"
 
 export interface ShippingProps extends SystemContextProps {
   order: Shipping_order
@@ -477,27 +479,16 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
   }))
   onSelectShippingOption(shippingOption: CommerceOrderFulfillmentTypeEnum) {
     if (this.state.shippingOption !== shippingOption) {
-      this.setState({ shippingOption }, () => {
-        const addressList = this.getAddressList()
-        if (addressList && addressList.length > 0 && this.isArtaShipping()) {
-          this.selectShipping()
+      this.setState(
+        { shippingOption, shippingQuotes: null, shippingQuoteId: undefined },
+        () => {
+          const addressList = this.getAddressList()
+          if (addressList && addressList.length > 0 && this.isArtaShipping()) {
+            this.selectShipping()
+          }
         }
-      })
+      )
     }
-  }
-
-  handleSelectedAddressEdited = () => {
-    this.setState(
-      {
-        shippingQuotes: null,
-        shippingQuoteId: undefined,
-      },
-      () => {
-        if (this.isArtaShipping()) {
-          this.selectShipping()
-        }
-      }
-    )
   }
 
   handleShippingQuoteSelected = (shippingQuoteId: string) => {
@@ -506,11 +497,47 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
 
   selectSavedAddress = (value: string) => {
     if (this.state.selectedAddressID !== value) {
-      this.setState({ selectedAddressID: value }, () => {
-        if (this.isArtaShipping()) {
-          this.selectShipping()
+      this.setState(
+        {
+          selectedAddressID: value,
+          shippingQuotes: null,
+          shippingQuoteId: undefined,
+        },
+        () => {
+          if (this.isArtaShipping()) {
+            this.selectShipping()
+          }
         }
-      })
+      )
+    }
+  }
+
+  handleAddressEdit = (
+    address: UpdateUserAddressMutationResponse["updateUserAddress"]
+  ) => {
+    // reload shipping quotes if selected address edited
+    if (
+      this.state.selectedAddressID === address?.userAddressOrErrors?.internalID
+    ) {
+      this.setState(
+        {
+          shippingQuotes: null,
+          shippingQuoteId: undefined,
+        },
+        () => {
+          if (this.isArtaShipping()) {
+            this.selectShipping()
+          }
+        }
+      )
+    }
+  }
+
+  handleAddressCreate = (
+    address: CreateUserAddressMutationResponse["createUserAddress"]
+  ) => {
+    if (address?.userAddressOrErrors?.internalID) {
+      this.selectSavedAddress(address.userAddressOrErrors.internalID)
     }
   }
 
@@ -633,7 +660,8 @@ export class ShippingRoute extends Component<ShippingProps, ShippingState> {
                   onSelect={this.selectSavedAddress}
                   inCollectorProfile={false}
                   onAddressDelete={this.handleAddressDelete}
-                  onSelectedAddressEdited={this.handleSelectedAddressEdited}
+                  onAddressCreate={this.handleAddressCreate}
+                  onAddressEdit={this.handleAddressEdit}
                 />
               </Collapse>
 
