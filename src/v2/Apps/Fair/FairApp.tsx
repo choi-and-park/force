@@ -74,13 +74,26 @@ const FairApp: React.FC<FairAppProps> = ({ children, fair }) => {
         >
           Overview
         </RouteTab>
+
+        <RouteTab
+          to={`${fairHref}/exhibitors`}
+          exact
+          onClick={trackTabData(
+            `${fairHref}/exhibitors`,
+            "Exhibitors A-Z",
+            ContextModule.exhibitorsTab
+          )}
+        >
+          Exhibitors
+        </RouteTab>
+
         <RouteTab
           to={`${fairHref}/booths`}
           exact
           onClick={trackTabData(
             `${fairHref}/booths`,
             "Booths",
-            ContextModule.exhibitorsTab
+            ContextModule.artistsTab
           )}
         >
           Booths
@@ -142,7 +155,6 @@ export const FairAppFragmentContainer = createFragmentContainer(
         href
         slug
         ...FairMeta_fair
-        ...FairOverview_fair
         ...FairHeader_fair
         ...FairHeaderImage_fair
         counts {

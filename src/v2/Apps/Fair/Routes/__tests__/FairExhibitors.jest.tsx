@@ -1,6 +1,6 @@
 import React from "react"
 import { ReactWrapper } from "enzyme"
-import { FairExhibitorsFragmentContainer } from "../FairExhibitors"
+import { FairBoothsFragmentContainer } from "../FairBooths"
 import { FairExhibitors_QueryRawResponse } from "v2/__generated__/FairExhibitors_Query.graphql"
 import { FairExhibitorRail } from "../../Components/FairExhibitorRail"
 import { graphql } from "react-relay"
@@ -24,7 +24,7 @@ jest.mock("v2/System/Router/useRouter", () => ({
   }),
 }))
 
-describe("FairExhibitors", () => {
+describe("FairBooths", () => {
   const getWrapper = async ({
     response = FAIR_EXHIBITORS_FIXTURE,
     breakpoint = "lg",
@@ -36,7 +36,7 @@ describe("FairExhibitors", () => {
       Component: ({ fair }) => {
         return (
           <MockBoot breakpoint={breakpoint}>
-            <FairExhibitorsFragmentContainer fair={fair} />
+            <FairBoothsFragmentContainer fair={fair} />
           </MockBoot>
         )
       },
@@ -48,7 +48,7 @@ describe("FairExhibitors", () => {
           $sort: ShowSorts
         ) @raw_response_type {
           fair(id: $id) {
-            ...FairExhibitors_fair
+            ...FairBooths_fair
               @arguments(first: $first, page: $page, sort: $sort)
           }
         }
