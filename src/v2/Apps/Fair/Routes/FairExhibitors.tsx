@@ -1,18 +1,24 @@
 import React from "react"
-import { Box, Text } from "@artsy/palette"
+import { Text } from "@artsy/palette"
 import { graphql, createFragmentContainer } from "react-relay"
 import { FairExhibitors_fair } from "v2/__generated__/FairExhibitors_fair.graphql"
 import { FairExhibitorsGroupQueryRenderer as FairExhibitorsGroup } from "../Components/FairExhibitors"
+import { FairExhibitorsGroupPlaceholder } from "../Components/FairExhibitors/FairExhibitorGroupPlaceholder"
+import { useLazyLoadComponent } from "v2/Utils/Hooks/useLazyLoadComponent"
 
 interface FairExhibitorsProps {
   fair: FairExhibitors_fair
 }
 
 const FairExhibitors: React.FC<FairExhibitorsProps> = ({ fair }) => {
+  const { isEnteredView, Waypoint } = useLazyLoadComponent()
+
   return (
     <>
+      <Waypoint />
+
       {fair.exhibitorsGroupedByName?.map(exhibitorsGroup => {
-        if (!exhibitorsGroup?.exhibitors) {
+        if (!exhibitorsGroup?.exhibitors?.length || !exhibitorsGroup.letter) {
           return null
         }
 
@@ -21,12 +27,16 @@ const FairExhibitors: React.FC<FairExhibitorsProps> = ({ fair }) => {
         )
 
         return (
-          <Box>
+          <React.Fragment key={exhibitorsGroup.letter}>
             <Text variant="lg" my={4}>
               {exhibitorsGroup.letter}
             </Text>
-            <FairExhibitorsGroup ids={partnerIds} />
-          </Box>
+            {isEnteredView ? (
+              <FairExhibitorsGroup ids={partnerIds} />
+            ) : (
+              <FairExhibitorsGroupPlaceholder />
+            )}
+          </React.Fragment>
         )
       })}
     </>

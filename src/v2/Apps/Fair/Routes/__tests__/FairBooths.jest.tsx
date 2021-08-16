@@ -1,7 +1,7 @@
 import React from "react"
 import { ReactWrapper } from "enzyme"
 import { FairBoothsFragmentContainer } from "../FairBooths"
-import { FairExhibitors_QueryRawResponse } from "v2/__generated__/FairExhibitors_Query.graphql"
+import { FairBooths_QueryRawResponse } from "v2/__generated__/FairBooths_Query.graphql"
 import { FairExhibitorRail } from "../../Components/FairExhibitorRail"
 import { graphql } from "react-relay"
 import { FairExhibitorSortFilter } from "../../Components/FairExhibitorSortFilter"
@@ -26,10 +26,10 @@ jest.mock("v2/System/Router/useRouter", () => ({
 
 describe("FairBooths", () => {
   const getWrapper = async ({
-    response = FAIR_EXHIBITORS_FIXTURE,
+    response = FAIR_BOOTHS_FIXTURE,
     breakpoint = "lg",
   }: {
-    response?: FairExhibitors_QueryRawResponse
+    response?: FairBooths_QueryRawResponse
     breakpoint?: Breakpoint
   }) => {
     return renderRelayTree({
@@ -41,7 +41,7 @@ describe("FairBooths", () => {
         )
       },
       query: graphql`
-        query FairExhibitors_Query(
+        query FairBooths_Query(
           $id: String!
           $first: Int
           $page: Int
@@ -64,7 +64,7 @@ describe("FairBooths", () => {
   beforeEach(async () => {
     wrapper = await getWrapper({})
     refetchSpy = jest.spyOn(
-      (wrapper.find("FairExhibitors").props() as any).relay,
+      (wrapper.find("FairBooths").props() as any).relay,
       "refetch"
     )
   })
@@ -130,7 +130,7 @@ describe("FairBooths", () => {
   })
 })
 
-const FAIR_EXHIBITORS_FIXTURE: FairExhibitors_QueryRawResponse = {
+const FAIR_BOOTHS_FIXTURE: FairBooths_QueryRawResponse = {
   fair: {
     id: "xxx",
     slug: "xxx",

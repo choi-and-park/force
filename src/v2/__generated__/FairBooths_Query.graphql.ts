@@ -4,18 +4,18 @@
 import { ConcreteRequest } from "relay-runtime";
 import { FragmentRefs } from "relay-runtime";
 export type ShowSorts = "END_AT_ASC" | "END_AT_DESC" | "FEATURED_ASC" | "FEATURED_DESC" | "FEATURED_DESC_END_AT_DESC" | "NAME_ASC" | "NAME_DESC" | "PARTNER_ASC" | "SORTABLE_NAME_ASC" | "SORTABLE_NAME_DESC" | "START_AT_ASC" | "START_AT_DESC" | "UPDATED_AT_ASC" | "UPDATED_AT_DESC" | "%future added value";
-export type FairExhibitors_QueryVariables = {
+export type FairBooths_QueryVariables = {
     id: string;
     first?: number | null;
     page?: number | null;
     sort?: ShowSorts | null;
 };
-export type FairExhibitors_QueryResponse = {
+export type FairBooths_QueryResponse = {
     readonly fair: {
         readonly " $fragmentRefs": FragmentRefs<"FairBooths_fair">;
     } | null;
 };
-export type FairExhibitors_QueryRawResponse = {
+export type FairBooths_QueryRawResponse = {
     readonly fair: ({
         readonly slug: string;
         readonly exhibitors: ({
@@ -70,16 +70,16 @@ export type FairExhibitors_QueryRawResponse = {
         readonly id: string | null;
     }) | null;
 };
-export type FairExhibitors_Query = {
-    readonly response: FairExhibitors_QueryResponse;
-    readonly variables: FairExhibitors_QueryVariables;
-    readonly rawResponse: FairExhibitors_QueryRawResponse;
+export type FairBooths_Query = {
+    readonly response: FairBooths_QueryResponse;
+    readonly variables: FairBooths_QueryVariables;
+    readonly rawResponse: FairBooths_QueryRawResponse;
 };
 
 
 
 /*
-query FairExhibitors_Query(
+query FairBooths_Query(
   $id: String!
   $first: Int
   $page: Int
@@ -271,7 +271,7 @@ return {
     "argumentDefinitions": (v0/*: any*/),
     "kind": "Fragment",
     "metadata": null,
-    "name": "FairExhibitors_Query",
+    "name": "FairBooths_Query",
     "selections": [
       {
         "alias": null,
@@ -300,7 +300,7 @@ return {
   "operation": {
     "argumentDefinitions": (v0/*: any*/),
     "kind": "Operation",
-    "name": "FairExhibitors_Query",
+    "name": "FairBooths_Query",
     "selections": [
       {
         "alias": null,
@@ -497,11 +497,11 @@ return {
   "params": {
     "id": null,
     "metadata": {},
-    "name": "FairExhibitors_Query",
+    "name": "FairBooths_Query",
     "operationKind": "query",
-    "text": "query FairExhibitors_Query(\n  $id: String!\n  $first: Int\n  $page: Int\n  $sort: ShowSorts\n) {\n  fair(id: $id) {\n    ...FairBooths_fair_1HMhop\n    id\n  }\n}\n\nfragment FairBooths_fair_1HMhop on Fair {\n  slug\n  exhibitors: showsConnection(sort: $sort, first: $first, page: $page, totalCount: true) {\n    pageInfo {\n      hasNextPage\n    }\n    pageCursors {\n      ...Pagination_pageCursors\n    }\n    edges {\n      node {\n        id\n        counts {\n          artworks\n        }\n        partner {\n          __typename\n          ... on Partner {\n            id\n          }\n          ... on ExternalPartner {\n            id\n          }\n          ... on Node {\n            id\n          }\n        }\n        ...FairExhibitorRail_show\n      }\n    }\n  }\n}\n\nfragment FairExhibitorRail_show on Show {\n  internalID\n  slug\n  href\n  partner {\n    __typename\n    ... on Partner {\n      name\n    }\n    ... on ExternalPartner {\n      name\n      id\n    }\n    ... on Node {\n      id\n    }\n  }\n  counts {\n    artworks\n  }\n}\n\nfragment Pagination_pageCursors on PageCursors {\n  around {\n    cursor\n    page\n    isCurrent\n  }\n  first {\n    cursor\n    page\n    isCurrent\n  }\n  last {\n    cursor\n    page\n    isCurrent\n  }\n  previous {\n    cursor\n    page\n  }\n}\n"
+    "text": "query FairBooths_Query(\n  $id: String!\n  $first: Int\n  $page: Int\n  $sort: ShowSorts\n) {\n  fair(id: $id) {\n    ...FairBooths_fair_1HMhop\n    id\n  }\n}\n\nfragment FairBooths_fair_1HMhop on Fair {\n  slug\n  exhibitors: showsConnection(sort: $sort, first: $first, page: $page, totalCount: true) {\n    pageInfo {\n      hasNextPage\n    }\n    pageCursors {\n      ...Pagination_pageCursors\n    }\n    edges {\n      node {\n        id\n        counts {\n          artworks\n        }\n        partner {\n          __typename\n          ... on Partner {\n            id\n          }\n          ... on ExternalPartner {\n            id\n          }\n          ... on Node {\n            id\n          }\n        }\n        ...FairExhibitorRail_show\n      }\n    }\n  }\n}\n\nfragment FairExhibitorRail_show on Show {\n  internalID\n  slug\n  href\n  partner {\n    __typename\n    ... on Partner {\n      name\n    }\n    ... on ExternalPartner {\n      name\n      id\n    }\n    ... on Node {\n      id\n    }\n  }\n  counts {\n    artworks\n  }\n}\n\nfragment Pagination_pageCursors on PageCursors {\n  around {\n    cursor\n    page\n    isCurrent\n  }\n  first {\n    cursor\n    page\n    isCurrent\n  }\n  last {\n    cursor\n    page\n    isCurrent\n  }\n  previous {\n    cursor\n    page\n  }\n}\n"
   }
 };
 })();
-(node as any).hash = '3153594dfd9a401ba413698cb1942042';
+(node as any).hash = 'b293ea54e73e80cd45ee7ba042fcfa1c';
 export default node;

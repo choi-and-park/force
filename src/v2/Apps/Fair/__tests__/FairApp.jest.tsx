@@ -63,7 +63,7 @@ describe("FairApp", () => {
     expect(wrapper.find(Title).prop("children")).toEqual("Miart 2020 | Artsy")
   })
 
-  it("renders the exhibitors (booths) tab with an appropriate href", () => {
+  it("renders the booths tab with an appropriate href", () => {
     const wrapper = getWrapper({
       Fair: () => ({
         href: "/fair/miart-2020",
@@ -79,7 +79,23 @@ describe("FairApp", () => {
     expect(boothsTab.props().to).toEqual("/fair/miart-2020/booths")
   })
 
-  it("tracks clicks to the exhibitors (booths) tab", () => {
+  it("renders the exhibitors tab with an appropriate href", () => {
+    const wrapper = getWrapper({
+      Fair: () => ({
+        href: "/fair/miart-2020",
+      }),
+    })
+
+    const exhibitorsTab = wrapper
+      .find("RouteTab")
+      .findWhere(t => !!t.text().match("Exhibitors A-Z"))
+      .first()
+
+    expect(exhibitorsTab.text()).toContain("Exhibitors A-Z")
+    expect(exhibitorsTab.props().to).toEqual("/fair/miart-2020/exhibitors")
+  })
+
+  it("tracks clicks to the booths tab", () => {
     const wrapper = getWrapper({
       Fair: () => ({
         internalID: "bson-fair",
@@ -144,7 +160,7 @@ describe("FairApp", () => {
 
     expect(trackEvent).toHaveBeenCalledWith({
       action: "clickedNavigationTab",
-      context_module: "exhibitorsTab",
+      context_module: "artistsTab",
       context_page_owner_id: "bson-fair",
       context_page_owner_slug: "miart-2020",
       context_page_owner_type: "fair",
