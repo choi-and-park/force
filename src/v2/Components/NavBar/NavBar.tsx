@@ -175,25 +175,25 @@ export const NavBar: React.FC = track(
               <Flex display={["none", "flex"]} ml={1} alignItems="stretch">
                 <Text variant="sm" lineHeight={1} display={["none", "flex"]}>
                   <NavBarItemLink
-                    href="/collect"
+                    // href="/collect"
                     textDecoration="none"
-                    onClick={handleClick}
+                    // onClick={handleClick}
                   >
                     Buy
                   </NavBarItemLink>
 
                   <NavBarItemLink
-                    href="/consign"
+                    // href="/consign"
                     textDecoration="none"
-                    onClick={handleClick}
+                    // onClick={handleClick}
                   >
                     Sell
                   </NavBarItemLink>
 
                   <NavBarItemLink
-                    href="/articles"
+                    // href="/articles"
                     textDecoration="none"
-                    onClick={handleClick}
+                    // onClick={handleClick}
                   >
                     Editorial
                   </NavBarItemLink>
@@ -360,9 +360,8 @@ export const NavBar: React.FC = track(
                   Fairs
                 </NavBarItemLink>
 
-                <NavBarItemLink href="/Shows" onClick={handleClick}>
-                  Shows
-                </NavBarItemLink>
+                {/* <NavBarItemLink href="/Shows" onClick={handleClick}> */}
+                <NavBarItemLink>Shows</NavBarItemLink>
 
                 <NavBarItemLink
                   // Hide link at smaller viewports — corresponding display inside of `MoreNavMenu`
