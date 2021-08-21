@@ -35,7 +35,7 @@ import {
   NavBarItemLink,
   NavBarItemUnfocusableAnchor,
 } from "./NavBarItem"
-import { scrollIntoView } from "v2/Utils/scrollHelpers"
+// import { scrollIntoView } from "v2/Utils/scrollHelpers"
 import { AppContainer } from "v2/Apps/Components/AppContainer"
 import { HorizontalPadding } from "v2/Apps/Components/HorizontalPadding"
 import { useNavBarHeight } from "./useNavBarHeight"

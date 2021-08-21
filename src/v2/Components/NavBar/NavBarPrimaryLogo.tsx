@@ -1,5 +1,5 @@
 import React from "react"
-import { ArtsyMarkIcon } from "@artsy/palette"
+// import { ArtsyMarkIcon } from "@artsy/palette"
 import styled from "styled-components"
 import { RouterLink, RouterLinkProps } from "v2/System/Router/RouterLink"
 import { themeGet } from "@styled-system/theme-get"
