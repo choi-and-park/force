@@ -10,7 +10,9 @@ export const NavBarPrimaryLogo: React.FC<Omit<
 >> = props => {
   return (
     <HitArea to="/" {...props}>
-      <ArtsyMarkIcon height={40} width={40} name="Artsy" />
+      {/* <ArtsyMarkIcon height={40} width={40} name="Artsy" /> */}
+      <b>Nu Art</b>
+      {/* <img src={LogoImg} /> */}
     </HitArea>
   )
 }

@@ -49,121 +49,217 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
         menu: {
           title: "Career Stage",
           links: [
+            // {
+            //   text: "Blue-Chip Artists",
+            //   href: "/collection/blue-chip-artists",
+            // },
+            // {
+            //   text: "Critically Acclaimed Artists",
+            //   href: "/collection/critically-acclaimed-artists",
+            // },
+            // {
+            //   text: "Trending Emerging Artists",
+            //   href: "/collection/trending-emerging-artists",
+            // },
+            // {
+            //   text: "New & Noteworthy Artists",
+            //   href: "/collection/new-and-noteworthy-artists",
+            // },
             {
-              text: "Blue-Chip Artists",
-              href: "/collection/blue-chip-artists",
+              text: "블루칩 작가",
+              href: "",
             },
             {
-              text: "Critically Acclaimed Artists",
-              href: "/collection/critically-acclaimed-artists",
+              text: "이머징 작가",
+              href: "",
             },
             {
-              text: "Trending Emerging Artists",
-              href: "/collection/trending-emerging-artists",
+              text: "주목할만한 작가",
+              href: "",
             },
             {
-              text: "New & Noteworthy Artists",
-              href: "/collection/new-and-noteworthy-artists",
+              text: "호평받는 작가",
+              href: "",
             },
           ],
         },
       },
+      // {
+      //   text: "Popular Categories",
+      //   menu: {
+      //     title: "Popular Categories",
+      //     links: [
+      //       {
+      //         text: "New From Emerging Artists",
+      //         href: "/collection/new-from-emerging-artists",
+      //       },
+      //       {
+      //         text: "Modern & Contemporary Masters",
+      //         href: "/collection/master-works",
+      //       },
+      //       {
+      //         text: "Limited-Edition Prints by Leading Artists",
+      //         href: "/collection/limited-edition-prints-trending-artists",
+      //       },
+      //       {
+      //         text: "Black Figurative Painters",
+      //         href: "/collection/black-figurative-painters",
+      //       },
+      //       {
+      //         text: "Women Artists to Watch",
+      //         href: "/collection/women-painters-on-the-rise",
+      //       },
+      //     ],
+      //   },
+      //   dividerBelow: true,
+      // },
       {
-        text: "Popular Categories",
+        text: "Categories",
         menu: {
-          title: "Popular Categories",
+          title: "Categories",
           links: [
             {
-              text: "New From Emerging Artists",
-              href: "/collection/new-from-emerging-artists",
+              text: "회화",
+              href: "",
             },
             {
-              text: "Modern & Contemporary Masters",
-              href: "/collection/master-works",
+              text: "사진",
+              href: "",
             },
             {
-              text: "Limited-Edition Prints by Leading Artists",
-              href: "/collection/limited-edition-prints-trending-artists",
+              text: "드로잉",
+              href: "",
             },
             {
-              text: "Black Figurative Painters",
-              href: "/collection/black-figurative-painters",
+              text: "판화",
+              href: "",
             },
             {
-              text: "Women Artists to Watch",
-              href: "/collection/women-painters-on-the-rise",
-            },
-          ],
-        },
-        dividerBelow: true,
-      },
-      {
-        text: "Artist Nationality or Ethicity",
-        menu: {
-          title: "Artist Nationality or Ethicity",
-          links: [
-            {
-              text: "American",
-              href: "/collect?artist_nationalities%5B0%5D=American",
+              text: "조각",
+              href: "",
             },
             {
-              text: "African",
-              href: "/collection/african-artists",
+              text: "디자인",
+              href: "",
             },
             {
-              text: "Asian",
-              href: "/collection/asian-artists",
+              text: "미디어아트",
+              href: "",
             },
             {
-              text: "British",
-              href: "/collect?artist_nationalities%5B0%5D=British",
-            },
-            {
-              text: "European",
-              href: "/collection/european-artists",
-            },
-            {
-              text: "Latin American",
-              href: "/collection/latin-american-artists",
-            },
-            {
-              text: "Middle Eastern",
-              href: "/collection/middle-eastern-artists",
+              text: "스트릿아트",
+              href: "",
             },
           ],
         },
       },
+      // {
+      //   text: "Artist Nationality or Ethicity",
+      //   menu: {
+      //     title: "Artist Nationality or Ethicity",
+      //     links: [
+      //       {
+      //         text: "American",
+      //         href: "/collect?artist_nationalities%5B0%5D=American",
+      //       },
+      //       {
+      //         text: "African",
+      //         href: "/collection/african-artists",
+      //       },
+      //       {
+      //         text: "Asian",
+      //         href: "/collection/asian-artists",
+      //       },
+      //       {
+      //         text: "British",
+      //         href: "/collect?artist_nationalities%5B0%5D=British",
+      //       },
+      //       {
+      //         text: "European",
+      //         href: "/collection/european-artists",
+      //       },
+      //       {
+      //         text: "Latin American",
+      //         href: "/collection/latin-american-artists",
+      //       },
+      //       {
+      //         text: "Middle Eastern",
+      //         href: "/collection/middle-eastern-artists",
+      //       },
+      //     ],
+      //   },
+      // },
+      // {
+      //   text: "Featured Artists",
+      //   menu: {
+      //     title: "Featured Artists",
+      //     links: [
+      //       {
+      //         text: "Derrick Adams",
+      //         href: "/artist/derrick-adams/works-for-sale",
+      //       },
+      //       {
+      //         text: "Bridget Riley",
+      //         href: "/artist/bridget-riley/works-for-sale",
+      //       },
+      //       {
+      //         text: "Frank Stella",
+      //         href: "/artist/frank-stella/works-for-sale",
+      //       },
+      //       {
+      //         text: "Julian Opie",
+      //         href: "/artist/julian-opie/works-for-sale",
+      //       },
+      //       {
+      //         text: "Judy Chicago",
+      //         href: "/artist/judy-chicago/works-for-sale",
+      //       },
+      //       {
+      //         text: "Etel Adnan",
+      //         href: "/artist/etel-adnan/works-for-sale",
+      //       },
+      //       {
+      //         text: "Mickalene Thomas",
+      //         href: "/artist/mickalene-thomas/works-for-sale",
+      //       },
+      //     ],
+      //   },
+      // },
       {
         text: "Featured Artists",
         menu: {
           title: "Featured Artists",
           links: [
             {
-              text: "Derrick Adams",
-              href: "/artist/derrick-adams/works-for-sale",
+              text: "김창열",
+              href: "/artist/김창열/works-for-sale",
             },
             {
-              text: "Bridget Riley",
+              text: "이우한",
               href: "/artist/bridget-riley/works-for-sale",
             },
             {
-              text: "Frank Stella",
+              text: "서도호",
               href: "/artist/frank-stella/works-for-sale",
             },
             {
-              text: "Julian Opie",
+              text: "장마리아",
               href: "/artist/julian-opie/works-for-sale",
             },
             {
-              text: "Judy Chicago",
+              text: "이세현",
               href: "/artist/judy-chicago/works-for-sale",
             },
             {
-              text: "Etel Adnan",
+              text: "줄리아 오피",
               href: "/artist/etel-adnan/works-for-sale",
             },
             {
-              text: "Mickalene Thomas",
+              text: "알렉스 카츠",
+              href: "/artist/mickalene-thomas/works-for-sale",
+            },
+            {
+              text: "문형태",
               href: "/artist/mickalene-thomas/works-for-sale",
             },
           ],

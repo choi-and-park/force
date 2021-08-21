@@ -5,7 +5,7 @@ import path from "path"
 import webpack from "webpack"
 import { basePath, env } from "../utils/env"
 import { standardMinimizer } from "./commonEnv"
-import { jadeLoader } from "./commonLoaders"
+import { jadeLoader, pngLoader } from "./commonLoaders"
 
 export const serverConfig = {
   devtool: env.webpackDevtool || "source-map",
@@ -35,6 +35,7 @@ export const serverConfig = {
         ],
       },
       jadeLoader,
+      pngLoader,
     ],
   },
   node: {
@@ -55,7 +56,7 @@ export const serverConfig = {
     }),
   ],
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".coffee"],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json", ".coffee", ".png"],
     modules: [path.resolve(basePath, "src"), "node_modules"],
   },
   target: "node",

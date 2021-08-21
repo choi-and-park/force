@@ -166,11 +166,10 @@ export const NavBar: React.FC = track(
             {/* Top-tier */}
             <Flex pt={1} pb={[1, 0]} alignItems="stretch" flex={1}>
               <NavBarPrimaryLogo mr={1} />
-
+              {/* <div>Nu Art</div> */}
               <Flex flex={1} alignItems="center">
                 <SearchBarQueryRenderer width="100%" />
               </Flex>
-
               {/* Desktop. Collapses into mobile at `xs` breakpoint. */}
               <Flex display={["none", "flex"]} ml={1} alignItems="stretch">
                 <Text variant="sm" lineHeight={1} display={["none", "flex"]}>
@@ -235,7 +234,6 @@ export const NavBar: React.FC = track(
                   </Flex>
                 )}
               </Flex>
-
               {/* Mobile. Triggers at the `xs` breakpoint. */}
               <Flex display={["flex", "none"]}>
                 <NavBarItemButton
@@ -344,21 +342,17 @@ export const NavBar: React.FC = track(
                   )}
                 </Dropdown>
 
-                <NavBarItemLink href="/auctions" onClick={handleClick}>
-                  Auctions
-                </NavBarItemLink>
+                {/* <NavBarItemLink href="/auctions" onClick={handleClick}> */}
+                <NavBarItemLink>Auctions</NavBarItemLink>
 
-                <NavBarItemLink href="/viewing-rooms" onClick={handleClick}>
-                  Viewing&nbsp;Rooms
-                </NavBarItemLink>
+                {/* <NavBarItemLink href="/viewing-rooms" onClick={handleClick}> */}
+                <NavBarItemLink>Viewing&nbsp;Rooms</NavBarItemLink>
 
-                <NavBarItemLink href="/galleries" onClick={handleClick}>
-                  Galleries
-                </NavBarItemLink>
+                {/* <NavBarItemLink href="/galleries" onClick={handleClick}> */}
+                <NavBarItemLink>Galleries</NavBarItemLink>
 
-                <NavBarItemLink href="/fairs" onClick={handleClick}>
-                  Fairs
-                </NavBarItemLink>
+                {/* <NavBarItemLink href="/fairs" onClick={handleClick}> */}
+                <NavBarItemLink>Fairs</NavBarItemLink>
 
                 {/* <NavBarItemLink href="/Shows" onClick={handleClick}> */}
                 <NavBarItemLink>Shows</NavBarItemLink>
@@ -372,18 +366,22 @@ export const NavBar: React.FC = track(
                 >
                   Museums
                 </NavBarItemLink>
+
+                <NavBarItemLink>Rental</NavBarItemLink>
+                <NavBarItemLink>NFT</NavBarItemLink>
+                <NavBarItemLink>F.I.</NavBarItemLink>
               </Flex>
 
               <Flex alignItems="stretch" display={["none", "none", "flex"]}>
                 <NavBarItemButton
                   px={0}
                   pl={1}
-                  onClick={() => {
-                    scrollIntoView({
-                      selector: "#download-app-banner",
-                      behavior: "smooth",
-                    })
-                  }}
+                  // onClick={() => {
+                  //   scrollIntoView({
+                  //     selector: "#download-app-banner",
+                  //     behavior: "smooth",
+                  //   })
+                  // }}
                 >
                   Download App
                 </NavBarItemButton>

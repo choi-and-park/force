@@ -70,3 +70,8 @@ export const mjsLoader = {
   type: "javascript/auto",
   use: [],
 }
+
+export const pngLoader = {
+  test: /\.(png|jpg)$/,
+  loader: "file-loader",
+}
