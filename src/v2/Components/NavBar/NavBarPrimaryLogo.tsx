@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { RouterLink, RouterLinkProps } from "v2/System/Router/RouterLink"
 import { themeGet } from "@styled-system/theme-get"
-import NuArtIcon from "./NuArtLogo.svg"
+import NuArtIcon from "./nuart_logo.svg"
 
 export const NavBarPrimaryLogo: React.FC<Omit<
   RouterLinkProps,
@@ -11,7 +11,7 @@ export const NavBarPrimaryLogo: React.FC<Omit<
 >> = props => {
   return (
     <HitArea to="/" {...props}>
-      <NuArtIcon width={120} hegith={30} />
+      <NuArtIcon width={110} height={30} />
     </HitArea>
   )
 }

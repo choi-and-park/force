@@ -101,7 +101,7 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
   return (
     <>
       <Flex justifyContent="space-between">
-        <Text variant="xl">Featured Categories</Text>
+        <Text variant="xl">Categories</Text>
 
         <Text variant="md">
           <RouterLink to="/categories">View All Categories</RouterLink>
