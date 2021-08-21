@@ -11,7 +11,7 @@ export const NavBarPrimaryLogo: React.FC<Omit<
 >> = props => {
   return (
     <HitArea to="/" {...props}>
-      <NuArtIcon width={150} hegith={30} />
+      <NuArtIcon width={120} hegith={30} />
     </HitArea>
   )
 }
