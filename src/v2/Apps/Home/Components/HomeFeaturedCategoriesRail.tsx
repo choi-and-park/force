@@ -6,9 +6,9 @@ import {
   GridColumns,
   ResponsiveBox,
   Spacer,
-  Skeleton,
-  SkeletonBox,
-  SkeletonText,
+  // Skeleton,
+  // SkeletonBox,
+  // SkeletonText,
   Text,
 } from "@artsy/palette"
 import React from "react"
@@ -159,33 +159,33 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
   )
 }
 
-const HomeFeaturedCategoriesRailPlaceholder: React.FC = () => {
-  return (
-    <Skeleton>
-      <GridColumns gridRowGap={4}>
-        {[...new Array(6)].map((_, i) => {
-          return (
-            <Column key={i} span={[6, 4, 2]}>
-              <ResponsiveBox aspectWidth={3} aspectHeight={2} maxWidth="100%">
-                <SkeletonBox width="100%" height="100%" />
-              </ResponsiveBox>
+// const HomeFeaturedCategoriesRailPlaceholder: React.FC = () => {
+//   return (
+//     <Skeleton>
+//       <GridColumns gridRowGap={4}>
+//         {[...new Array(6)].map((_, i) => {
+//           return (
+//             <Column key={i} span={[6, 4, 2]}>
+//               <ResponsiveBox aspectWidth={3} aspectHeight={2} maxWidth="100%">
+//                 <SkeletonBox width="100%" height="100%" />
+//               </ResponsiveBox>
 
-              <Spacer mt={2} />
+//               <Spacer mt={2} />
 
-              <SkeletonText variant="lg">Collection Title</SkeletonText>
+//               <SkeletonText variant="lg">Collection Title</SkeletonText>
 
-              <Spacer mt={0.5} />
+//               <Spacer mt={0.5} />
 
-              <SkeletonText variant="md" lineClamp={2} mr={1}>
-                Collection description which happens to be longer.
-              </SkeletonText>
-            </Column>
-          )
-        })}
-      </GridColumns>
-    </Skeleton>
-  )
-}
+//               <SkeletonText variant="md" lineClamp={2} mr={1}>
+//                 Collection description which happens to be longer.
+//               </SkeletonText>
+//             </Column>
+//           )
+//         })}
+//       </GridColumns>
+//     </Skeleton>
+//   )
+// }
 
 // const PLACEHOLDER = (
 //   <HomeFeaturedCategories>
