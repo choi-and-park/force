@@ -23,34 +23,38 @@ export const HomeApp: React.FC<HomeAppProps> = ({ homePage, orderedSet }) => {
   return (
     <>
       <HomeMeta />
-
       <FullBleed>
         <FlashBannerQueryRenderer />
       </FullBleed>
-
       <Spacer mt={[2, 0]} />
-
       {homePage && <HomeHeroUnitsFragmentContainer homePage={homePage} />}
-
       <Spacer mt={4} />
-
+      cnp0
       <Join separator={<Spacer mt={6} />}>
         {orderedSet && (
           <>
+            <div>cnp1</div>
             <HomeFeaturedEventsRailFragmentContainer orderedSet={orderedSet} />
-
+            <div>cnp101</div>
             <Separator />
           </>
         )}
 
-        {!isLoggedIn && <HomeFeaturedCategoriesRailQueryRenderer />}
-
+        {!isLoggedIn && (
+          <div>
+            cnp2 <HomeFeaturedCategoriesRailQueryRenderer />
+          </div>
+        )}
         {homePage && (
-          <HomeArtworkModulesFragmentContainer homePage={homePage} />
+          <div>
+            cnp3
+            <HomeArtworkModulesFragmentContainer homePage={homePage} />
+          </div>
         )}
 
         <HomeFeaturedArticlesLazyQueryRenderer />
       </Join>
+      cnp4
     </>
   )
 }

@@ -13,21 +13,65 @@ import {
 } from "@artsy/palette"
 import React from "react"
 import { createFragmentContainer, graphql } from "react-relay"
-import { useSystemContext } from "v2/System"
-import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
+// import { useSystemContext } from "v2/System"
+// import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { cropped } from "v2/Utils/resized"
-import { HomeFeaturedCategoriesRail_marketingCollections } from "v2/__generated__/HomeFeaturedCategoriesRail_marketingCollections.graphql"
-import { HomeFeaturedCategoriesRailQuery } from "v2/__generated__/HomeFeaturedCategoriesRailQuery.graphql"
+// import { HomeFeaturedCategoriesRail_marketingCollections } from "v2/__generated__/HomeFeaturedCategoriesRail_marketingCollections.graphql"
+// import { HomeFeaturedCategoriesRailQuery } from "v2/__generated__/HomeFeaturedCategoriesRailQuery.graphql"
 import { RouterLink } from "v2/System/Router/RouterLink"
 
-interface HomeFeaturedCategoriesRailProps {
-  marketingCollections: HomeFeaturedCategoriesRail_marketingCollections
-}
+const staticMarketingCollections = [
+  {
+    slug: "painting",
+    title: "회화",
+    thumbnail: "http://nebulach.com:10080/images/painting.png",
+  },
+  {
+    slug: "photography",
+    title: "사진",
+    thumbnail: "http://nebulach.com:10080/images/photography.png",
+  },
+  {
+    slug: "drawing",
+    title: "드로잉",
+    thumbnail: "http://nebulach.com:10080/images/drawing.png",
+  },
+  {
+    slug: "engraving",
+    title: "판화",
+    thumbnail: "http://nebulach.com:10080/images/engraving.png",
+  },
+  {
+    slug: "sculpture",
+    title: "조각",
+    thumbnail: "http://nebulach.com:10080/images/sculpture.png",
+  },
+  // {
+  //   slug: "design",
+  //   title: "디자인",
+  //   thumbnail: "http://files.artsy.net/images/juno-calypso.jpg",
+  // },
+  // {
+  //   slug: "media-art",
+  //   title: "미디어아트",
+  //   thumbnail: "http://files.artsy.net/images/pulp-fiction.jpg",
+  // },
+  {
+    slug: "street-art",
+    title: "스트릿아트",
+    thumbnail: "http://nebulach.com:10080/images/street-art.png",
+  },
+]
 
-export const HomeFeaturedCategoriesRail: React.FC<HomeFeaturedCategoriesRailProps> = ({
-  marketingCollections,
-}) => {
+// interface HomeFeaturedCategoriesRailProps {
+//   marketingCollections: HomeFeaturedCategoriesRail_marketingCollections
+// }
+
+// export const HomeFeaturedCategoriesRail: React.FC<HomeFeaturedCategoriesRailProps> = ({
+export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
   if (marketingCollections.length === 0) return null
+
+  console.log(marketingCollections)
 
   return (
     <GridColumns gridRowGap={4}>
@@ -72,9 +116,9 @@ export const HomeFeaturedCategoriesRail: React.FC<HomeFeaturedCategoriesRailProp
 
               <Spacer mt={0.5} />
 
-              <Text variant="md" lineClamp={2} mr={1}>
+              {/* <Text variant="md" lineClamp={2} mr={1}>
                 {SUBTITLES[collection.slug]}
-              </Text>
+              </Text> */}
             </RouterLink>
           </Column>
         )
@@ -149,43 +193,53 @@ const PLACEHOLDER = (
   </HomeFeaturedCategories>
 )
 
+// export const HomeFeaturedCategoriesRailQueryRenderer: React.FC = () => {
+//   const { relayEnvironment } = useSystemContext()
+
+//   return (
+//     <SystemQueryRenderer<HomeFeaturedCategoriesRailQuery>
+//       environment={relayEnvironment}
+//       query={graphql`
+//         query HomeFeaturedCategoriesRailQuery {
+//           marketingHubCollections {
+//             ...HomeFeaturedCategoriesRail_marketingCollections
+//           }
+//         }
+//       `}
+//       placeholder={PLACEHOLDER}
+//       render={({ error, props }) => {
+//         if (error) {
+//           console.error(error)
+//           return null
+//         }
+
+//         if (!props) {
+//           return PLACEHOLDER
+//         }
+
+//         if (props.marketingHubCollections) {
+//           return (
+//             <HomeFeaturedCategories>
+//               <HomeFeaturedCategoriesRailFragmentContainer
+//                 marketingCollections={props.marketingHubCollections}
+//               />
+//             </HomeFeaturedCategories>
+//           )
+//         }
+
+//         return null
+//       }}
+//     />
+//   )
+// }
+
 export const HomeFeaturedCategoriesRailQueryRenderer: React.FC = () => {
-  const { relayEnvironment } = useSystemContext()
-
   return (
-    <SystemQueryRenderer<HomeFeaturedCategoriesRailQuery>
-      environment={relayEnvironment}
-      query={graphql`
-        query HomeFeaturedCategoriesRailQuery {
-          marketingHubCollections {
-            ...HomeFeaturedCategoriesRail_marketingCollections
-          }
-        }
-      `}
-      placeholder={PLACEHOLDER}
-      render={({ error, props }) => {
-        if (error) {
-          console.error(error)
-          return null
-        }
-
-        if (!props) {
-          return PLACEHOLDER
-        }
-
-        if (props.marketingHubCollections) {
-          return (
-            <HomeFeaturedCategories>
-              <HomeFeaturedCategoriesRailFragmentContainer
-                marketingCollections={props.marketingHubCollections}
-              />
-            </HomeFeaturedCategories>
-          )
-        }
-
-        return null
-      }}
-    />
+    <HomeFeaturedCategories>
+      <HomeFeaturedCategoriesRail
+        marketingCollections={staticMarketingCollections}
+      />
+    </HomeFeaturedCategories>
   )
 }
 
