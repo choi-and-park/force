@@ -71,8 +71,6 @@ const staticMarketingCollections = [
 export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
   if (marketingCollections.length === 0) return null
 
-  console.log(marketingCollections)
-
   return (
     <GridColumns gridRowGap={4}>
       {marketingCollections.map(collection => {
@@ -147,9 +145,9 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
       <Flex justifyContent="space-between">
         <Text variant="xl">Categories</Text>
 
-        <Text variant="md">
+        {/* <Text variant="md">
           <RouterLink to="/categories">View All Categories</RouterLink>
-        </Text>
+        </Text> */}
       </Flex>
 
       <Spacer mt={4} />

@@ -79,9 +79,9 @@ app.get(
         icons: {
           // TODO: Move to new assset pipeline, this adds the CDN for images.
           favicon: res.locals.asset("/images/favicon.ico"),
-          icon120: res.locals.asset("/images/icon-120.png"),
-          icon152: res.locals.asset("/images/icon-152.png"),
-          icon76: res.locals.asset("/images/icon-76.png"),
+          // icon120: res.locals.asset("/images/icon-120.png"),
+          // icon152: res.locals.asset("/images/icon-152.png"),
+          // icon76: res.locals.asset("/images/icon-76.png"),
         },
         manifest: {
           browserConfig: NOVO_MANIFEST.lookup("/images/browserconfig.xml"),

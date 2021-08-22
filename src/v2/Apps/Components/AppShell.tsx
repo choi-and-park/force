@@ -31,9 +31,11 @@ export const AppShell: React.FC<AppShellProps> = props => {
 
   const { children, match } = props
   const routeConfig = findCurrentRoute(match)
-  const { user, isEigen } = useSystemContext()
-  // @ts-expect-error STRICT_NULL_CHECK
-  const showFooter = !isEigen && !routeConfig.hideFooter
+  const { user } = useSystemContext()
+  // const { user, isEigen } = useSystemContext()
+  // // @ts-expect-error STRICT_NULL_CHECK
+  // const showFooter = !isEigen && !routeConfig.hideFooter
+  const showFooter = false
   // @ts-expect-error STRICT_NULL_CHECK
   const appContainerMaxWidth = routeConfig.displayFullPage ? "100%" : null
   const isLoggedIn = Boolean(user)

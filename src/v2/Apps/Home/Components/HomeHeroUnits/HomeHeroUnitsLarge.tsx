@@ -1,6 +1,6 @@
 import React from "react"
-import { createFragmentContainer } from "react-relay"
-import { graphql } from "relay-runtime"
+// import { createFragmentContainer } from "react-relay"
+// import { graphql } from "relay-runtime"
 import {
   Box,
   Flex,
@@ -10,10 +10,10 @@ import {
   ShelfNext,
   ShelfPrevious,
 } from "@artsy/palette"
-import { HomeHeroUnitsLarge_homePage } from "v2/__generated__/HomeHeroUnitsLarge_homePage.graphql"
+// import { HomeHeroUnitsLarge_homePage } from "v2/__generated__/HomeHeroUnitsLarge_homePage.graphql"
 import {
   HomeHeroUnitFragmentContainer,
-  LOGGED_OUT_HERO_UNIT,
+  // LOGGED_OUT_HERO_UNIT,
 } from "./HomeHeroUnit"
 // import { compact } from "lodash"
 import { useCursor } from "use-cursor"
@@ -24,20 +24,22 @@ import { useCallback } from "react"
 import { useNextPrevious } from "v2/Utils/Hooks/useNextPrevious"
 
 interface HomeHeroUnitsLargeProps {
-  homePage: HomeHeroUnitsLarge_homePage
+  heroUnits: []
+  // homePage: HomeHeroUnitsLarge_homePage
 }
 
 const HomeHeroUnitsLarge: React.FC<HomeHeroUnitsLargeProps> = ({
-  homePage,
+  heroUnits,
 }) => {
+  // const HomeHeroUnitsLarge: React.FC<HomeHeroUnitsLargeProps> = ({
+  //   homePage,
+  // }) => {
   const { isLoggedIn } = useSystemContext()
 
   // const heroUnits = [
   //   ...(isLoggedIn ? [] : [LOGGED_OUT_HERO_UNIT]),
   //   ...compact(homePage.heroUnits),
   // ]
-
-  const heroUnits = [LOGGED_OUT_HERO_UNIT, LOGGED_OUT_HERO_UNIT]
 
   const {
     index,
@@ -81,7 +83,7 @@ const HomeHeroUnitsLarge: React.FC<HomeHeroUnitsLargeProps> = ({
     onPrevious: handlePrev,
   })
 
-  if (!homePage.heroUnits) return null
+  // if (!homePage.heroUnits) return null
 
   return (
     <div ref={containerRef as any}>
@@ -125,16 +127,20 @@ const HomeHeroUnitsLarge: React.FC<HomeHeroUnitsLargeProps> = ({
   )
 }
 
-export const HomeHeroUnitsLargeFragmentContainer = createFragmentContainer(
-  HomeHeroUnitsLarge,
-  {
-    homePage: graphql`
-      fragment HomeHeroUnitsLarge_homePage on HomePage {
-        heroUnits(platform: DESKTOP) {
-          internalID
-          ...HomeHeroUnit_heroUnit
-        }
-      }
-    `,
-  }
-)
+export const HomeHeroUnitsLargeFragmentContainer = ({ heroUnits }) => {
+  return <HomeHeroUnitsLarge heroUnits={heroUnits} />
+}
+
+// export const HomeHeroUnitsLargeFragmentContainer = createFragmentContainer(
+//   HomeHeroUnitsLarge,
+//   {
+//     homePage: graphql`
+//       fragment HomeHeroUnitsLarge_homePage on HomePage {
+//         heroUnits(platform: DESKTOP) {
+//           internalID
+//           ...HomeHeroUnit_heroUnit
+//         }
+//       }
+//     `,
+//   }
+// )
