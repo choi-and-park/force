@@ -174,6 +174,9 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
               as={index === 0 ? "h1" : "h2"}
               variant={["lg", "xl", "xxl"]}
               color={colorScheme.title}
+              style={{
+                whiteSpace: "pre-line",
+              }}
             >
               {heroUnit.title}
             </Text>
@@ -184,6 +187,9 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
 
                 <HTML
                   variant={["xs", "md", "lg"]}
+                  style={{
+                    whiteSpace: "pre-line",
+                  }}
                   color={colorScheme.subtitle}
                   html={heroUnit.subtitle}
                 />
@@ -276,10 +282,10 @@ export const HomeHeroUnitFragmentContainer = createFragmentContainer(
 )
 
 export const LOGGED_OUT_HERO_UNIT: StaticHeroUnit = {
-  title: "Collect art from leading galleries, fairs, and auctions",
-  subtitle: "Sign up to get updates about your favorite artists",
-  href: "/signup",
-  linkText: "Sign up",
-  backgroundImageURL:
-    "https://files.artsy.net/images/alexander-calder-rouge-triomphant-triumphant-red-1959-1965.jpg",
+  title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
+  subtitle:
+    "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
+  href: "/",
+  // linkText: "Sign up",
+  backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
 }

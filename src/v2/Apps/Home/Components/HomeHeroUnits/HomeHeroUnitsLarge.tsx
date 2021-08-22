@@ -15,7 +15,7 @@ import {
   HomeHeroUnitFragmentContainer,
   LOGGED_OUT_HERO_UNIT,
 } from "./HomeHeroUnit"
-import { compact } from "lodash"
+// import { compact } from "lodash"
 import { useCursor } from "use-cursor"
 import { useRef, useEffect } from "react"
 import { HomeCarousel } from "../HomeCarousel"
@@ -32,10 +32,12 @@ const HomeHeroUnitsLarge: React.FC<HomeHeroUnitsLargeProps> = ({
 }) => {
   const { isLoggedIn } = useSystemContext()
 
-  const heroUnits = [
-    ...(isLoggedIn ? [] : [LOGGED_OUT_HERO_UNIT]),
-    ...compact(homePage.heroUnits),
-  ]
+  // const heroUnits = [
+  //   ...(isLoggedIn ? [] : [LOGGED_OUT_HERO_UNIT]),
+  //   ...compact(homePage.heroUnits),
+  // ]
+
+  const heroUnits = [LOGGED_OUT_HERO_UNIT, LOGGED_OUT_HERO_UNIT]
 
   const {
     index,
