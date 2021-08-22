@@ -187,11 +187,11 @@ const HomeFeaturedCategoriesRailPlaceholder: React.FC = () => {
   )
 }
 
-const PLACEHOLDER = (
-  <HomeFeaturedCategories>
-    <HomeFeaturedCategoriesRailPlaceholder />
-  </HomeFeaturedCategories>
-)
+// const PLACEHOLDER = (
+//   <HomeFeaturedCategories>
+//     <HomeFeaturedCategoriesRailPlaceholder />
+//   </HomeFeaturedCategories>
+// )
 
 // export const HomeFeaturedCategoriesRailQueryRenderer: React.FC = () => {
 //   const { relayEnvironment } = useSystemContext()
@@ -243,11 +243,11 @@ export const HomeFeaturedCategoriesRailQueryRenderer: React.FC = () => {
   )
 }
 
-const SUBTITLES = {
-  contemporary: "Today’s leading artists and emerging talents",
-  "post-war": "From Abstract Expressionism to Pop Art",
-  "impressionist-and-modern": "The birth of abstraction, Surrealism, and Dada",
-  "pre-20th-century": "Ancient Rome, the Renaissance, Baroque, and more",
-  photography: "Through the lens—from daguerreotypes to digital",
-  "street-art": "The rise of graffiti, vinyl toys, and skate culture",
-}
+// const SUBTITLES = {
+//   contemporary: "Today’s leading artists and emerging talents",
+//   "post-war": "From Abstract Expressionism to Pop Art",
+//   "impressionist-and-modern": "The birth of abstraction, Surrealism, and Dada",
+//   "pre-20th-century": "Ancient Rome, the Renaissance, Baroque, and more",
+//   photography: "Through the lens—from daguerreotypes to digital",
+//   "street-art": "The rise of graffiti, vinyl toys, and skate culture",
+// }
