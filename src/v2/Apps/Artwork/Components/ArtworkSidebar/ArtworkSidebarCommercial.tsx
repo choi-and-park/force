@@ -459,7 +459,7 @@ export class ArtworkSidebarCommercialContainer extends React.Component<
             <Button
               width="100%"
               size="medium"
-              onClick={this.handleInquiry.bind(this)}
+              // onClick={this.handleInquiry.bind(this)}
             >
               Contact Gallery
             </Button>

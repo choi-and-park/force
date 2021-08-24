@@ -102,9 +102,9 @@ export class ArtworkDetailsAboutTheWorkFromPartner extends React.Component<
             >
               <EntityHeader
                 name={partnerName!}
-                href={
-                  hasDefaultPublicProfile ? `${sd.APP_URL}${partner?.href}` : ""
-                }
+                // href={
+                //   hasDefaultPublicProfile ? `${sd.APP_URL}${partner?.href}` : ""
+                // }
                 meta={locationNames}
                 {...(showPartnerLogo
                   ? {
@@ -116,19 +116,19 @@ export class ArtworkDetailsAboutTheWorkFromPartner extends React.Component<
                       },
                     }
                   : {})}
-                FollowButton={
-                  showPartnerFollow && partner?.profile ? (
-                    <FollowProfileButton
-                      profile={partner.profile}
-                      user={user}
-                      contextModule={ContextModule.aboutTheWork}
-                      buttonProps={{
-                        size: "small",
-                        variant: "secondaryOutline",
-                      }}
-                    />
-                  ) : undefined
-                }
+                // FollowButton={
+                //   showPartnerFollow && partner?.profile ? (
+                //     <FollowProfileButton
+                //       profile={partner.profile}
+                //       user={user}
+                //       contextModule={ContextModule.aboutTheWork}
+                //       buttonProps={{
+                //         size: "small",
+                //         variant: "secondaryOutline",
+                //       }}
+                //     />
+                //   ) : undefined
+                // }
               />
 
               {additional_information && (

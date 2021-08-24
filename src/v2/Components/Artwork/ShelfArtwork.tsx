@@ -47,7 +47,8 @@ const ShelfArtwork: React.FC<ShelfArtworkProps> = ({
   return (
     <>
       <RouterLink
-        to={artwork?.href}
+        // to={artwork?.href}
+        to={"http://nu-art.co.kr/artwork/kim-tschang-yeul-recurrence-2140"}
         display="block"
         textDecoration="none"
         onClick={onClick}

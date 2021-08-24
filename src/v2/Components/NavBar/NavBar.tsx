@@ -359,6 +359,9 @@ export const NavBar: React.FC = track(
                 {/* <NavBarItemLink href="/auctions" onClick={handleClick}> */}
                 <NavBarItemLink>Auctions</NavBarItemLink>
 
+                {}
+                <NavBarItemLink>Collectors</NavBarItemLink>
+
                 {/* <NavBarItemLink href="/viewing-rooms" onClick={handleClick}> */}
                 <NavBarItemLink>Viewing&nbsp;Rooms</NavBarItemLink>
 

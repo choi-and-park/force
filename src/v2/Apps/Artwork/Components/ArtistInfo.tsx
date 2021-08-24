@@ -49,20 +49,20 @@ export class ArtistInfo extends Component<ArtistInfoProps> {
         <StackableBorderBox flexDirection="column" data-test="artistInfo">
           <EntityHeader
             name={artist.name!}
-            href={artist.href!}
+            // href={artist.href!}
             meta={artist.formatted_nationality_and_birthday!}
             image={{
               src: image?.cropped?.src,
               srcSet: image?.cropped?.srcSet,
               lazyLoad: true,
             }}
-            FollowButton={
-              <FollowArtistButton
-                artist={artist}
-                contextModule={ContextModule.aboutTheWork}
-                buttonProps={{ size: "small", variant: "secondaryOutline" }}
-              />
-            }
+            // FollowButton={
+            //   <FollowArtistButton
+            //     artist={artist}
+            //     contextModule={ContextModule.aboutTheWork}
+            //     buttonProps={{ size: "small", variant: "secondaryOutline" }}
+            //   />
+            // }
           />
           {showArtistBio && (
             <>
@@ -90,7 +90,8 @@ export class ArtistInfo extends Component<ArtistInfoProps> {
           // @ts-expect-error STRICT_NULL_CHECK
           exhibitions={artist.exhibition_highlights}
           ViewAllLink={
-            <a href={`${sd.APP_URL}/artist/${artist.slug}/cv`}>View all</a>
+            // <a href={`${sd.APP_URL}/artist/${artist.slug}/cv`}>View all</a>
+            <div>View all</div>
           }
           Container={Container}
         />

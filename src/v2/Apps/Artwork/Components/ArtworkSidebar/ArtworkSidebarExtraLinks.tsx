@@ -168,15 +168,15 @@ class ArtworkSidebarExtraLinksContainer extends React.Component<
       return (
         <Container>
           Have a question?{" "}
-          <Link
+          {/* <Link
             href="https://support.artsy.net/hc/en-us/sections/360008203114-Buy-Now-and-Make-Offer"
             target="_blank"
             rel="noopener noreferrer"
             onClick={this.onClickBuyNowFAQ.bind(this)}
           >
             Visit our help center
-          </Link>{" "}
-          or{" "}
+          </Link>{" "} */}
+          Visit our help center or{" "}
           <Clickable
             onClick={this.onClickBuyNowAskSpecialist.bind(this)}
             textDecoration="underline"
@@ -192,15 +192,15 @@ class ArtworkSidebarExtraLinksContainer extends React.Component<
       return (
         <Container>
           Have a question?{" "}
-          <Link
+          {/* <Link
             href="https://support.artsy.net/hc/en-us/sections/360008203054-Contact-a-gallery"
             target="_blank"
             rel="noopener noreferrer"
             onClick={this.onClickCollectorFAQ.bind(this)}
           >
             Visit our help center
-          </Link>
-          .
+          </Link> */}
+          Visit our help center .
         </Container>
       )
   }

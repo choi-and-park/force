@@ -23,22 +23,22 @@ export const ArtworkSidebarArtists: React.FC<ArtistsProps> = ({
           <EntityHeader
             key={artist.internalID}
             name={artist.name}
-            href={artist.href!}
+            // href={artist.href!}
             meta={artist.formattedNationalityAndBirthday!}
             image={{
               src: artist.avatar?.cropped?.src,
               srcSet: artist.avatar?.cropped?.srcSet,
             }}
-            FollowButton={
-              <FollowArtistButton
-                artist={artist}
-                contextModule={ContextModule.artworkSidebar}
-                triggerSuggestions
-                buttonProps={{ size: "small", variant: "secondaryOutline" }}
-              >
-                Follow
-              </FollowArtistButton>
-            }
+            // FollowButton={
+            //   <FollowArtistButton
+            //     artist={artist}
+            //     contextModule={ContextModule.artworkSidebar}
+            //     triggerSuggestions
+            //     buttonProps={{ size: "small", variant: "secondaryOutline" }}
+            //   >
+            //     Follow
+            //   </FollowArtistButton>
+            // }
           />
         )
       })}

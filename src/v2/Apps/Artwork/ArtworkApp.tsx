@@ -196,10 +196,10 @@ export class ArtworkApp extends React.Component<Props> {
           <Media lessThan="sm">{BelowTheFoldArtworkDetails}</Media>
 
           <Spacer mt={6} />
-
+          {/* 
           <ArtworkArtistSeriesFragmentContainer artwork={artwork} />
 
-          <Spacer mt={6} />
+          <Spacer mt={6} /> */}
 
           {/* <OtherWorksFragmentContainer artwork={artwork} />
 

@@ -515,6 +515,10 @@ export const MENU_DATA: MenuData = {
       href: "/auctions",
     },
     {
+      text: "Collectors",
+      href: "/collectors",
+    },
+    {
       text: "Viewing Rooms",
       href: "/viewing-rooms",
     },

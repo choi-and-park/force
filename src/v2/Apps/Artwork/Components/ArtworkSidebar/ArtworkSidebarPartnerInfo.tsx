@@ -31,7 +31,8 @@ export class ArtworkSidebarPartnerInfo extends React.Component<
 
     return partner.href ? (
       <Text variant="md">
-        <RouterLink to={partner.href}>{partner.name}</RouterLink>
+        {/* <RouterLink to={partner.href}>{partner.name}</RouterLink> */}
+        {partner.name}
       </Text>
     ) : (
       <Text variant="md">{partner.name}</Text>
@@ -58,9 +59,7 @@ export class ArtworkSidebarPartnerInfo extends React.Component<
     return (
       <>
         <Spacer mt={2} />
-
         {this.renderPartnerName()}
-
         {locationNames && locationNames.length > 0 && (
           <Flex mt={1}>
             <LocationIcon />
@@ -70,7 +69,6 @@ export class ArtworkSidebarPartnerInfo extends React.Component<
             </Flex>
           </Flex>
         )}
-
         <Spacer mt={2} />
       </>
     )
