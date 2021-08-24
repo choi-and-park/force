@@ -495,6 +495,9 @@ const StaticSearchContainer: React.FC<{ searchQuery: string } & BoxProps> = ({
     <>
       <Box display={["block", "none"]} {...rest}>
         <SearchInputContainer
+          style={{
+            fontFamily: "Gowun Batang",
+          }}
           placeholder={searchQuery || PLACEHOLDER_XS}
           defaultValue={searchQuery}
         />
@@ -502,6 +505,9 @@ const StaticSearchContainer: React.FC<{ searchQuery: string } & BoxProps> = ({
 
       <Box display={["none", "block"]} {...rest}>
         <SearchInputContainer
+          style={{
+            fontFamily: "Gowun Batang",
+          }}
           placeholder={searchQuery || PLACEHOLDER}
           defaultValue={searchQuery}
         />

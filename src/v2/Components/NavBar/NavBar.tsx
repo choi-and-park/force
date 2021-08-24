@@ -172,7 +172,15 @@ export const NavBar: React.FC = track(
               </Flex>
               {/* Desktop. Collapses into mobile at `xs` breakpoint. */}
               <Flex display={["none", "flex"]} ml={1} alignItems="stretch">
-                <Text variant="sm" lineHeight={1} display={["none", "flex"]}>
+                <Text
+                  variant="sm"
+                  lineHeight={1}
+                  display={["none", "flex"]}
+                  style={{
+                    fontFamily: "Gowun Batang",
+                    fontWeight: 700,
+                  }}
+                >
                   <NavBarItemLink
                     // href="/collect"
                     textDecoration="none"
@@ -278,6 +286,10 @@ export const NavBar: React.FC = track(
               flex={1}
               variant="sm"
               lineHeight={1}
+              style={{
+                fontFamily: "Gowun Batang",
+                fontWeight: 700,
+              }}
             >
               <Flex alignItems="stretch">
                 <Dropdown

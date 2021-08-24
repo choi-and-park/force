@@ -161,6 +161,10 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
                     variant="xs"
                     textTransform="uppercase"
                     color={colorScheme.heading}
+                    style={{
+                      fontFamily: "Gowun Batang",
+                      // fontFamily: "Times New Roman",
+                    }}
                   >
                     {heroUnit.heading}
                   </Text>
@@ -176,6 +180,8 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
               color={colorScheme.title}
               style={{
                 whiteSpace: "pre-line",
+                // fontFamily: "Times New Roman",
+                fontFamily: "Gowun Batang",
               }}
             >
               {heroUnit.title}
@@ -189,6 +195,8 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
                   variant={["xs", "md", "lg"]}
                   style={{
                     whiteSpace: "pre-line",
+                    // fontFamily: "Times New Roman",
+                    fontFamily: "Gowun Batang",
                   }}
                   color={colorScheme.subtitle}
                   html={heroUnit.subtitle}
@@ -224,7 +232,14 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
                 <Spacer mt={1} />
 
                 <RouterLink to={heroUnit.href} noUnderline>
-                  <Text variant="xs" color={colorScheme.linkText}>
+                  <Text
+                    variant="xs"
+                    color={colorScheme.linkText}
+                    style={{
+                      // fontFamily: "Times New Roman",
+                      fontFamily: "Gowun Batang",
+                    }}
+                  >
                     {heroUnit.linkText}
                   </Text>
                 </RouterLink>

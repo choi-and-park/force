@@ -305,19 +305,19 @@ export const ARTWORKS_SUBMENU_DATA: MenuLinkData = {
           title: "Highlights From",
           links: [
             {
-              text: "Auction",
+              text: "갤러리",
               href: "/collection/auction-highlights",
             },
             {
-              text: "Art Fairs",
+              text: "옥션",
               href: "/collection/art-fair-highlights",
             },
             {
-              text: "Gallery Shows",
+              text: "아트페어",
               href: "/collection/gallery-show-highlights",
             },
             {
-              text: "Non-profit Shops",
+              text: "비영리기관",
               href: "/collection/nonprofit-shops",
             },
           ],
@@ -329,120 +329,168 @@ export const ARTWORKS_SUBMENU_DATA: MenuLinkData = {
           title: "Price",
           links: [
             {
-              text: "$50,000 and Above",
+              text: "~50 만원",
               href: "/collect?price_range=50000-%2A",
             },
             {
-              text: "$25,000–$50,000",
+              text: "50~100 만원",
               href: "/collect?price_range=25000-50000",
             },
             {
-              text: "$10,000–$25,000",
+              text: "100~200 만원",
               href: "/collect?price_range=10000-25000",
             },
             {
-              text: "$5,000–$10,000",
+              text: "200~300 만원",
               href: "/collect?price_range=5000-10000",
             },
             {
-              text: "Under $5,000",
+              text: "300~500 만원",
+              href: "/collect?price_range=0-5000",
+            },
+            {
+              text: "500~1,000 만원",
+              href: "/collect?price_range=0-5000",
+            },
+            {
+              text: "1,000 만원~",
               href: "/collect?price_range=0-5000",
             },
           ],
         },
       },
       {
-        text: "Medium",
+        text: "Categories",
         menu: {
-          title: "Medium",
+          title: "Categories",
           links: [
             {
-              text: "Painting",
-              href: "/collection/painting",
+              text: "회화",
+              href: "",
             },
             {
-              text: "Prints",
-              href: "/collection/prints",
+              text: "사진",
+              href: "",
             },
             {
-              text: "Photography",
-              href: "/collection/photography",
+              text: "드로잉",
+              href: "",
             },
             {
-              text: "Sculpture",
-              href: "/collection/sculpture",
+              text: "판화",
+              href: "",
             },
             {
-              text: "Works on Paper",
-              href: "/collection/works-on-paper",
+              text: "조각",
+              href: "",
             },
             {
-              text: "Mixed Media",
-              href: "/collection/mixed-media",
+              text: "디자인",
+              href: "",
             },
             {
-              text: "Design",
-              href: "/collection/design",
+              text: "미디어아트",
+              href: "",
+            },
+            {
+              text: "스트릿아트",
+              href: "",
             },
           ],
         },
       },
-      {
-        text: "Movements",
-        menu: {
-          title: "Movements",
-          links: [
-            {
-              text: "Contemporary",
-              href: "/collection/contemporary",
-            },
-            {
-              text: "Street Art",
-              href: "/collection/street-art",
-            },
-            {
-              text: "Pop Art",
-              href: "/collection/pop-art",
-            },
-            {
-              text: "Abstract Expressionism",
-              href: "/collection/abstract-expressionism",
-            },
-            {
-              text: "Post-War",
-              href: "/collection/post-war",
-            },
-            {
-              text: "Impressionism & Modernism",
-              href: "/collection/impressionist-and-modern",
-            },
-            {
-              text: "Old Masters",
-              href: "/collection/old-masters",
-            },
-          ],
-        },
-        dividerBelow: true,
-      },
+      // {
+      //   text: "Medium",
+      //   menu: {
+      //     title: "Medium",
+      //     links: [
+      //       {
+      //         text: "Painting",
+      //         href: "/collection/painting",
+      //       },
+      //       {
+      //         text: "Prints",
+      //         href: "/collection/prints",
+      //       },
+      //       {
+      //         text: "Photography",
+      //         href: "/collection/photography",
+      //       },
+      //       {
+      //         text: "Sculpture",
+      //         href: "/collection/sculpture",
+      //       },
+      //       {
+      //         text: "Works on Paper",
+      //         href: "/collection/works-on-paper",
+      //       },
+      //       {
+      //         text: "Mixed Media",
+      //         href: "/collection/mixed-media",
+      //       },
+      //       {
+      //         text: "Design",
+      //         href: "/collection/design",
+      //       },
+      //     ],
+      //   },
+      // },
+      // {
+      //   text: "Movements",
+      //   menu: {
+      //     title: "Movements",
+      //     links: [
+      //       {
+      //         text: "Contemporary",
+      //         href: "/collection/contemporary",
+      //       },
+      //       {
+      //         text: "Street Art",
+      //         href: "/collection/street-art",
+      //       },
+      //       {
+      //         text: "Pop Art",
+      //         href: "/collection/pop-art",
+      //       },
+      //       {
+      //         text: "Abstract Expressionism",
+      //         href: "/collection/abstract-expressionism",
+      //       },
+      //       {
+      //         text: "Post-War",
+      //         href: "/collection/post-war",
+      //       },
+      //       {
+      //         text: "Impressionism & Modernism",
+      //         href: "/collection/impressionist-and-modern",
+      //       },
+      //       {
+      //         text: "Old Masters",
+      //         href: "/collection/old-masters",
+      //       },
+      //     ],
+      //   },
+      //   dividerBelow: true,
+      // },
       {
         text: "Subject Matter",
         menu: {
           title: "Subject Matter",
           links: [
             {
-              text: "Abstract Art",
+              text: "추상",
               href: "/gene/abstract-art",
             },
             {
-              text: "Figurative Art",
+              text: "구상",
               href: "/gene/figurative-art",
             },
             {
-              text: "Landscapes",
+              text: "풍경",
               href: "/gene/landscapes",
             },
             {
-              text: "Still Life",
+              text: "정물",
               href: "/gene/still-life",
             },
           ],

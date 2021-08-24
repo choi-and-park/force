@@ -66,13 +66,26 @@ export const HomeFeaturedCategoriesRail: React.FC<HomeFeaturedCategoriesRailProp
 
               <Spacer mt={2} />
 
-              <Text variant="lg" mr={1}>
+              <Text
+                variant="lg"
+                mr={1}
+                style={{
+                  fontFamily: "Gowun Batang",
+                }}
+              >
                 {collection.title}
               </Text>
 
               <Spacer mt={0.5} />
 
-              <Text variant="md" lineClamp={2} mr={1}>
+              <Text
+                variant="md"
+                lineClamp={2}
+                mr={1}
+                style={{
+                  fontFamily: "Gowun Batang",
+                }}
+              >
                 {SUBTITLES[collection.slug]}
               </Text>
             </RouterLink>
