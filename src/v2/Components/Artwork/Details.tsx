@@ -48,7 +48,14 @@ const ArtistLine: React.FC<DetailsProps> = ({
 
   if (artists && artists.length) {
     return (
-      <Text variant={tokens.variant} overflowEllipsis>
+      <Text
+        variant={tokens.variant}
+        overflowEllipsis
+        style={{
+          fontFamily: "Gowun Batang",
+          fontWeight: 700,
+        }}
+      >
         {artists.map((artist, i) => {
           if (!artist || !artist.href || !artist.name) return null
 
@@ -92,6 +99,8 @@ const TitleLine: React.FC<DetailsProps> = ({
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
+          fontFamily: "Gowun Batang",
+          fontWeight: 700,
         }}
       >
         <i>{title}</i>
@@ -116,7 +125,16 @@ const PartnerLine: React.FC<DetailsProps> = ({
 
   if (collecting_institution) {
     return (
-      <Text variant={tokens.variant} color="black60" overflowEllipsis>
+      <Text
+        variant={tokens.variant}
+        color="black60"
+        overflowEllipsis
+        style={{
+          whiteSpace: "pre-line",
+          fontFamily: "Gowun Batang",
+          fontWeight: 700,
+        }}
+      >
         {collecting_institution}
       </Text>
     )
@@ -126,7 +144,16 @@ const PartnerLine: React.FC<DetailsProps> = ({
     return (
       //  @ts-expect-error STRICT_NULL_CHECK
       <ConditionalLink includeLinks={includeLinks} href={partner.href}>
-        <Text variant={tokens.variant} color="black60" overflowEllipsis>
+        <Text
+          variant={tokens.variant}
+          color="black60"
+          overflowEllipsis
+          style={{
+            whiteSpace: "pre-line",
+            fontFamily: "Gowun Batang",
+            fontWeight: 700,
+          }}
+        >
           {partner.name}
         </Text>
       </ConditionalLink>
@@ -156,6 +183,11 @@ const SaleInfoLine: React.FC<DetailsProps> = props => {
       color={tokens.color}
       fontWeight={tokens.fontWeight}
       overflowEllipsis
+      style={{
+        whiteSpace: "pre-line",
+        fontFamily: "Gowun Batang",
+        fontWeight: 700,
+      }}
     >
       <SaleMessage {...props} /> <BidInfo {...props} />
     </Text>
