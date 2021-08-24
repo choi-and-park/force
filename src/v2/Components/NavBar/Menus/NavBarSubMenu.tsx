@@ -1,5 +1,5 @@
 import { Box, Text, GridColumns, Column, Flex } from "@artsy/palette"
-import { AnalyticsSchema, ContextModule } from "v2/System"
+import { ContextModule } from "v2/System"
 // import { useTracking } from "v2/System/Analytics/useTracking"
 import React from "react"
 import { MenuData, SimpleLinkData } from "../menuData"
