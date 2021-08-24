@@ -1,6 +1,6 @@
 import { CloseIcon, MenuIcon, ModalBase, Separator, Text } from "@artsy/palette"
-import { AnalyticsSchema } from "v2/System"
-import { useTracking } from "v2/System/Analytics"
+// import { AnalyticsSchema } from "v2/System"
+// import { useTracking } from "v2/System/Analytics"
 import {
   ARTISTS_SUBMENU_DATA,
   ARTWORKS_SUBMENU_DATA,
@@ -28,22 +28,23 @@ export const NavBarMobileMenu: React.FC<NavBarMobileMenuProps> = ({
   onClose,
 }) => {
   const { downloadAppUrl } = useDeviceDetection()
-  const { trackEvent } = useTracking()
+  // const { trackEvent } = useTracking()
 
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement, MouseEvent>
   ) => {
-    const node = event.currentTarget
-    const text = node.textContent ?? ""
-    const href = node.getAttribute("href")!
+    event.preventDefault()
+    // const node = event.currentTarget
+    // const text = node.textContent ?? ""
+    // const href = node.getAttribute("href")!
 
-    trackEvent({
-      action_type: AnalyticsSchema.ActionType.Click,
-      context_module: AnalyticsSchema.ContextModule.Header,
-      flow: "Header",
-      subject: text,
-      destination_path: href,
-    })
+    // trackEvent({
+    //   action_type: AnalyticsSchema.ActionType.Click,
+    //   context_module: AnalyticsSchema.ContextModule.Header,
+    //   flow: "Header",
+    //   subject: text,
+    //   destination_path: href,
+    // })
   }
 
   return (

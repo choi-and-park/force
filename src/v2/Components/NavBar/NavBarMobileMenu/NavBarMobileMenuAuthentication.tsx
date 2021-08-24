@@ -8,9 +8,9 @@ import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { NavBarMobileMenuAuthenticationQuery } from "v2/__generated__/NavBarMobileMenuAuthenticationQuery.graphql"
 import { NavBarMobileMenuAuthentication_me } from "v2/__generated__/NavBarMobileMenuAuthentication_me.graphql"
 import { getConversationCount, updateConversationCache } from "../helpers"
-import { ModalType } from "v2/Components/Authentication/Types"
-import { getMobileAuthLink } from "v2/Utils/openAuthModal"
-import { ContextModule, Intent } from "@artsy/cohesion"
+// import { ModalType } from "v2/Components/Authentication/Types"
+// import { getMobileAuthLink } from "v2/Utils/openAuthModal"
+// import { ContextModule, Intent } from "@artsy/cohesion"
 import { createFragmentContainer } from "react-relay"
 import { NavBarMobileSubMenu } from "./NavBarMobileSubMenu"
 
@@ -136,22 +136,18 @@ export const NavBarMobileMenuLoggedInQueryRenderer: React.FC<{}> = () => {
 }
 
 const NavBarMobileMenuLoggedOut: React.FC = () => {
-  const authLink = (type: ModalType) => {
-    return getMobileAuthLink(type, {
-      intent: Intent[type],
-      contextModule: ContextModule.header,
-    })
-  }
+  // const authLink = (type: ModalType) => {
+  //   return getMobileAuthLink(type, {
+  //     intent: Intent[type],
+  //     contextModule: ContextModule.header,
+  //   })
+  // }
 
   return (
     <>
-      <NavBarMobileMenuItemLink to={authLink(ModalType.signup)}>
-        Sign up
-      </NavBarMobileMenuItemLink>
+      <NavBarMobileMenuItemLink to={"/"}>Sign up</NavBarMobileMenuItemLink>
 
-      <NavBarMobileMenuItemLink to={authLink(ModalType.login)}>
-        Log in
-      </NavBarMobileMenuItemLink>
+      <NavBarMobileMenuItemLink to={"/"}>Log in</NavBarMobileMenuItemLink>
     </>
   )
 }
