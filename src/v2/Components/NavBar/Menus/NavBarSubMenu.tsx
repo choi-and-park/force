@@ -6,7 +6,7 @@ import { MenuData, SimpleLinkData } from "../menuData"
 import { AppContainer } from "v2/Apps/Components/AppContainer"
 import { HorizontalPadding } from "v2/Apps/Components/HorizontalPadding"
 import { NavBarMenuItemLink } from "./NavBarMenuItem"
-import { RouterLink } from "v2/System/Router/RouterLink"
+// import { RouterLink } from "v2/System/Router/RouterLink"
 
 interface NavBarSubMenuProps {
   menu: MenuData
@@ -38,8 +38,8 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
     // })
   }
 
-  const isArtistsDropdown =
-    contextModule === AnalyticsSchema.ContextModule.HeaderArtistsDropdown
+  // const isArtistsDropdown =
+  //   contextModule === AnalyticsSchema.ContextModule.HeaderArtistsDropdown
 
   const lastMenuLinkIndex = menu.links.length - 1
   const lastMenuItem = menu.links[lastMenuLinkIndex] as SimpleLinkData
@@ -131,7 +131,7 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
                 })}
               </Flex>
 
-              {isArtistsDropdown && (
+              {/* {isArtistsDropdown && (
                 <Box>
                   <Text
                     variant="xs"
@@ -161,7 +161,7 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
                     })}
                   </Text>
                 </Box>
-              )}
+              )} */}
             </Column>
           </GridColumns>
         </HorizontalPadding>
@@ -170,4 +170,4 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
   )
 }
 
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+// const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")

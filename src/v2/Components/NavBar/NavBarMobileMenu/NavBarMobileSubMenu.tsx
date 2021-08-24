@@ -59,7 +59,7 @@ export const NavBarMobileSubMenu: React.FC<NavBarMobileSubMenuProps> = ({
   )
 }
 
-const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
+// const LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")
 
 interface NavBarMobileSubMenuPanelProps {
   isOpen: boolean
@@ -103,7 +103,7 @@ const NavBarMobileSubMenuPanel: React.FC<NavBarMobileSubMenuPanelProps> = ({
         )
       })}
 
-      {isArtistsMenu && (
+      {/* {isArtistsMenu && (
         <>
           <Separator my={1} />
 
@@ -124,7 +124,7 @@ const NavBarMobileSubMenuPanel: React.FC<NavBarMobileSubMenuPanelProps> = ({
             })}
           </Flex>
         </>
-      )}
+      )} */}
     </NavBarMobileMenuTransition>
   )
 }
