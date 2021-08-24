@@ -9,14 +9,14 @@ import { ArtworkBannerFragmentContainer } from "./Components/ArtworkBanner/Artwo
 import { ArtworkDetailsFragmentContainer } from "./Components/ArtworkDetails"
 import { ArtworkImageBrowserFragmentContainer } from "./Components/ArtworkImageBrowser"
 import { ArtworkMetaFragmentContainer } from "./Components/ArtworkMeta"
-import { ArtworkRelatedArtistsPaginationContainer } from "./Components/ArtworkRelatedArtists"
+// import { ArtworkRelatedArtistsPaginationContainer } from "./Components/ArtworkRelatedArtists"
 import { ArtworkSidebarFragmentContainer } from "./Components/ArtworkSidebar"
-import { OtherWorksFragmentContainer } from "./Components/OtherWorks"
+// import { OtherWorksFragmentContainer } from "./Components/OtherWorks"
 import { ArtworkArtistSeriesFragmentContainer } from "./Components/ArtworkArtistSeries"
 import { PricingContextFragmentContainer } from "./Components/PricingContext"
 import { withSystemContext } from "v2/System"
 import * as Schema from "v2/System/Analytics/Schema"
-import { RecentlyViewed } from "v2/Components/RecentlyViewed"
+// import { RecentlyViewed } from "v2/Components/RecentlyViewed"
 import { RouterContext } from "found"
 import { TrackingProp } from "react-tracking"
 import {
@@ -201,7 +201,7 @@ export class ArtworkApp extends React.Component<Props> {
 
           <Spacer mt={6} />
 
-          <OtherWorksFragmentContainer artwork={artwork} />
+          {/* <OtherWorksFragmentContainer artwork={artwork} />
 
           {artwork.artist && (
             <>
@@ -213,7 +213,7 @@ export class ArtworkApp extends React.Component<Props> {
 
           <Spacer mt={6} />
 
-          <RecentlyViewed />
+          <RecentlyViewed /> */}
         </>
       </>
     )

@@ -33,15 +33,18 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
     links: [
       {
         text: "In-Demand Artists",
-        href: "/collection/in-demand-artists",
+        href: "/",
+        // href: "/collection/in-demand-artists",
       },
       {
         text: "Artists We're Eyeing",
-        href: "/collection/artists-we-are-eyeing",
+        href: "/",
+        // href: "/collection/artists-we-are-eyeing",
       },
       {
         text: "Artsy Vanguard Artists",
-        href: "/collection/artsy-vanguard-artists",
+        href: "/",
+        // href: "/collection/artsy-vanguard-artists",
         dividerBelow: true,
       },
       {
@@ -67,19 +70,19 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
             // },
             {
               text: "블루칩 작가",
-              href: "",
+              href: "/",
             },
             {
               text: "이머징 작가",
-              href: "",
+              href: "/",
             },
             {
               text: "주목할만한 작가",
-              href: "",
+              href: "/",
             },
             {
               text: "호평받는 작가",
-              href: "",
+              href: "/",
             },
           ],
         },
@@ -120,35 +123,35 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
           links: [
             {
               text: "회화",
-              href: "",
+              href: "/",
             },
             {
               text: "사진",
-              href: "",
+              href: "/",
             },
             {
               text: "드로잉",
-              href: "",
+              href: "/",
             },
             {
               text: "판화",
-              href: "",
+              href: "/",
             },
             {
               text: "조각",
-              href: "",
+              href: "/",
             },
             {
               text: "디자인",
-              href: "",
+              href: "/",
             },
             {
               text: "미디어아트",
-              href: "",
+              href: "/",
             },
             {
               text: "스트릿아트",
-              href: "",
+              href: "/",
             },
           ],
         },
@@ -232,42 +235,42 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
           links: [
             {
               text: "김창열",
-              href: "/artist/김창열/works-for-sale",
+              href: "/",
             },
             {
               text: "이우한",
-              href: "/artist/bridget-riley/works-for-sale",
+              href: "/",
             },
             {
               text: "서도호",
-              href: "/artist/frank-stella/works-for-sale",
+              href: "/",
             },
             {
               text: "장마리아",
-              href: "/artist/julian-opie/works-for-sale",
+              href: "/",
             },
             {
               text: "이세현",
-              href: "/artist/judy-chicago/works-for-sale",
+              href: "/",
             },
             {
               text: "줄리아 오피",
-              href: "/artist/etel-adnan/works-for-sale",
+              href: "/",
             },
             {
               text: "알렉스 카츠",
-              href: "/artist/mickalene-thomas/works-for-sale",
+              href: "/",
             },
             {
               text: "문형태",
-              href: "/artist/mickalene-thomas/works-for-sale",
+              href: "/",
             },
           ],
         },
       },
       {
         text: "View all artists",
-        href: "/artists",
+        href: "/",
       },
     ],
   },
@@ -280,23 +283,23 @@ export const ARTWORKS_SUBMENU_DATA: MenuLinkData = {
     links: [
       {
         text: "Trove",
-        href: "/gene/trove",
+        href: "/",
       },
       {
         text: "New This Week",
-        href: "/collection/new-this-week",
+        href: "/",
       },
       {
         text: "Trending on Artsy",
-        href: "/collection/highlights-this-month",
+        href: "/",
       },
       {
         text: "Exclusively on Artsy",
-        href: "/collection/exclusively-on-artsy",
+        href: "/",
       },
       {
         text: "Limited Editions",
-        href: "/collection/limited-edition-works",
+        href: "/",
         dividerBelow: true,
       },
       {
@@ -305,20 +308,20 @@ export const ARTWORKS_SUBMENU_DATA: MenuLinkData = {
           title: "Highlights From",
           links: [
             {
-              text: "Auction",
-              href: "/collection/auction-highlights",
+              text: "갤러리",
+              href: "/",
             },
             {
-              text: "Art Fairs",
-              href: "/collection/art-fair-highlights",
+              text: "옥션",
+              href: "/",
             },
             {
-              text: "Gallery Shows",
-              href: "/collection/gallery-show-highlights",
+              text: "아트페어",
+              href: "/",
             },
             {
-              text: "Non-profit Shops",
-              href: "/collection/nonprofit-shops",
+              text: "비영리기관",
+              href: "/",
             },
           ],
         },
@@ -329,100 +332,75 @@ export const ARTWORKS_SUBMENU_DATA: MenuLinkData = {
           title: "Price",
           links: [
             {
-              text: "$50,000 and Above",
-              href: "/collect?price_range=50000-%2A",
+              text: "~50 만원",
+              href: "/",
             },
             {
-              text: "$25,000–$50,000",
-              href: "/collect?price_range=25000-50000",
+              text: "50~100 만원",
+              href: "/",
             },
             {
-              text: "$10,000–$25,000",
-              href: "/collect?price_range=10000-25000",
+              text: "100~200 만원",
+              href: "/",
             },
             {
-              text: "$5,000–$10,000",
-              href: "/collect?price_range=5000-10000",
+              text: "200~300 만원",
+              href: "/",
             },
             {
-              text: "Under $5,000",
-              href: "/collect?price_range=0-5000",
+              text: "300~500 만원",
+              href: "/",
+            },
+            {
+              text: "500~1,000 만원",
+              href: "/",
+            },
+            {
+              text: "1,000 만원~",
+              href: "/",
             },
           ],
         },
       },
       {
-        text: "Medium",
+        text: "Categories",
         menu: {
-          title: "Medium",
+          title: "Categories",
           links: [
             {
-              text: "Painting",
-              href: "/collection/painting",
+              text: "회화",
+              href: "/",
             },
             {
-              text: "Prints",
-              href: "/collection/prints",
+              text: "사진",
+              href: "/",
             },
             {
-              text: "Photography",
-              href: "/collection/photography",
+              text: "드로잉",
+              href: "/",
             },
             {
-              text: "Sculpture",
-              href: "/collection/sculpture",
+              text: "판화",
+              href: "/",
             },
             {
-              text: "Works on Paper",
-              href: "/collection/works-on-paper",
+              text: "조각",
+              href: "/",
             },
             {
-              text: "Mixed Media",
-              href: "/collection/mixed-media",
+              text: "디자인",
+              href: "/",
             },
             {
-              text: "Design",
-              href: "/collection/design",
+              text: "미디어아트",
+              href: "/",
+            },
+            {
+              text: "스트릿아트",
+              href: "/",
             },
           ],
         },
-      },
-      {
-        text: "Movements",
-        menu: {
-          title: "Movements",
-          links: [
-            {
-              text: "Contemporary",
-              href: "/collection/contemporary",
-            },
-            {
-              text: "Street Art",
-              href: "/collection/street-art",
-            },
-            {
-              text: "Pop Art",
-              href: "/collection/pop-art",
-            },
-            {
-              text: "Abstract Expressionism",
-              href: "/collection/abstract-expressionism",
-            },
-            {
-              text: "Post-War",
-              href: "/collection/post-war",
-            },
-            {
-              text: "Impressionism & Modernism",
-              href: "/collection/impressionist-and-modern",
-            },
-            {
-              text: "Old Masters",
-              href: "/collection/old-masters",
-            },
-          ],
-        },
-        dividerBelow: true,
       },
       {
         text: "Subject Matter",
@@ -430,25 +408,26 @@ export const ARTWORKS_SUBMENU_DATA: MenuLinkData = {
           title: "Subject Matter",
           links: [
             {
-              text: "Abstract Art",
-              href: "/gene/abstract-art",
+              text: "추상",
+              href: "/",
             },
             {
-              text: "Figurative Art",
-              href: "/gene/figurative-art",
+              text: "구상",
+              href: "/",
             },
             {
-              text: "Landscapes",
-              href: "/gene/landscapes",
+              text: "풍경",
+              href: "/",
             },
             {
-              text: "Still Life",
-              href: "/gene/still-life",
+              text: "정물",
+              href: "/",
             },
           ],
         },
+        dividerBelow: true,
       },
-      { text: "View all artworks", href: "/collect" },
+      { text: "View all artworks", href: "/" },
     ],
   },
 }

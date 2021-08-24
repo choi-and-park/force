@@ -1,6 +1,6 @@
 import { Box, Text, GridColumns, Column, Flex } from "@artsy/palette"
 import { AnalyticsSchema, ContextModule } from "v2/System"
-import { useTracking } from "v2/System/Analytics/useTracking"
+// import { useTracking } from "v2/System/Analytics/useTracking"
 import React from "react"
 import { MenuData, SimpleLinkData } from "../menuData"
 import { AppContainer } from "v2/Apps/Components/AppContainer"
@@ -21,22 +21,21 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
   contextModule,
   onClick,
 }) => {
-  const { trackEvent } = useTracking()
+  // const { trackEvent } = useTracking()
 
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
-    const link = event.currentTarget
-    const text = link.innerText
-    const href = link.getAttribute("href")!
-
-    trackEvent({
-      action_type: AnalyticsSchema.ActionType.Click,
-      subject: text,
-      destination_path: href,
-      // @ts-ignore
-      context_module: contextModule,
-    })
+    // const link = event.currentTarget
+    // const text = link.innerText
+    // const href = link.getAttribute("href")!
+    // trackEvent({
+    //   action_type: AnalyticsSchema.ActionType.Click,
+    //   subject: text,
+    //   destination_path: href,
+    //   // @ts-ignore
+    //   context_module: contextModule,
+    // })
   }
 
   const isArtistsDropdown =

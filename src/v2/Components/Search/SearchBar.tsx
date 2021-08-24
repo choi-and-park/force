@@ -363,7 +363,7 @@ export class SearchBar extends Component<Props, State> {
     const { viewer } = this.props
 
     const inputProps = {
-      "aria-label": "Search Artsy",
+      "aria-label": "Search Nuart",
       name: "term",
       onBlur: this.onBlur,
       onChange: this.searchTextChanged,
@@ -401,7 +401,7 @@ export class SearchBar extends Component<Props, State> {
         suggestions={suggestions}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         onSuggestionHighlighted={this.throttledOnSuggestionHighlighted}
-        onSuggestionsFetchRequested={this.throttledFetch}
+        // onSuggestionsFetchRequested={this.throttledFetch}
         getSuggestionValue={this.getSuggestionValue}
         renderSuggestion={this.renderSuggestion}
         renderSuggestionsContainer={props => {
@@ -410,7 +410,7 @@ export class SearchBar extends Component<Props, State> {
         inputProps={inputProps}
         onSuggestionSelected={(e, selection) => {
           e.preventDefault()
-          this.onSuggestionSelected(selection)
+          // this.onSuggestionSelected(selection)
         }}
         renderInputComponent={this.renderInputComponent}
       />
@@ -418,27 +418,30 @@ export class SearchBar extends Component<Props, State> {
   }
 
   render() {
-    const { router } = this.props
+    // const { router } = this.props
 
     return (
       <Form
         action="/search"
         method="GET"
         onSubmit={event => {
-          if (router) {
-            event.preventDefault()
-            // TODO: Reenable in-router push once all routes have been moved over
-            // to new novo app
-            // router.push(`/search?term=${this.state.term}`)
-
-            window.location.assign(`/search?term=${this.state.term}`)
-            this.onBlur(event)
-          } else {
-            console.error(
-              "[Components/Search/SearchBar] `router` instance not found."
-            )
-          }
+          event.preventDefault()
         }}
+        // onSubmit={event => {
+        //   if (router) {
+        //     event.preventDefault()
+        //     // TODO: Reenable in-router push once all routes have been moved over
+        //     // to new novo app
+        //     // router.push(`/search?term=${this.state.term}`)
+
+        //     window.location.assign(`/search?term=${this.state.term}`)
+        //     this.onBlur(event)
+        //   } else {
+        //     console.error(
+        //       "[Components/Search/SearchBar] `router` instance not found."
+        //     )
+        //   }
+        // }}
       >
         <Media at="xs">{this.renderAutosuggestComponent({ xs: true })}</Media>
         <Media greaterThan="xs">

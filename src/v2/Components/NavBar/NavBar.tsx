@@ -16,13 +16,13 @@ import {
   NavBarMobileMenuIcon,
 } from "./NavBarMobileMenu/NavBarMobileMenu"
 import { NavBarMobileMenuInboxNotificationCountQueryRenderer } from "./NavBarMobileMenu/NavBarMobileMenuInboxNotificationCount"
-import { ModalType } from "v2/Components/Authentication/Types"
+// import { ModalType } from "v2/Components/Authentication/Types"
 import {
   ARTISTS_SUBMENU_DATA,
   ARTWORKS_SUBMENU_DATA,
 } from "v2/Components/NavBar/menuData"
-import { openAuthModal } from "v2/Utils/openAuthModal"
-import { ContextModule, Intent } from "@artsy/cohesion"
+// import { openAuthModal } from "v2/Utils/openAuthModal"
+// import { ContextModule, Intent } from "@artsy/cohesion"
 import { AnalyticsSchema } from "v2/System"
 import { track, useTracking } from "v2/System/Analytics"
 import Events from "v2/Utils/Events"
@@ -65,7 +65,8 @@ export const NavBar: React.FC = track(
     dispatch: data => Events.postEvent(data),
   }
 )(() => {
-  const { mediator, user, isEigen } = useSystemContext()
+  // const { mediator, user, isEigen } = useSystemContext()
+  const { user, isEigen } = useSystemContext()
   if (isEigen) {
     return null
   }
@@ -105,15 +106,16 @@ export const NavBar: React.FC = track(
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
-    const link = event.currentTarget
-    const text = (link.textContent || link.getAttribute("data-label")) ?? ""
-    const href = link.getAttribute("href")!
+    event.preventDefault()
+    // const link = event.currentTarget
+    // const text = (link.textContent || link.getAttribute("data-label")) ?? ""
+    // const href = link.getAttribute("href")!
 
-    trackEvent({
-      action_type: AnalyticsSchema.ActionType.Click,
-      destination_path: href,
-      subject: text,
-    })
+    // trackEvent({
+    //   action_type: AnalyticsSchema.ActionType.Click,
+    //   destination_path: href,
+    //   subject: text,
+    // })
   }
 
   const { height } = useNavBarHeight()
@@ -142,7 +144,7 @@ export const NavBar: React.FC = track(
                 <Button
                   // @ts-ignore
                   as={RouterLink}
-                  to="/signup"
+                  // to="/signup"
                   variant="secondaryOutline"
                   flex={1}
                   size="small"
@@ -153,7 +155,7 @@ export const NavBar: React.FC = track(
                 <Button
                   // @ts-ignore
                   as={RouterLink}
-                  to="/login"
+                  // to="/login"
                   flex={1}
                   ml={1}
                   size="small"
@@ -174,25 +176,25 @@ export const NavBar: React.FC = track(
               <Flex display={["none", "flex"]} ml={1} alignItems="stretch">
                 <Text variant="sm" lineHeight={1} display={["none", "flex"]}>
                   <NavBarItemLink
-                    // href="/collect"
+                    href="/collect"
                     textDecoration="none"
-                    // onClick={handleClick}
+                    onClick={handleClick}
                   >
                     Buy
                   </NavBarItemLink>
 
                   <NavBarItemLink
-                    // href="/consign"
+                    href="/consign"
                     textDecoration="none"
-                    // onClick={handleClick}
+                    onClick={handleClick}
                   >
                     Sell
                   </NavBarItemLink>
 
                   <NavBarItemLink
-                    // href="/articles"
+                    href="/articles"
                     textDecoration="none"
-                    // onClick={handleClick}
+                    onClick={handleClick}
                   >
                     Editorial
                   </NavBarItemLink>
@@ -206,28 +208,28 @@ export const NavBar: React.FC = track(
                       mx={1}
                       variant="secondaryOutline"
                       size="small"
-                      onClick={() => {
-                        // @ts-expect-error STRICT_NULL_CHECK
-                        openAuthModal(mediator, {
-                          mode: ModalType.login,
-                          intent: Intent.login,
-                          contextModule: ContextModule.header,
-                        })
-                      }}
+                      // onClick={() => {
+                      //   // @ts-expect-error STRICT_NULL_CHECK
+                      //   openAuthModal(mediator, {
+                      //     mode: ModalType.login,
+                      //     intent: Intent.login,
+                      //     contextModule: ContextModule.header,
+                      //   })
+                      // }}
                     >
                       Log in
                     </Button>
 
                     <Button
                       size="small"
-                      onClick={() => {
-                        // @ts-expect-error STRICT_NULL_CHECK
-                        openAuthModal(mediator, {
-                          mode: ModalType.signup,
-                          intent: Intent.signup,
-                          contextModule: ContextModule.header,
-                        })
-                      }}
+                      // onClick={() => {
+                      //   // @ts-expect-error STRICT_NULL_CHECK
+                      //   openAuthModal(mediator, {
+                      //     mode: ModalType.signup,
+                      //     intent: Intent.signup,
+                      //     contextModule: ContextModule.header,
+                      //   })
+                      // }}
                     >
                       Sign up
                     </Button>
@@ -303,7 +305,7 @@ export const NavBar: React.FC = track(
                       {...anchorProps}
                     >
                       <NavBarItemUnfocusableAnchor
-                        href="/artists"
+                        href="/"
                         onClick={handleClick}
                         data-label="Artists"
                       />
@@ -333,7 +335,7 @@ export const NavBar: React.FC = track(
                       {...anchorProps}
                     >
                       <NavBarItemUnfocusableAnchor
-                        href="/collect"
+                        href="/"
                         onClick={handleClick}
                         data-label="Artworks"
                       />
@@ -361,7 +363,7 @@ export const NavBar: React.FC = track(
                   // Hide link at smaller viewports — corresponding display inside of `MoreNavMenu`
                   // If we need to do this again, consider a more abstract solution
                   display={["none", "none", "flex", "flex"]}
-                  href="/institutions"
+                  href="/"
                   onClick={handleClick}
                 >
                   Museums

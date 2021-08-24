@@ -86,7 +86,14 @@ const TitleLine: React.FC<DetailsProps> = ({
   return (
     // @ts-expect-error STRICT_NULL_CHECK
     <ConditionalLink includeLinks={includeLinks} href={href}>
-      <Text variant={tokens.variant} color="black60" overflowEllipsis>
+      <Text
+        variant={tokens.variant}
+        color="black60"
+        overflowEllipsis
+        style={{
+          whiteSpace: "pre-line",
+        }}
+      >
         <i>{title}</i>
         {date && `, ${date}`}
       </Text>

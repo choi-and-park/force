@@ -77,6 +77,9 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
           height: "100%",
         }}
         tabIndex={-1}
+        onClick={e => {
+          e.preventDefault()
+        }}
       >
         {image && (
           <>
@@ -153,6 +156,9 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
             to={heroUnit.href ?? ""}
             tabIndex={-1}
             style={{ display: "block", textDecoration: "none" }}
+            onClick={e => {
+              e.preventDefault()
+            }}
           >
             <Media greaterThan="xs">
               {heroUnit.heading && (

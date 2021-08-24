@@ -12,7 +12,7 @@ import {
   Text,
 } from "@artsy/palette"
 import React from "react"
-import { createFragmentContainer, graphql } from "react-relay"
+// import { createFragmentContainer, graphql } from "react-relay"
 // import { useSystemContext } from "v2/System"
 // import { SystemQueryRenderer } from "v2/System/Relay/SystemQueryRenderer"
 import { cropped } from "v2/Utils/resized"
@@ -24,42 +24,48 @@ const staticMarketingCollections = [
   {
     slug: "painting",
     title: "회화",
-    thumbnail: "http://nebulach.com:10080/images/painting.png",
+    thumbnail:
+      "https://aws.cooknpaste.com/volume/images/home/categories/painting.png",
   },
   {
     slug: "photography",
     title: "사진",
-    thumbnail: "http://nebulach.com:10080/images/photography.png",
+    thumbnail:
+      "https://aws.cooknpaste.com/volume/images/home/categories/photography.png",
   },
   {
     slug: "drawing",
     title: "드로잉",
-    thumbnail: "http://nebulach.com:10080/images/drawing.png",
+    thumbnail:
+      "https://aws.cooknpaste.com/volume/images/home/categories/drawing.png",
   },
   {
     slug: "engraving",
     title: "판화",
-    thumbnail: "http://nebulach.com:10080/images/engraving.png",
+    thumbnail:
+      "https://aws.cooknpaste.com/volume/images/home/categories/engraving.png",
   },
   {
     slug: "sculpture",
     title: "조각",
-    thumbnail: "http://nebulach.com:10080/images/sculpture.png",
+    thumbnail:
+      "https://aws.cooknpaste.com/volume/images/home/categories/sculpture.png",
   },
   // {
   //   slug: "design",
   //   title: "디자인",
-  //   thumbnail: "http://files.artsy.net/images/juno-calypso.jpg",
+  //   thumbnail: "https://aws.cooknpaste.com/volume/images/home/categories/juno-calypso.jpg",
   // },
   // {
   //   slug: "media-art",
   //   title: "미디어아트",
-  //   thumbnail: "http://files.artsy.net/images/pulp-fiction.jpg",
+  //   thumbnail: "https://aws.cooknpaste.com/volume/images/home/categories/pulp-fiction.jpg",
   // },
   {
     slug: "street-art",
     title: "스트릿아트",
-    thumbnail: "http://nebulach.com:10080/images/street-art.png",
+    thumbnail:
+      "https://aws.cooknpaste.com/volume/images/home/categories/street-art.png",
   },
 ]
 
@@ -84,10 +90,14 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
         return (
           <Column key={collection.slug} span={[6, 4, 2]}>
             <RouterLink
-              to={`/collection/${collection.slug}`}
+              // to={`/collection/${collection.slug}`}
+              to={`/`}
               style={{
                 display: "block",
                 textDecoration: "none",
+              }}
+              onClick={e => {
+                e.preventDefault()
               }}
             >
               <ResponsiveBox aspectWidth={3} aspectHeight={2} maxWidth="100%">
@@ -125,19 +135,19 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
   )
 }
 
-export const HomeFeaturedCategoriesRailFragmentContainer = createFragmentContainer(
-  HomeFeaturedCategoriesRail,
-  {
-    marketingCollections: graphql`
-      fragment HomeFeaturedCategoriesRail_marketingCollections on MarketingCollection
-        @relay(plural: true) {
-        slug
-        title
-        thumbnail
-      }
-    `,
-  }
-)
+// export const HomeFeaturedCategoriesRailFragmentContainer = createFragmentContainer(
+//   HomeFeaturedCategoriesRail,
+//   {
+//     marketingCollections: graphql`
+//       fragment HomeFeaturedCategoriesRail_marketingCollections on MarketingCollection
+//         @relay(plural: true) {
+//         slug
+//         title
+//         thumbnail
+//       }
+//     `,
+//   }
+// )
 
 const HomeFeaturedCategories: React.FC = ({ children }) => {
   return (
@@ -145,9 +155,16 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
       <Flex justifyContent="space-between">
         <Text variant="xl">Categories</Text>
 
-        {/* <Text variant="md">
-          <RouterLink to="/categories">View All Categories</RouterLink>
-        </Text> */}
+        <Text variant="md">
+          <RouterLink
+            to="/"
+            onClick={e => {
+              e.preventDefault()
+            }}
+          >
+            View All Categories
+          </RouterLink>
+        </Text>
       </Flex>
 
       <Spacer mt={4} />

@@ -35,14 +35,15 @@ import { Media } from "v2/Utils/Responsive"
 //   }
 // )
 
-const StaticHeroUnits = [
+const constHeroUnits = [
   {
     title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
     subtitle:
       "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     // linkText: "Sign up",
-    backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+    backgroundImageURL:
+      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
   },
   {
     title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
@@ -50,7 +51,8 @@ const StaticHeroUnits = [
       "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     // linkText: "Sign up",
-    backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+    backgroundImageURL:
+      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
   },
   {
     title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
@@ -58,7 +60,8 @@ const StaticHeroUnits = [
       "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     // linkText: "Sign up",
-    backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+    backgroundImageURL:
+      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
   },
   {
     title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
@@ -66,7 +69,8 @@ const StaticHeroUnits = [
       "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     // linkText: "Sign up",
-    backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+    backgroundImageURL:
+      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
   },
   {
     title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
@@ -74,9 +78,11 @@ const StaticHeroUnits = [
       "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     // linkText: "Sign up",
-    backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+    backgroundImageURL:
+      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
   },
 ]
+
 interface HomeHeroUnitsProps {
   // homePage: HomeHeroUnits_homePage
 }
@@ -85,11 +91,11 @@ const HomeHeroUnits: React.FC<HomeHeroUnitsProps> = () => {
   return (
     <>
       <Media at="xs">
-        <HomeHeroUnitsSmallFragmentContainer heroUnits={StaticHeroUnits} />
+        <HomeHeroUnitsSmallFragmentContainer heroUnits={constHeroUnits} />
       </Media>
 
       <Media greaterThan="xs">
-        <HomeHeroUnitsLargeFragmentContainer heroUnits={StaticHeroUnits} />
+        <HomeHeroUnitsLargeFragmentContainer heroUnits={constHeroUnits} />
       </Media>
     </>
   )
