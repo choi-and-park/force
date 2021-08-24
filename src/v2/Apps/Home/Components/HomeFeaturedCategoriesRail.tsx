@@ -123,6 +123,7 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
                 mr={1}
                 style={{
                   fontFamily: "Gowun Batang",
+                  fontWeight: 700,
                 }}
               >
                 {collection.title}
@@ -159,7 +160,15 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
   return (
     <>
       <Flex justifyContent="space-between">
-        <Text variant="xl">Categories</Text>
+        <Text
+          variant="xl"
+          style={{
+            fontFamily: "Gowun Batang",
+            fontWeight: 700,
+          }}
+        >
+          Categories
+        </Text>
 
         <Text variant="md">
           <RouterLink

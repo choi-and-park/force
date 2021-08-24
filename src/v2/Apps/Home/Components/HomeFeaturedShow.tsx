@@ -114,7 +114,10 @@ const HomeFeaturedShow: React.FC<HomeFeaturedShowProps> = ({ show }) => {
   return (
     <RouterLink
       to={show.href ?? ""}
-      style={{ display: "block", textDecoration: "none" }}
+      style={{
+        display: "block",
+        textDecoration: "none",
+      }}
       onClick={e => {
         e.preventDefault()
       }}
@@ -138,17 +141,38 @@ const HomeFeaturedShow: React.FC<HomeFeaturedShowProps> = ({ show }) => {
 
       <Spacer mt={2} />
 
-      <Text variant="xl" mr={1} lineClamp={2}>
+      <Text
+        variant="lg"
+        mr={1}
+        lineClamp={2}
+        style={{
+          fontFamily: "Gowun Batang",
+          fontWeight: 700,
+        }}
+      >
         {show.name}
       </Text>
 
-      <Text variant="xl" color="black60" lineClamp={1}>
+      <Text
+        variant="lg"
+        color="black60"
+        lineClamp={1}
+        style={{
+          fontFamily: "Gowun Batang",
+        }}
+      >
         {show.partner?.name}
       </Text>
 
       <Spacer mt={1} />
 
-      <Text variant="sm">
+      <Text
+        variant="sm"
+        style={{
+          fontFamily: "Gowun Batang",
+          fontWeight: 700,
+        }}
+      >
         {[show.formattedStartAt, show.formattedEndAt]
           .filter(Boolean)
           .join(" ~ ")}

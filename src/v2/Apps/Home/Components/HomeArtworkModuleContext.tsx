@@ -281,12 +281,21 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               as={RouterLink}
               // @ts-ignore
               to={context.href}
+              style={{
+                fontFamily: "Gowun Batang",
+              }}
               noUnderline
             >
               {title}
             </Text>
 
-            <Text variant="lg" color="black60">
+            <Text
+              variant="lg"
+              color="black60"
+              style={{
+                fontFamily: "Gowun Batang",
+              }}
+            >
               {context.exhibitionPeriod}
             </Text>
           </Box>
@@ -297,6 +306,9 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
             // @ts-ignore
             to={context.href}
             ml={1}
+            style={{
+              fontFamily: "Gowun Batang",
+            }}
           >
             View All
           </Text>
@@ -368,7 +380,13 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
       return (
         <>
           {context.basedOn && (
-            <Text variant="xs" textTransform="uppercase">
+            <Text
+              variant="xs"
+              textTransform="uppercase"
+              style={{
+                fontFamily: "Gowun Batang",
+              }}
+            >
               Based on{" "}
               <RouterLink to={context.basedOn.href ?? ""} noUnderline>
                 {context.basedOn.name}
@@ -381,6 +399,9 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
             as={RouterLink}
             // @ts-ignore
             to={context.artist?.href}
+            style={{
+              fontFamily: "Gowun Batang",
+            }}
             noUnderline
           >
             {context.artist?.name ?? title}
@@ -396,6 +417,10 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
           as={RouterLink}
           // @ts-ignore
           to={context.href}
+          style={{
+            fontFamily: "Gowun Batang",
+            fontWeight: 700,
+          }}
           noUnderline
         >
           {title}
@@ -414,6 +439,10 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               // @ts-ignore
               // to="/works-for-you"
               noUnderline
+              style={{
+                fontFamily: "Gowun Batang",
+                fontWeight: 700,
+              }}
             >
               {title}
             </Text>
@@ -426,6 +455,10 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               ml={1}
               onClick={e => {
                 e.preventDefault()
+              }}
+              style={{
+                fontFamily: "Gowun Batang",
+                fontWeight: 700,
               }}
             >
               View All
@@ -446,6 +479,10 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
                   onClick={e => {
                     e.preventDefault()
                   }}
+                  style={{
+                    fontFamily: "Gowun Batang",
+                    fontWeight: 700,
+                  }}
                 >
                   {artist.name}
                 </BaseTab>
@@ -457,7 +494,16 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
     }
 
     default:
-      return <Text variant="lg">{title}</Text>
+      return (
+        <Text
+          variant="lg"
+          style={{
+            fontFamily: "Gowun Batang",
+          }}
+        >
+          {title}
+        </Text>
+      )
   }
 }
 

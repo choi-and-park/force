@@ -324,7 +324,15 @@ const HomeFeaturedShowsContainer: React.FC = ({ children }) => {
   return (
     <>
       <Flex justifyContent="space-between">
-        <Text variant="xl">Featured shows</Text>
+        <Text
+          variant="xl"
+          style={{
+            fontFamily: "Gowun Batang",
+            fontWeight: 700,
+          }}
+        >
+          Featured shows
+        </Text>
 
         <Text
           variant="sm"
@@ -333,6 +341,10 @@ const HomeFeaturedShowsContainer: React.FC = ({ children }) => {
           to="/shows"
           onClick={e => {
             e.preventDefault()
+          }}
+          style={{
+            fontFamily: "Gowun Batang",
+            fontWeight: 700,
           }}
         >
           Explore All Shows

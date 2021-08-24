@@ -212,11 +212,26 @@ const HomeFeaturedEventsRail: React.FC<HomeFeaturedEventsRailProps> = ({}) => {
                 <Spacer ml={2} />
 
                 <Flex flexDirection="column" justifyContent="center">
-                  <Text variant="xs" color="black60">
+                  <Text
+                    variant="xs"
+                    color="black60"
+                    style={{
+                      fontFamily: "Gowun Batang",
+                      fontWeight: 700,
+                    }}
+                  >
                     {event.title}
                   </Text>
 
-                  <Text variant="md">{event.subtitle}</Text>
+                  <Text
+                    variant="md"
+                    style={{
+                      fontFamily: "Gowun Batang",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {event.subtitle}
+                  </Text>
                 </Flex>
               </Flex>
             </RouterLink>

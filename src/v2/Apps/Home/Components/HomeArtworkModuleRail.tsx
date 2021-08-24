@@ -675,7 +675,14 @@ const HomeArtworkModule: React.FC<{ context: string | JSX.Element }> = ({
   return (
     <>
       {typeof context === "string" ? (
-        <Text variant="lg">{context}</Text>
+        <Text
+          variant="lg"
+          style={{
+            fontFamily: "Gowun Batang",
+          }}
+        >
+          {context}
+        </Text>
       ) : (
         context
       )}
