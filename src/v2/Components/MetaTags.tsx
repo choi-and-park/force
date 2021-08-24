@@ -3,10 +3,15 @@ import { Title, Meta, Link } from "react-head"
 import { getENV } from "v2/Utils/getENV"
 import { cropped } from "v2/Utils/resized"
 
-const DEFAULT_TITLE = "Artsy — Discover, Buy, and Sell Fine Art"
-const DEFAULT_DESCRIPTION =
-  "Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
-const DEFAULT_IMAGE_URL = "https://files.artsy.net/images/og_image.jpeg"
+// const DEFAULT_TITLE = "Artsy — Discover, Buy, and Sell Fine Art"
+// const DEFAULT_DESCRIPTION =
+//   "Artsy is the world’s largest online art marketplace. Browse over 1 million artworks by iconic and emerging artists from 4000+ galleries and top auction houses."
+// const DEFAULT_IMAGE_URL = "https://files.artsy.net/images/og_image.jpeg"
+// const DEFAULT_PATHNAME = "/"
+
+const DEFAULT_TITLE = "Nu art"
+const DEFAULT_DESCRIPTION = "Nu art"
+const DEFAULT_IMAGE_URL = "http://nebulach.com:10080/images/nuart.png"
 const DEFAULT_PATHNAME = "/"
 
 interface MetaTagsProps {
@@ -57,7 +62,7 @@ export const MetaTags: React.FC<MetaTagsProps> = ({
       <Meta property="og:type" content="website" />
       <Meta property="og:url" content={href} />
       <Meta property="og:title" content={title} />
-      <Meta property="og:site_name" content="Artsy" />
+      <Meta property="og:site_name" content="Nu-art" />
       <Meta property="og:description" content={description} />
       <Meta property="og:image" content={src} />
 
@@ -65,7 +70,7 @@ export const MetaTags: React.FC<MetaTagsProps> = ({
       <Meta property="twitter:title" content={title} />
       <Meta property="twitter:card" content={card} />
       <Meta property="twitter:url" content={href} />
-      <Meta property="twitter:site" content="@artsy" />
+      <Meta property="twitter:site" content="@nu-art" />
       <Meta property="twitter:description" content={description} />
       <Meta property="twitter:image" content={src} />
 

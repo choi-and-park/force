@@ -11,7 +11,7 @@ import {
   HTML,
 } from "@artsy/palette"
 import { Link } from "react-head"
-import { createFragmentContainer, graphql } from "react-relay"
+// import { createFragmentContainer, graphql } from "react-relay"
 import { HomeHeroUnit_heroUnit } from "v2/__generated__/HomeHeroUnit_heroUnit.graphql"
 import { cropped } from "v2/Utils/resized"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -77,6 +77,9 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
           height: "100%",
         }}
         tabIndex={-1}
+        onClick={e => {
+          e.preventDefault()
+        }}
       >
         {image && (
           <>
@@ -153,6 +156,9 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
             to={heroUnit.href ?? ""}
             tabIndex={-1}
             style={{ display: "block", textDecoration: "none" }}
+            onClick={e => {
+              e.preventDefault()
+            }}
           >
             <Media greaterThan="xs">
               {heroUnit.heading && (
@@ -279,28 +285,39 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
   )
 }
 
-export const HomeHeroUnitFragmentContainer = createFragmentContainer(
-  HomeHeroUnit,
-  {
-    heroUnit: graphql`
-      fragment HomeHeroUnit_heroUnit on HomePageHeroUnit {
-        backgroundImageURL
-        heading
-        title
-        subtitle
-        linkText
-        href
-        creditLine
-      }
-    `,
-  }
-)
-
-export const LOGGED_OUT_HERO_UNIT: StaticHeroUnit = {
-  title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-  subtitle:
-    "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-  href: "/",
-  // linkText: "Sign up",
-  backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+export const HomeHeroUnitFragmentContainer = ({
+  index,
+  heroUnit,
+  layout,
+  bg,
+}) => {
+  return (
+    <HomeHeroUnit index={index} heroUnit={heroUnit} layout={layout} bg={bg} />
+  )
 }
+
+// export const HomeHeroUnitFragmentContainer = createFragmentContainer(
+//   HomeHeroUnit,
+//   {
+//     heroUnit: graphql`
+//       fragment HomeHeroUnit_heroUnit on HomePageHeroUnit {
+//         backgroundImageURL
+//         heading
+//         title
+//         subtitle
+//         linkText
+//         href
+//         creditLine
+//       }
+//     `,
+//   }
+// )
+
+// export const LOGGED_OUT_HERO_UNIT: StaticHeroUnit = {
+//   title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
+//   subtitle:
+//     "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
+//   href: "/",
+//   // linkText: "Sign up",
+//   backgroundImageURL: "http://nebulach.com:10080/images/mmca.png",
+// }

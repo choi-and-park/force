@@ -51,6 +51,7 @@ const ShelfArtwork: React.FC<ShelfArtworkProps> = ({
         display="block"
         textDecoration="none"
         onClick={onClick}
+        // onClick={e=>{e.preventDefault()}}
         data-test="artworkShelfArtwork"
         {...containerProps}
       >
@@ -157,3 +158,19 @@ export const ShelfArtworkFragmentContainer = createFragmentContainer(
     `,
   }
 )
+
+export const ShelfArtworkFragmentContainerTemp = ({
+  key,
+  contextModule,
+  artwork,
+  lazyLoad,
+}) => {
+  return (
+    <ShelfArtwork
+      key={key}
+      artwork={artwork}
+      contextModule={contextModule}
+      lazyLoad={lazyLoad}
+    />
+  )
+}

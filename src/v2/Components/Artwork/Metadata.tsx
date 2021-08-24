@@ -32,6 +32,9 @@ export const Metadata: React.FC<MetadataProps> = ({
       textAlign="left"
       mt={mt}
       {...rest}
+      onClick={e => {
+        e.preventDefault()
+      }}
     >
       <Details
         includeLinks={false}
