@@ -102,7 +102,7 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
                           color="black60"
                           textTransform="uppercase"
                           style={{
-                            fontFamily: "Gowun Batang",
+                            fontFamily: "Noto Sans KR",
                           }}
                         >
                           {subMenu.text}
@@ -117,7 +117,7 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
                                   to={menuItem.href}
                                   onClick={handleClick}
                                   style={{
-                                    fontFamily: "Gowun Batang",
+                                    fontFamily: "Noto Sans KR",
                                   }}
                                 >
                                   {menuItem.text}

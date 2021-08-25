@@ -144,6 +144,20 @@ const constFeaturedEvents = [
       },
     },
   },
+  {
+    __typename: "FeaturedLink",
+    internalID: "event3",
+    title: "Featured Fair",
+    subtitle: "ART BUSAN",
+    href: "/",
+    image: {
+      cropped: {
+        src: "https://aws.cooknpaste.com/volume/images/home/fair/fair1.png",
+        srcSet:
+          "https://aws.cooknpaste.com/volume/images/home/fair/fair1.png 1x",
+      },
+    },
+  },
   // {
   //     "__typename": "FeaturedLink",
   //     "internalID": "intersect-aspen-2021",
@@ -216,8 +230,7 @@ const HomeFeaturedEventsRail: React.FC<HomeFeaturedEventsRailProps> = ({}) => {
                     variant="xs"
                     color="black60"
                     style={{
-                      fontFamily: "Gowun Batang",
-                      fontWeight: 700,
+                      fontFamily: "Noto Sans KR",
                     }}
                   >
                     {event.title}
@@ -226,8 +239,7 @@ const HomeFeaturedEventsRail: React.FC<HomeFeaturedEventsRailProps> = ({}) => {
                   <Text
                     variant="md"
                     style={{
-                      fontFamily: "Gowun Batang",
-                      fontWeight: 700,
+                      fontFamily: "Noto Sans KR",
                     }}
                   >
                     {event.subtitle}

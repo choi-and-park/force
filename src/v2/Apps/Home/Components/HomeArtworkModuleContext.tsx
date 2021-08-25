@@ -282,7 +282,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               // @ts-ignore
               to={context.href}
               style={{
-                fontFamily: "Gowun Batang",
+                fontFamily: "Noto Sans KR",
               }}
               noUnderline
             >
@@ -293,7 +293,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               variant="lg"
               color="black60"
               style={{
-                fontFamily: "Gowun Batang",
+                fontFamily: "Noto Sans KR",
               }}
             >
               {context.exhibitionPeriod}
@@ -307,7 +307,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
             to={context.href}
             ml={1}
             style={{
-              fontFamily: "Gowun Batang",
+              fontFamily: "Noto Sans KR",
             }}
           >
             View All
@@ -384,7 +384,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               variant="xs"
               textTransform="uppercase"
               style={{
-                fontFamily: "Gowun Batang",
+                fontFamily: "Noto Sans KR",
               }}
             >
               Based on{" "}
@@ -400,7 +400,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
             // @ts-ignore
             to={context.artist?.href}
             style={{
-              fontFamily: "Gowun Batang",
+              fontFamily: "Noto Sans KR",
             }}
             noUnderline
           >
@@ -418,7 +418,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
           // @ts-ignore
           to={context.href}
           style={{
-            fontFamily: "Gowun Batang",
+            fontFamily: "Noto Sans KR",
             fontWeight: 700,
           }}
           noUnderline
@@ -440,8 +440,8 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
               // to="/works-for-you"
               noUnderline
               style={{
-                fontFamily: "Gowun Batang",
-                fontWeight: 700,
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
               }}
             >
               {title}
@@ -457,8 +457,8 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
                 e.preventDefault()
               }}
               style={{
-                fontFamily: "Gowun Batang",
-                fontWeight: 700,
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
               }}
             >
               View All
@@ -480,8 +480,8 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
                     e.preventDefault()
                   }}
                   style={{
-                    fontFamily: "Gowun Batang",
-                    fontWeight: 700,
+                    fontFamily: "Noto Sans KR",
+                    // fontWeight: 700,
                   }}
                 >
                   {artist.name}
@@ -498,7 +498,7 @@ const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
         <Text
           variant="lg"
           style={{
-            fontFamily: "Gowun Batang",
+            fontFamily: "Noto Sans KR",
           }}
         >
           {title}

@@ -122,8 +122,7 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
                 variant="lg"
                 mr={1}
                 style={{
-                  fontFamily: "Gowun Batang",
-                  fontWeight: 700,
+                  fontFamily: "Noto Sans KR",
                 }}
               >
                 {collection.title}
@@ -163,8 +162,7 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
         <Text
           variant="xl"
           style={{
-            fontFamily: "Gowun Batang",
-            fontWeight: 700,
+            fontFamily: "Noto Sans KR",
           }}
         >
           Categories

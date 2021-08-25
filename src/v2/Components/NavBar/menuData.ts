@@ -238,7 +238,7 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
               href: "/",
             },
             {
-              text: "이우한",
+              text: "이우환",
               href: "/",
             },
             {
@@ -254,7 +254,7 @@ export const ARTISTS_SUBMENU_DATA: MenuLinkData = {
               href: "/",
             },
             {
-              text: "줄리아 오피",
+              text: "줄리안 오피",
               href: "/",
             },
             {

@@ -142,12 +142,12 @@ const HomeFeaturedShow: React.FC<HomeFeaturedShowProps> = ({ show }) => {
       <Spacer mt={2} />
 
       <Text
-        variant="lg"
+        variant="xl"
         mr={1}
         lineClamp={2}
         style={{
-          fontFamily: "Gowun Batang",
-          fontWeight: 700,
+          fontFamily: "Noto Sans KR",
+          // fontWeight: 700,
         }}
       >
         {show.name}
@@ -158,7 +158,7 @@ const HomeFeaturedShow: React.FC<HomeFeaturedShowProps> = ({ show }) => {
         color="black60"
         lineClamp={1}
         style={{
-          fontFamily: "Gowun Batang",
+          fontFamily: "Noto Sans KR",
         }}
       >
         {show.partner?.name}
@@ -169,8 +169,8 @@ const HomeFeaturedShow: React.FC<HomeFeaturedShowProps> = ({ show }) => {
       <Text
         variant="sm"
         style={{
-          fontFamily: "Gowun Batang",
-          fontWeight: 700,
+          fontFamily: "Noto Sans KR",
+          // fontWeight: 700,
         }}
       >
         {[show.formattedStartAt, show.formattedEndAt]

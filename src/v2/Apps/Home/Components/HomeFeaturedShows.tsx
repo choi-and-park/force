@@ -327,8 +327,8 @@ const HomeFeaturedShowsContainer: React.FC = ({ children }) => {
         <Text
           variant="xl"
           style={{
-            fontFamily: "Gowun Batang",
-            fontWeight: 700,
+            fontFamily: "Noto Sans KR",
+            // fontWeight: 700,
           }}
         >
           Featured shows
@@ -343,8 +343,8 @@ const HomeFeaturedShowsContainer: React.FC = ({ children }) => {
             e.preventDefault()
           }}
           style={{
-            fontFamily: "Gowun Batang",
-            fontWeight: 700,
+            fontFamily: "Noto Sans KR",
+            // fontWeight: 700,
           }}
         >
           Explore All Shows

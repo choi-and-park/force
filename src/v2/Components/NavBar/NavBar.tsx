@@ -179,8 +179,8 @@ export const NavBar: React.FC = track(
                   lineHeight={1}
                   display={["none", "flex"]}
                   style={{
-                    fontFamily: "Gowun Batang",
-                    fontWeight: 700,
+                    fontFamily: "Noto Sans KR",
+                    // fontWeight: 700,
                   }}
                 >
                   <NavBarItemLink
@@ -289,8 +289,8 @@ export const NavBar: React.FC = track(
               variant="sm"
               lineHeight={1}
               style={{
-                fontFamily: "Gowun Batang",
-                fontWeight: 700,
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
               }}
             >
               <Flex alignItems="stretch">

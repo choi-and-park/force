@@ -678,7 +678,7 @@ const HomeArtworkModule: React.FC<{ context: string | JSX.Element }> = ({
         <Text
           variant="lg"
           style={{
-            fontFamily: "Gowun Batang",
+            fontFamily: "Noto Sans KR",
           }}
         >
           {context}

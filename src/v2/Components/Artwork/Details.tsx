@@ -52,8 +52,8 @@ const ArtistLine: React.FC<DetailsProps> = ({
         variant={tokens.variant}
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Batang",
-          fontWeight: 700,
+          fontFamily: "Noto Sans KR",
+          // fontWeight: 700,
         }}
       >
         {artists.map((artist, i) => {
@@ -99,8 +99,8 @@ const TitleLine: React.FC<DetailsProps> = ({
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
-          fontFamily: "Gowun Batang",
-          fontWeight: 700,
+          fontFamily: "Noto Sans KR",
+          // fontWeight: 700,
         }}
       >
         <i>{title}</i>
@@ -131,8 +131,8 @@ const PartnerLine: React.FC<DetailsProps> = ({
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
-          fontFamily: "Gowun Batang",
-          fontWeight: 700,
+          fontFamily: "Noto Sans KR",
+          // fontWeight: 700,
         }}
       >
         {collecting_institution}
@@ -150,8 +150,8 @@ const PartnerLine: React.FC<DetailsProps> = ({
           overflowEllipsis
           style={{
             whiteSpace: "pre-line",
-            fontFamily: "Gowun Batang",
-            fontWeight: 700,
+            fontFamily: "Noto Sans KR",
+            // fontWeight: 700,
           }}
         >
           {partner.name}
@@ -185,8 +185,8 @@ const SaleInfoLine: React.FC<DetailsProps> = props => {
       overflowEllipsis
       style={{
         whiteSpace: "pre-line",
-        fontFamily: "Gowun Batang",
-        fontWeight: 700,
+        fontFamily: "Noto Sans KR",
+        // fontWeight: 700,
       }}
     >
       <SaleMessage {...props} /> <BidInfo {...props} />

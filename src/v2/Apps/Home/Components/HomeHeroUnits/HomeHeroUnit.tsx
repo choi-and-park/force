@@ -168,7 +168,7 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
                     textTransform="uppercase"
                     color={colorScheme.heading}
                     style={{
-                      fontFamily: "Gowun Batang",
+                      fontFamily: "Noto Sans KR",
                       // fontFamily: "Times New Roman",
                     }}
                   >
@@ -187,7 +187,7 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
               style={{
                 whiteSpace: "pre-line",
                 // fontFamily: "Times New Roman",
-                fontFamily: "Gowun Batang",
+                fontFamily: "Noto Sans KR",
               }}
             >
               {heroUnit.title}
@@ -202,7 +202,7 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
                   style={{
                     whiteSpace: "pre-line",
                     // fontFamily: "Times New Roman",
-                    fontFamily: "Gowun Batang",
+                    fontFamily: "Noto Sans KR",
                   }}
                   color={colorScheme.subtitle}
                   html={heroUnit.subtitle}
@@ -243,7 +243,7 @@ export const HomeHeroUnit: React.FC<HomeHeroUnitProps> = ({
                     color={colorScheme.linkText}
                     style={{
                       // fontFamily: "Times New Roman",
-                      fontFamily: "Gowun Batang",
+                      fontFamily: "Noto Sans KR",
                     }}
                   >
                     {heroUnit.linkText}
