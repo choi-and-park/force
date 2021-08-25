@@ -13,7 +13,7 @@
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     // "noUnusedParameters": true,
     // Need output directory for incremental type-checking
     "outDir": ".cache/tsc",
