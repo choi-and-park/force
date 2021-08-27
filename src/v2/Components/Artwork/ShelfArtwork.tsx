@@ -47,12 +47,10 @@ const ShelfArtwork: React.FC<ShelfArtworkProps> = ({
   return (
     <>
       <RouterLink
-        // to={artwork?.href}
-        to={"http://nu-art.co.kr/artwork/kim-tschang-yeul-recurrence-2140"}
+        to={artwork?.href}
         display="block"
         textDecoration="none"
         onClick={onClick}
-        // onClick={e=>{e.preventDefault()}}
         data-test="artworkShelfArtwork"
         {...containerProps}
       >
@@ -159,19 +157,3 @@ export const ShelfArtworkFragmentContainer = createFragmentContainer(
     `,
   }
 )
-
-export const ShelfArtworkFragmentContainerTemp = ({
-  key,
-  contextModule,
-  artwork,
-  lazyLoad,
-}) => {
-  return (
-    <ShelfArtwork
-      key={key}
-      artwork={artwork}
-      contextModule={contextModule}
-      lazyLoad={lazyLoad}
-    />
-  )
-}

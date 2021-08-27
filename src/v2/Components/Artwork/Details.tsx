@@ -48,14 +48,7 @@ const ArtistLine: React.FC<DetailsProps> = ({
 
   if (artists && artists.length) {
     return (
-      <Text
-        variant={tokens.variant}
-        overflowEllipsis
-        style={{
-          fontFamily: "Noto Sans KR",
-          // fontWeight: 700,
-        }}
-      >
+      <Text variant={tokens.variant} overflowEllipsis>
         {artists.map((artist, i) => {
           if (!artist || !artist.href || !artist.name) return null
 
@@ -93,16 +86,7 @@ const TitleLine: React.FC<DetailsProps> = ({
   return (
     // @ts-expect-error STRICT_NULL_CHECK
     <ConditionalLink includeLinks={includeLinks} href={href}>
-      <Text
-        variant={tokens.variant}
-        color="black60"
-        overflowEllipsis
-        style={{
-          whiteSpace: "pre-line",
-          fontFamily: "Noto Sans KR",
-          // fontWeight: 700,
-        }}
-      >
+      <Text variant={tokens.variant} color="black60" overflowEllipsis>
         <i>{title}</i>
         {date && `, ${date}`}
       </Text>
@@ -125,16 +109,7 @@ const PartnerLine: React.FC<DetailsProps> = ({
 
   if (collecting_institution) {
     return (
-      <Text
-        variant={tokens.variant}
-        color="black60"
-        overflowEllipsis
-        style={{
-          whiteSpace: "pre-line",
-          fontFamily: "Noto Sans KR",
-          // fontWeight: 700,
-        }}
-      >
+      <Text variant={tokens.variant} color="black60" overflowEllipsis>
         {collecting_institution}
       </Text>
     )
@@ -144,16 +119,7 @@ const PartnerLine: React.FC<DetailsProps> = ({
     return (
       //  @ts-expect-error STRICT_NULL_CHECK
       <ConditionalLink includeLinks={includeLinks} href={partner.href}>
-        <Text
-          variant={tokens.variant}
-          color="black60"
-          overflowEllipsis
-          style={{
-            whiteSpace: "pre-line",
-            fontFamily: "Noto Sans KR",
-            // fontWeight: 700,
-          }}
-        >
+        <Text variant={tokens.variant} color="black60" overflowEllipsis>
           {partner.name}
         </Text>
       </ConditionalLink>
@@ -183,11 +149,6 @@ const SaleInfoLine: React.FC<DetailsProps> = props => {
       color={tokens.color}
       fontWeight={tokens.fontWeight}
       overflowEllipsis
-      style={{
-        whiteSpace: "pre-line",
-        fontFamily: "Noto Sans KR",
-        // fontWeight: 700,
-      }}
     >
       <SaleMessage {...props} /> <BidInfo {...props} />
     </Text>
