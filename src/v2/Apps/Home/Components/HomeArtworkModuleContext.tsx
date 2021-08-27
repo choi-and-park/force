@@ -1,8 +1,152 @@
-import { Box, BaseTabs, BaseTab, Spacer, Text, Flex } from "@artsy/palette"
+import { BaseTabs, BaseTab, Spacer, Text, Flex } from "@artsy/palette"
 import React from "react"
-// import { createFragmentContainer, graphql } from "react-relay"
 import { RouterLink } from "v2/System/Router/RouterLink"
-import { HomeArtworkModuleContext_context } from "v2/__generated__/HomeArtworkModuleContext_context.graphql"
+
+export const HomeArtworkModuleContextFragmentContainer = ({
+  title,
+  context,
+}) => {
+  if (!context && !title) return null
+
+  if (!context) {
+    return <Text variant="lg">{title}</Text>
+  }
+
+  switch (context.__typename) {
+    case "TrendingArtists": {
+      return (
+        <>
+          <Flex justifyContent="space-between">
+            <Text
+              variant="xl"
+              as={RouterLink}
+              // @ts-ignore
+              to="/works-for-you"
+              noUnderline
+              style={{
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
+              }}
+              onClick={e => {
+                e.preventDefault()
+              }}
+            >
+              {title}
+            </Text>
+
+            <Text
+              variant="sm"
+              as={RouterLink}
+              // @ts-ignore
+              to="/works-for-you"
+              ml={1}
+              style={{
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
+              }}
+              onClick={e => {
+                e.preventDefault()
+              }}
+            >
+              View All
+            </Text>
+          </Flex>
+
+          <Spacer mt={4} />
+
+          <BaseTabs>
+            {(context.artists ?? []).map((artist, i) => {
+              if (!artist || !artist.href) return <></>
+              return (
+                <BaseTab
+                  key={artist.href}
+                  as={RouterLink}
+                  // @ts-ignore
+                  to={artist.href}
+                  style={{
+                    fontFamily: "Noto Sans KR",
+                    // fontWeight: 700,
+                  }}
+                  onClick={e => {
+                    e.preventDefault()
+                  }}
+                >
+                  {artist.name}
+                </BaseTab>
+              )
+            })}
+          </BaseTabs>
+        </>
+      )
+    }
+
+    case "FeaturedShows": {
+      return (
+        <>
+          <Flex justifyContent="space-between">
+            <Text
+              variant="xl"
+              as={RouterLink}
+              // @ts-ignore
+              to="/works-for-you"
+              noUnderline
+              style={{
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
+              }}
+              onClick={e => {
+                e.preventDefault()
+              }}
+            >
+              {title}
+            </Text>
+
+            <Text
+              variant="sm"
+              as={RouterLink}
+              // @ts-ignore
+              to="/works-for-you"
+              ml={1}
+              style={{
+                fontFamily: "Noto Sans KR",
+                // fontWeight: 700,
+              }}
+              onClick={e => {
+                e.preventDefault()
+              }}
+            >
+              View All
+            </Text>
+          </Flex>
+
+          <Spacer mt={4} />
+        </>
+      )
+    }
+
+    default:
+      return (
+        <Text
+          variant="lg"
+          style={{
+            fontFamily: "Noto Sans KR",
+          }}
+        >
+          {title}
+        </Text>
+      )
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+// import { Box, BaseTabs, BaseTab, Spacer, Text, Flex } from "@artsy/palette"
+// import React from "react"
+// import { createFragmentContainer, graphql } from "react-relay"
+// import { RouterLink } from "v2/System/Router/RouterLink"
+// import { HomeArtworkModuleContext_context } from "v2/__generated__/HomeArtworkModuleContext_context.graphql"
 
 // interface HomeArtworkModuleContextProps {
 //   title?: string | null
@@ -158,9 +302,9 @@ import { HomeArtworkModuleContext_context } from "v2/__generated__/HomeArtworkMo
 //           <Flex justifyContent="space-between">
 //             <Text
 //               variant="xl"
-//               // as={RouterLink}
+//               as={RouterLink}
 //               // @ts-ignore
-//               // to="/works-for-you"
+//               to="/works-for-you"
 //               noUnderline
 //             >
 //               {title}
@@ -170,9 +314,8 @@ import { HomeArtworkModuleContext_context } from "v2/__generated__/HomeArtworkMo
 //               variant="sm"
 //               as={RouterLink}
 //               // @ts-ignore
-//               // to="/works-for-you"
+//               to="/works-for-you"
 //               ml={1}
-//               onClick={e=>{e.preventDefault()}}
 //             >
 //               View All
 //             </Text>
@@ -183,13 +326,13 @@ import { HomeArtworkModuleContext_context } from "v2/__generated__/HomeArtworkMo
 //           <BaseTabs>
 //             {(context.artists ?? []).map((artist, i) => {
 //               if (!artist || !artist.href) return <></>
+
 //               return (
 //                 <BaseTab
 //                   key={artist.href}
 //                   as={RouterLink}
 //                   // @ts-ignore
 //                   to={artist.href}
-//                   onClick={e=>{e.preventDefault()}}
 //                 >
 //                   {artist.name}
 //                 </BaseTab>
@@ -255,261 +398,3 @@ import { HomeArtworkModuleContext_context } from "v2/__generated__/HomeArtworkMo
 //     `,
 //   }
 // )
-
-interface HomeArtworkModuleContextProps {
-  title?: string | null
-  context: HomeArtworkModuleContext_context | null
-}
-
-const HomeArtworkModuleContext: React.FC<HomeArtworkModuleContextProps> = ({
-  title,
-  context,
-}) => {
-  if (!context && !title) return null
-
-  if (!context) {
-    return <Text variant="lg">{title}</Text>
-  }
-
-  switch (context.__typename) {
-    case "Fair": {
-      return (
-        <Flex justifyContent="space-between">
-          <Box>
-            <Text
-              variant="lg"
-              as={RouterLink}
-              // @ts-ignore
-              to={context.href}
-              style={{
-                fontFamily: "Noto Sans KR",
-              }}
-              noUnderline
-            >
-              {title}
-            </Text>
-
-            <Text
-              variant="lg"
-              color="black60"
-              style={{
-                fontFamily: "Noto Sans KR",
-              }}
-            >
-              {context.exhibitionPeriod}
-            </Text>
-          </Box>
-
-          <Text
-            variant="sm"
-            as={RouterLink}
-            // @ts-ignore
-            to={context.href}
-            ml={1}
-            style={{
-              fontFamily: "Noto Sans KR",
-            }}
-          >
-            View All
-          </Text>
-        </Flex>
-      )
-    }
-
-    case "Sale": {
-      return (
-        <Flex justifyContent="space-between">
-          <Box>
-            <Text
-              variant="lg"
-              as={RouterLink}
-              // @ts-ignore
-              to={context.href}
-              noUnderline
-            >
-              {title}
-            </Text>
-
-            <Text variant="lg" color="black60">
-              {context.liveStartAt
-                ? `Live bidding starts ${context.liveStartAt}`
-                : `${context.startAt} – ${context.endAt}`}
-            </Text>
-          </Box>
-
-          <Text
-            variant="sm"
-            as={RouterLink}
-            // @ts-ignore
-            to={context.href}
-            ml={1}
-          >
-            View All
-          </Text>
-        </Flex>
-      )
-    }
-
-    case "Gene": {
-      return (
-        <Flex justifyContent="space-between">
-          <Text
-            variant="lg"
-            as={RouterLink}
-            // @ts-ignore
-            to={context.href}
-            noUnderline
-          >
-            {title}
-          </Text>
-
-          <Text
-            variant="sm"
-            as={RouterLink}
-            // @ts-ignore
-            to={context.href}
-            ml={1}
-          >
-            View All
-          </Text>
-        </Flex>
-      )
-    }
-
-    case "HomePageRelatedArtistArtworkModule": {
-      return (
-        <>
-          {context.basedOn && (
-            <Text
-              variant="xs"
-              textTransform="uppercase"
-              style={{
-                fontFamily: "Noto Sans KR",
-              }}
-            >
-              Based on{" "}
-              <RouterLink to={context.basedOn.href ?? ""} noUnderline>
-                {context.basedOn.name}
-              </RouterLink>
-            </Text>
-          )}
-
-          <Text
-            variant="lg"
-            as={RouterLink}
-            // @ts-ignore
-            to={context.artist?.href}
-            style={{
-              fontFamily: "Noto Sans KR",
-            }}
-            noUnderline
-          >
-            {context.artist?.name ?? title}
-          </Text>
-        </>
-      )
-    }
-
-    case "HomePageFollowedArtistArtworkModule": {
-      return (
-        <Text
-          variant="lg"
-          as={RouterLink}
-          // @ts-ignore
-          to={context.href}
-          style={{
-            fontFamily: "Noto Sans KR",
-            fontWeight: 700,
-          }}
-          noUnderline
-        >
-          {title}
-        </Text>
-      )
-    }
-
-    case "FollowArtists":
-    case "TrendingArtists": {
-      return (
-        <>
-          <Flex justifyContent="space-between">
-            <Text
-              variant="xl"
-              // as={RouterLink}
-              // @ts-ignore
-              // to="/works-for-you"
-              noUnderline
-              style={{
-                fontFamily: "Noto Sans KR",
-                // fontWeight: 700,
-              }}
-            >
-              {title}
-            </Text>
-
-            <Text
-              variant="sm"
-              as={RouterLink}
-              // @ts-ignore
-              // to="/works-for-you"
-              ml={1}
-              onClick={e => {
-                e.preventDefault()
-              }}
-              style={{
-                fontFamily: "Noto Sans KR",
-                // fontWeight: 700,
-              }}
-            >
-              View All
-            </Text>
-          </Flex>
-
-          <Spacer mt={4} />
-
-          <BaseTabs>
-            {(context.artists ?? []).map((artist, i) => {
-              if (!artist || !artist.href) return <></>
-              return (
-                <BaseTab
-                  key={artist.href}
-                  as={RouterLink}
-                  // @ts-ignore
-                  to={artist.href}
-                  onClick={e => {
-                    e.preventDefault()
-                  }}
-                  style={{
-                    fontFamily: "Noto Sans KR",
-                    // fontWeight: 700,
-                  }}
-                >
-                  {artist.name}
-                </BaseTab>
-              )
-            })}
-          </BaseTabs>
-        </>
-      )
-    }
-
-    default:
-      return (
-        <Text
-          variant="lg"
-          style={{
-            fontFamily: "Noto Sans KR",
-          }}
-        >
-          {title}
-        </Text>
-      )
-  }
-}
-
-export const HomeArtworkModuleContextFragmentContainer = ({
-  title,
-  context,
-}) => {
-  return <HomeArtworkModuleContext title={title} context={context} />
-}

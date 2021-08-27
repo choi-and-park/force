@@ -1,23 +1,11 @@
 import { ProgressDots, Spacer } from "@artsy/palette"
-// import { compact } from "lodash"
 import React from "react"
 import { useState } from "react"
-// import { createFragmentContainer, graphql } from "react-relay"
 import { useSystemContext } from "v2/System"
-// import { HomeHeroUnitsSmall_homePage } from "v2/__generated__/HomeHeroUnitsSmall_homePage.graphql"
 import { HomeSwiper } from "../HomeSwiper"
-import {
-  HomeHeroUnitFragmentContainer,
-  // LOGGED_OUT_HERO_UNIT,
-} from "./HomeHeroUnit"
+import { HomeHeroUnitFragmentContainer } from "./HomeHeroUnit"
 
-interface HomeHeroUnitsSmallProps {
-  heroUnits: []
-}
-
-const HomeHeroUnitsSmall: React.FC<HomeHeroUnitsSmallProps> = ({
-  heroUnits,
-}) => {
+export const HomeHeroUnitsSmallFragmentContainer = ({ heroUnits }) => {
   const { isLoggedIn } = useSystemContext()
   const [index, setIndex] = useState(0)
 
@@ -48,9 +36,22 @@ const HomeHeroUnitsSmall: React.FC<HomeHeroUnitsSmallProps> = ({
   )
 }
 
-export const HomeHeroUnitsSmallFragmentContainer = ({ heroUnits }) => {
-  return <HomeHeroUnitsSmall heroUnits={heroUnits} />
-}
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+// import { ProgressDots, Spacer } from "@artsy/palette"
+// import { compact } from "lodash"
+// import React from "react"
+// import { useState } from "react"
+// import { createFragmentContainer, graphql } from "react-relay"
+// import { useSystemContext } from "v2/System"
+// import { HomeHeroUnitsSmall_homePage } from "v2/__generated__/HomeHeroUnitsSmall_homePage.graphql"
+// import { HomeSwiper } from "../HomeSwiper"
+// import {
+//   HomeHeroUnitFragmentContainer,
+//   LOGGED_OUT_HERO_UNIT,
+// } from "./HomeHeroUnit"
 
 // interface HomeHeroUnitsSmallProps {
 //   homePage: HomeHeroUnitsSmall_homePage

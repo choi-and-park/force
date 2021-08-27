@@ -1,9 +1,32 @@
 import React from "react"
-// import { createFragmentContainer, graphql } from "react-relay"
 import { HomeHeroUnitsLargeFragmentContainer } from "./HomeHeroUnitsLarge"
 import { HomeHeroUnitsSmallFragmentContainer } from "./HomeHeroUnitsSmall"
-// import { HomeHeroUnits_homePage } from "v2/__generated__/HomeHeroUnits_homePage.graphql"
 import { Media } from "v2/Utils/Responsive"
+
+export const HomeHeroUnitsFragmentContainer = ({ heroUnits }) => {
+  return (
+    <>
+      <Media at="xs">
+        <HomeHeroUnitsSmallFragmentContainer heroUnits={heroUnits} />
+      </Media>
+
+      <Media greaterThan="xs">
+        <HomeHeroUnitsLargeFragmentContainer heroUnits={heroUnits} />
+      </Media>
+    </>
+  )
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+// import React from "react"
+// import { createFragmentContainer, graphql } from "react-relay"
+// import { HomeHeroUnitsLargeFragmentContainer } from "./HomeHeroUnitsLarge"
+// import { HomeHeroUnitsSmallFragmentContainer } from "./HomeHeroUnitsSmall"
+// import { HomeHeroUnits_homePage } from "v2/__generated__/HomeHeroUnits_homePage.graphql"
+// import { Media } from "v2/Utils/Responsive"
 
 // interface HomeHeroUnitsProps {
 //   homePage: HomeHeroUnits_homePage
@@ -34,73 +57,3 @@ import { Media } from "v2/Utils/Responsive"
 //     `,
 //   }
 // )
-
-const constHeroUnits = [
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    backgroundImageURL:
-      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
-  },
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    backgroundImageURL:
-      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
-  },
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    backgroundImageURL:
-      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
-  },
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    backgroundImageURL:
-      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
-  },
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    backgroundImageURL:
-      "https://aws.cooknpaste.com/volume/images/home/hero/mmca.png",
-  },
-]
-
-interface HomeHeroUnitsProps {
-  // homePage: HomeHeroUnits_homePage
-}
-
-const HomeHeroUnits: React.FC<HomeHeroUnitsProps> = () => {
-  return (
-    <>
-      <Media at="xs">
-        <HomeHeroUnitsSmallFragmentContainer heroUnits={constHeroUnits} />
-      </Media>
-
-      <Media greaterThan="xs">
-        <HomeHeroUnitsLargeFragmentContainer heroUnits={constHeroUnits} />
-      </Media>
-    </>
-  )
-}
-
-export const HomeHeroUnitsFragmentContainer = ({ homePage }) => {
-  return <HomeHeroUnits />
-}
