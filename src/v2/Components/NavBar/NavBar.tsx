@@ -125,7 +125,7 @@ export const NavBar: React.FC = track(
             height="100%"
           >
             {/* Mobile authentication banner */}
-            {!isLoggedIn && (
+            {/* {!isLoggedIn && (
               <Flex display={["flex", "none"]} pt={1}>
                 <Button
                   // @ts-ignore
@@ -149,7 +149,7 @@ export const NavBar: React.FC = track(
                   Log in
                 </Button>
               </Flex>
-            )}
+            )} */}
 
             {/* Top-tier */}
             <Flex pt={1} pb={[1, 0]} alignItems="stretch" flex={1}>
@@ -160,7 +160,7 @@ export const NavBar: React.FC = track(
               </Flex>
               {/* Desktop. Collapses into mobile at `xs` breakpoint. */}
               <Flex display={["none", "flex"]} ml={1} alignItems="stretch">
-                {isLoggedIn ? (
+                {/* {isLoggedIn ? (
                   <NavBarLoggedInActionsQueryRenderer />
                 ) : (
                   <Flex alignItems="center">
@@ -170,7 +170,7 @@ export const NavBar: React.FC = track(
 
                     <Button size="small">Sign up</Button>
                   </Flex>
-                )}
+                )} */}
               </Flex>
               {/* Mobile. Triggers at the `xs` breakpoint. */}
               <Flex display={["flex", "none"]}>
@@ -214,7 +214,7 @@ export const NavBar: React.FC = track(
               justifyContent="space-between"
               alignItems="stretch"
               flex={1}
-              variant="sm"
+              variant="xs"
               lineHeight={1}
               style={{
                 fontFamily: "Noto Sans KR",

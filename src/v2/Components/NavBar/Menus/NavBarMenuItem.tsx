@@ -8,8 +8,8 @@ const navBarMenuItemMixin = css`
   align-items: center;
   width: 100%;
   text-decoration: none;
-  font-family: "Gowun Batang";
-  font-weight: 700;
+  font-family: "Noto Sans KR";
+  font-size: small;
 
   &:hover,
   &:focus {
