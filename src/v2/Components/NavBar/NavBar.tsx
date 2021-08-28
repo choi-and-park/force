@@ -217,8 +217,8 @@ export const NavBar: React.FC = track(
               variant="md"
               lineHeight={1}
               style={{
-                fontFamily: "Noto Sans KR",
-                // fontWeight: 700,
+                fontFamily: "Alegreya",
+                // fontWeight: 400,
               }}
             >
               <Flex alignItems="stretch">
@@ -316,7 +316,7 @@ export const NavBar: React.FC = track(
                 <NavBarItemLink>F.I.</NavBarItemLink>
                 <NavBarItemLink>NFT</NavBarItemLink>
               </Flex>
-
+              {/* 
               <Flex alignItems="stretch" display={["none", "none", "flex"]}>
                 <NavBarItemButton
                   px={0}
@@ -330,7 +330,7 @@ export const NavBar: React.FC = track(
                 >
                   Download App
                 </NavBarItemButton>
-              </Flex>
+              </Flex> */}
             </Text>
           </HorizontalPadding>
         </AppContainer>

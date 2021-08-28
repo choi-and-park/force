@@ -1,58 +1,39 @@
 const banners = [
   {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
+    heading: "EXCLUSIVELY ON NUART",
+    title: "이건희컬렉션 특별전\n한국미술명작",
     subtitle:
       "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
-    // linkText: "Sign up",
     image: {
       src: "/images/home/banner/mmca.png",
       srcSet: "/images/home/banner/mmca.png 1x",
     },
+    linkText: "Browse Works",
   },
   {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
+    heading: "FEATURED COLLECTION",
+    title: "최석환 화백 특별전",
     subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
+      "Choi Seok-Hwan Collection\nThe korean art gallery\n2021.5.21.-2022.6.13.",
     href: "/",
-    // linkText: "Sign up",
     image: {
-      src: "/images/home/banner/mmca.png",
-      srcSet: "/images/home/banner/mmca.png 1x",
+      src: "/images/home/banner/korea.jpeg",
+      srcSet: "/images/home/banner/korea.jpeg 1x",
     },
+    linkText: "Buy now",
   },
   {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
+    heading: "FEATURED FESTIVAL",
+    title: "서울 도심에서 펼쳐지는\n스트리트 아트 페스티벌",
     subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
+      "Hongdae\nThe Street Art To Find There\nThe Soul of Seoul\n2021.5.21.-2022.6.13.",
     href: "/",
-    // linkText: "Sign up",
     image: {
-      src: "/images/home/banner/mmca.png",
-      srcSet: "/images/home/banner/mmca.png 1x",
+      src: "/images/home/banner/korea2.jpeg",
+      srcSet: "/images/home/banner/korea2.jpeg 1x",
     },
-  },
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    image: {
-      src: "/images/home/banner/mmca.png",
-      srcSet: "/images/home/banner/mmca.png 1x",
-    },
-  },
-  {
-    title: "MMCA\n이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
-    href: "/",
-    // linkText: "Sign up",
-    image: {
-      src: "/images/home/banner/mmca.png",
-      srcSet: "/images/home/banner/mmca.png 1x",
-    },
+    linkText: "Buy ticket",
   },
 ]
 
@@ -65,8 +46,8 @@ const events = [
     href: "/",
     image: {
       cropped: {
-        src: "/images/home/event/event1.png",
-        srcSet: "/images/home/event/event1.png 1x",
+        src: "/images/home/event/af0.png",
+        srcSet: "/images/home/event/af0.png 1x",
       },
     },
   },
@@ -74,12 +55,12 @@ const events = [
     __typename: "FeaturedLink",
     internalID: "event2",
     title: "Featured Fair",
-    subtitle: "ART BUSAN",
+    subtitle: "SEOUL ART SHOW 2021",
     href: "/",
     image: {
       cropped: {
-        src: "/images/home/event/event1.png",
-        srcSet: "/images/home/event/event1.png 1x",
+        src: "/images/home/event/af1.png",
+        srcSet: "/images/home/event/af1.png 1x",
       },
     },
   },
@@ -87,12 +68,12 @@ const events = [
     __typename: "FeaturedLink",
     internalID: "event3",
     title: "Featured Fair",
-    subtitle: "ART BUSAN",
+    subtitle: "ASYAAF 2021",
     href: "/",
     image: {
       cropped: {
-        src: "/images/home/event/event1.png",
-        srcSet: "/images/home/event/event1.png 1x",
+        src: "/images/home/event/af2.png",
+        srcSet: "/images/home/event/af2.png 1x",
       },
     },
   },
@@ -100,12 +81,12 @@ const events = [
     __typename: "FeaturedLink",
     internalID: "event3",
     title: "Featured Fair",
-    subtitle: "ART BUSAN",
+    subtitle: "BAMA 2021",
     href: "/",
     image: {
       cropped: {
-        src: "/images/home/event/event1.png",
-        srcSet: "/images/home/event/event1.png 1x",
+        src: "/images/home/event/af3.png",
+        srcSet: "/images/home/event/af3.png 1x",
       },
     },
   },
@@ -116,32 +97,32 @@ const categories = [
     slug: "painting",
     title: "회화",
     image: {
-      src: "/images/home/categories/painting.png",
-      srcSet: "/images/home/categories/painting.png 1x",
+      src: "/images/home/categories/hh.jpg",
+      srcSet: "/images/home/categories/hh.jpg 1x",
     },
   },
   {
     slug: "photography",
     title: "사진",
     image: {
-      src: "/images/home/categories/photography.png",
-      srcSet: "/images/home/categories/photography.png 1x",
+      src: "/images/home/categories/sj.png",
+      srcSet: "/images/home/categories/sj.png 1x",
     },
   },
   {
     slug: "drawing",
     title: "드로잉",
     image: {
-      src: "/images/home/categories/drawing.png",
-      srcSet: "/images/home/categories/drawing.png 1x",
+      src: "/images/home/categories/drw.png",
+      srcSet: "/images/home/categories/drw.png 1x",
     },
   },
   {
     slug: "engraving",
     title: "판화",
     image: {
-      src: "/images/home/categories/engraving.png",
-      srcSet: "/images/home/categories/engraving.png 1x",
+      src: "/images/home/categories/ph.png",
+      srcSet: "/images/home/categories/ph.png 1x",
     },
   },
   {

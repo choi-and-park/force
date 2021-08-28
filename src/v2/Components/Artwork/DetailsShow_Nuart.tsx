@@ -17,7 +17,7 @@ const TitleLine = ({ artwork }) => {
         variant={tokens.variant}
         overflowEllipsis
         style={{
-          fontFamily: "Noto Sans KR",
+          fontFamily: "Alegreya",
           // fontWeight: 700,
         }}
       >

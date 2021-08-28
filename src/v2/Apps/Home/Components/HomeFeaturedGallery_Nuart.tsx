@@ -36,11 +36,11 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
       <Spacer mt={1} />
 
       <Text
-        variant="text"
+        variant="md"
         mr={1}
         lineClamp={2}
         style={{
-          fontFamily: "Noto Sans KR",
+          fontFamily: "Alegreya",
           // fontWeight: 700,
         }}
       >
@@ -52,7 +52,7 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
         color="black60"
         lineClamp={1}
         style={{
-          fontFamily: "Noto Sans KR",
+          fontFamily: "Gowun Dodum",
         }}
       >
         {gallery.location}

@@ -37,7 +37,8 @@ const HomeFeaturedGalleriesContainer: React.FC = ({ children }) => {
         <Text
           variant="xl"
           style={{
-            fontFamily: "Noto Sans KR",
+            fontFamily: "Alegreya",
+            fontSize: 30,
             // fontWeight: 700,
           }}
         >
@@ -53,7 +54,7 @@ const HomeFeaturedGalleriesContainer: React.FC = ({ children }) => {
             e.preventDefault()
           }}
           style={{
-            fontFamily: "Noto Sans KR",
+            fontFamily: "Alegreya",
             // fontWeight: 700,
           }}
         >

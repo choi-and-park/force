@@ -45,13 +45,14 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
                     return (
                       <Box key={subMenu.text} flex={1}>
                         <Text
-                          variant="xs"
+                          variant="md"
                           mb={1}
                           px={2}
-                          color="black60"
+                          color="black80"
                           textTransform="uppercase"
                           style={{
-                            fontFamily: "Noto Sans KR",
+                            fontFamily: "Alegreya",
+                            fontWeight: 500,
                           }}
                         >
                           {subMenu.text}
@@ -65,8 +66,9 @@ export const NavBarSubMenu: React.FC<NavBarSubMenuProps> = ({
                                   key={menuItem.text}
                                   to={menuItem.href}
                                   onClick={handleClick}
+                                  color="black70"
                                   style={{
-                                    fontFamily: "Noto Sans KR",
+                                    fontFamily: "Gowun Dodum",
                                   }}
                                 >
                                   {menuItem.text}

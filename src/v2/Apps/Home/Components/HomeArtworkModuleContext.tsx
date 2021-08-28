@@ -24,7 +24,8 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               noUnderline
               style={{
-                fontFamily: "Noto Sans KR",
+                fontFamily: "Alegreya",
+                fontSize: 30,
                 // fontWeight: 700,
               }}
               onClick={e => {
@@ -41,7 +42,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               ml={1}
               style={{
-                fontFamily: "Noto Sans KR",
+                fontFamily: "Alegreya",
                 // fontWeight: 700,
               }}
               onClick={e => {
@@ -64,7 +65,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
                   // @ts-ignore
                   to={artist.href}
                   style={{
-                    fontFamily: "Noto Sans KR",
+                    fontFamily: "Gowun Dodum",
                     // fontWeight: 700,
                   }}
                   onClick={e => {
@@ -91,7 +92,8 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               noUnderline
               style={{
-                fontFamily: "Noto Sans KR",
+                fontFamily: "Alegreya",
+                fontSize: 30,
                 // fontWeight: 700,
               }}
               onClick={e => {
@@ -108,7 +110,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               ml={1}
               style={{
-                fontFamily: "Noto Sans KR",
+                fontFamily: "Alegreya",
                 // fontWeight: 700,
               }}
               onClick={e => {
@@ -129,7 +131,8 @@ export const HomeArtworkModuleContextFragmentContainer = ({
         <Text
           variant="lg"
           style={{
-            fontFamily: "Noto Sans KR",
+            fontFamily: "Alegreya",
+            fontSize: 30,
           }}
         >
           {title}

@@ -35,8 +35,8 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
                   <Image
                     src={collection.image.src}
                     srcSet={collection.image.srcSet}
-                    width="100%"
-                    height="100%"
+                    width="85%"
+                    height="85%"
                     lazyLoad
                     alt=""
                     style={{ display: "block" }}
@@ -46,14 +46,14 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
                 )}
               </ResponsiveBox>
 
-              <Spacer mt={1} />
+              {/* <Spacer mt={1} /> */}
 
               <Text
                 variant="md"
                 mr={1}
                 style={{
                   fontFamily: "Gowun Dodum",
-                  fontSize: 18,
+                  // fontSize: 18,
                 }}
               >
                 {collection.title}
@@ -79,7 +79,8 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
         <Text
           variant="xl"
           style={{
-            fontFamily: "Gowun Dodum",
+            fontFamily: "Alegreya",
+            fontSize: 30,
           }}
         >
           Categories
@@ -90,6 +91,9 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
             to="/"
             onClick={e => {
               e.preventDefault()
+            }}
+            style={{
+              fontFamily: "Alegreya",
             }}
           >
             View All Categories

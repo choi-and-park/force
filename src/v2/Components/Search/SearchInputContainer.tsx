@@ -35,6 +35,9 @@ export const SearchInputContainer: React.ForwardRefExoticComponent<
       ref={ref}
       width="100%"
       height={40}
+      style={{
+        fontFamily: "Gowun Dodum",
+      }}
       label={
         <SearchButton
           type="submit"

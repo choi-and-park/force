@@ -139,7 +139,7 @@ export const HomeHeroUnitFragmentContainer = ({
                     textTransform="uppercase"
                     color={colorScheme.heading}
                     style={{
-                      fontFamily: "Gowun Dodum",
+                      fontFamily: "Alegreya",
                       // fontFamily: "Times New Roman",
                     }}
                   >
@@ -157,27 +157,26 @@ export const HomeHeroUnitFragmentContainer = ({
               color={colorScheme.title}
               style={{
                 whiteSpace: "pre-line",
-                // fontFamily: "Times New Roman",
                 fontFamily: "Gowun Dodum",
               }}
             >
               {heroUnit.title}
             </Text>
-
             {heroUnit.subtitle && (
               <>
                 <Spacer mt={[1, 2]} />
 
-                <HTML
+                <Text
                   variant={["xs", "md", "lg"]}
                   style={{
                     whiteSpace: "pre-line",
-                    // fontFamily: "Times New Roman",
-                    fontFamily: "Gowun Dodum",
+                    fontFamily: "Alegreya",
                   }}
                   color={colorScheme.subtitle}
-                  html={heroUnit.subtitle}
-                />
+                  // html={heroUnit.subtitle}
+                >
+                  {heroUnit.subtitle}
+                </Text>
               </>
             )}
           </RouterLink>
@@ -213,8 +212,7 @@ export const HomeHeroUnitFragmentContainer = ({
                     variant="xs"
                     color={colorScheme.linkText}
                     style={{
-                      // fontFamily: "Times New Roman",
-                      fontFamily: "Gowun Dodum",
+                      fontFamily: "Alegreya",
                     }}
                   >
                     {heroUnit.linkText}

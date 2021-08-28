@@ -2,7 +2,12 @@ import React from "react"
 import { MetaTags } from "v2/Components/MetaTags"
 
 export const HomeMeta: React.FC = () => {
-  return <MetaTags title="Nu art" description="Nu art" />
+  return (
+    <MetaTags
+      title="Nu-art [ Discover, Buy, and Sell Fine Art in Korea. ]"
+      description="Nu-art [ Discover, Buy, and Sell Fine Art in Korea. ]"
+    />
+  )
 }
 
 ///////////////////////////////////////////////////////////////////////////////

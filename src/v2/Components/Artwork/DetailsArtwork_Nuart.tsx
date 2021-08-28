@@ -18,7 +18,6 @@ const ArtistLine = ({ artwork }) => {
         overflowEllipsis
         style={{
           fontFamily: "Gowun Dodum",
-          fontWeight: 700,
         }}
       >
         {artwork.artists.map((artist, i) => {
@@ -129,7 +128,7 @@ const SaleInfoLine = ({ artwork }) => {
     },
     v3: {
       variant: "xs" as TextVariant,
-      color: "black100",
+      color: "black80",
       fontWeight: "normal",
     },
   })
