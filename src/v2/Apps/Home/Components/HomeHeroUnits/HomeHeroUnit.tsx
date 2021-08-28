@@ -139,7 +139,7 @@ export const HomeHeroUnitFragmentContainer = ({
                     textTransform="uppercase"
                     color={colorScheme.heading}
                     style={{
-                      fontFamily: "Noto Sans KR",
+                      fontFamily: "Gowun Dodum",
                       // fontFamily: "Times New Roman",
                     }}
                   >
@@ -158,7 +158,7 @@ export const HomeHeroUnitFragmentContainer = ({
               style={{
                 whiteSpace: "pre-line",
                 // fontFamily: "Times New Roman",
-                fontFamily: "Noto Sans KR",
+                fontFamily: "Gowun Dodum",
               }}
             >
               {heroUnit.title}
@@ -173,7 +173,7 @@ export const HomeHeroUnitFragmentContainer = ({
                   style={{
                     whiteSpace: "pre-line",
                     // fontFamily: "Times New Roman",
-                    fontFamily: "Noto Sans KR",
+                    fontFamily: "Gowun Dodum",
                   }}
                   color={colorScheme.subtitle}
                   html={heroUnit.subtitle}
@@ -214,7 +214,7 @@ export const HomeHeroUnitFragmentContainer = ({
                     color={colorScheme.linkText}
                     style={{
                       // fontFamily: "Times New Roman",
-                      fontFamily: "Noto Sans KR",
+                      fontFamily: "Gowun Dodum",
                     }}
                   >
                     {heroUnit.linkText}

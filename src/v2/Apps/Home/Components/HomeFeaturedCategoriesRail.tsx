@@ -7,6 +7,7 @@ import {
   ResponsiveBox,
   Spacer,
   Text,
+  SmallCard,
 } from "@artsy/palette"
 import React from "react"
 import { RouterLink } from "v2/System/Router/RouterLink"
@@ -48,10 +49,11 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
               <Spacer mt={1} />
 
               <Text
-                variant="text"
+                variant="md"
                 mr={1}
                 style={{
-                  fontFamily: "Noto Sans KR",
+                  fontFamily: "Gowun Dodum",
+                  fontSize: 18,
                 }}
               >
                 {collection.title}
@@ -77,7 +79,7 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
         <Text
           variant="xl"
           style={{
-            fontFamily: "Noto Sans KR",
+            fontFamily: "Gowun Dodum",
           }}
         >
           Categories

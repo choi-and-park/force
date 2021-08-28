@@ -44,7 +44,7 @@ const GalleryLine = ({ artwork }) => {
         color="black60"
         overflowEllipsis
         style={{
-          fontFamily: "Noto Sans KR",
+          fontFamily: "Gowun Dodum",
           // fontWeight: 700,
         }}
       >
@@ -77,7 +77,7 @@ const DateLine = ({ artwork }) => {
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
-          fontFamily: "Noto Sans KR",
+          fontFamily: "Gowun Dodum",
           // fontWeight: 700,
         }}
       >

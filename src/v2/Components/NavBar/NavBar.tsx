@@ -214,7 +214,7 @@ export const NavBar: React.FC = track(
               justifyContent="space-between"
               alignItems="stretch"
               flex={1}
-              variant="xs"
+              variant="md"
               lineHeight={1}
               style={{
                 fontFamily: "Noto Sans KR",

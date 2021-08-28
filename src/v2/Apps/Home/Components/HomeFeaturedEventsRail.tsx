@@ -50,7 +50,7 @@ export const HomeFeaturedEventsRailFragmentContainer = ({ events }) => {
                     variant="xs"
                     color="black60"
                     style={{
-                      fontFamily: "Noto Sans KR",
+                      fontFamily: "Gowun Dodum",
                     }}
                   >
                     {event.title}
@@ -59,7 +59,7 @@ export const HomeFeaturedEventsRailFragmentContainer = ({ events }) => {
                   <Text
                     variant="md"
                     style={{
-                      fontFamily: "Noto Sans KR",
+                      fontFamily: "Gowun Dodum",
                     }}
                   >
                     {event.subtitle}
