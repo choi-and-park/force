@@ -29,6 +29,7 @@ import { tagRoutes } from "./Apps/Tag/tagRoutes"
 import { unsubscribeRoutes } from "./Apps/Unsubscribe/unsubscribeRoutes"
 import { viewingRoomRoutes } from "v2/Apps/ViewingRoom/viewingRoomRoutes"
 import { fairOrganizerRoutes } from "./Apps/FairOrginizer/fairOrganizerRoutes"
+import { NuartGalleryRoutes } from "v2/Apps/Nuart/Galleries/GalleryRoutes"
 
 export function getAppRoutes(): AppRouteConfig[] {
   return buildAppRoutes([
@@ -60,6 +61,7 @@ export function getAppRoutes(): AppRouteConfig[] {
     { routes: tagRoutes },
     { routes: unsubscribeRoutes },
     { routes: viewingRoomRoutes },
+    { routes: NuartGalleryRoutes },
 
     // For debugging baseline app shell stuff
     { routes: debugRoutes },
