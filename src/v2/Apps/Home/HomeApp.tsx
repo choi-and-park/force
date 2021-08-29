@@ -12,13 +12,13 @@ export const HomeAppFragmentContainer = props => {
     <>
       <HomeMeta />
 
-      <Spacer mt={[2, 0]} />
+      <Spacer mt={[1, 1]} />
 
       <HomeHeroUnitsFragmentContainer heroUnits={homeContents.banners} />
 
-      <Spacer mt={4} />
+      <Spacer mt={1} />
 
-      <Join separator={<Spacer mt={6} />}>
+      <Join separator={<Spacer mt={4} />}>
         <HomeFeaturedEventsRailFragmentContainer events={homeContents.events} />
         <Separator />
 

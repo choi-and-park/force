@@ -113,9 +113,10 @@ export const NavBar: React.FC = track(
       <Box
         as="header"
         bg="white100"
-        borderBottom="1px solid"
-        borderColor="black30"
+        // borderBottom="1px solid"
+        // borderColor="black30"
         height={height}
+        pb={1}
       >
         <AppContainer height="100%">
           <HorizontalPadding
@@ -153,11 +154,10 @@ export const NavBar: React.FC = track(
 
             {/* Top-tier */}
             <Flex pt={1} pb={[1, 0]} alignItems="stretch" flex={1}>
-              <NavBarPrimaryLogo mr={1} />
-              {/* <div>Nu Art</div> */}
-              <Flex flex={1} alignItems="center">
+              {/* <NavBarPrimaryLogo mr={1} /> */}
+              {/* <Flex flex={1} alignItems="center">
                 <SearchBarQueryRenderer width="100%" />
-              </Flex>
+              </Flex> */}
               {/* Desktop. Collapses into mobile at `xs` breakpoint. */}
               <Flex display={["none", "flex"]} ml={1} alignItems="stretch">
                 {/* {isLoggedIn ? (
@@ -222,10 +222,11 @@ export const NavBar: React.FC = track(
               }}
             >
               <Flex alignItems="stretch">
+                <NavBarPrimaryLogo mr={1} pr={1} />
                 <Dropdown
                   keepInDOM
                   placement="bottom"
-                  offset={0}
+                  offset={1}
                   dropdown={({ setVisible }) => (
                     <NavBarSubMenu
                       menu={ARTISTS_SUBMENU_DATA.menu}
@@ -257,7 +258,7 @@ export const NavBar: React.FC = track(
                 <Dropdown
                   keepInDOM
                   placement="bottom"
-                  offset={0}
+                  offset={1}
                   dropdown={({ setVisible }) => (
                     <NavBarSubMenu
                       menu={ARTWORKS_SUBMENU_DATA.menu}
@@ -315,6 +316,9 @@ export const NavBar: React.FC = track(
                 <NavBarItemLink>Rental</NavBarItemLink>
                 <NavBarItemLink>F.I.</NavBarItemLink>
                 <NavBarItemLink>NFT</NavBarItemLink>
+              </Flex>
+              <Flex flex={1} alignItems="right" pl={1} ml={1}>
+                <SearchBarQueryRenderer width="80%" />
               </Flex>
               {/* 
               <Flex alignItems="stretch" display={["none", "none", "flex"]}>
