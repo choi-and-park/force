@@ -27,8 +27,8 @@ import { Footer as BaseFooter } from "v2/Components/Footer"
 
 export const Footer = () => {
   return (
-    <Box px={2}>
-      <BaseFooter />
+    <Box px={0}>
+      {/* <BaseFooter /> */}
     </Box>
   )
 }

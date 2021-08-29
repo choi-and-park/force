@@ -1,0 +1,49 @@
+- var length = profiles.length
+
+if length > 0
+
+  if length > 1
+    .gpc-bumpers.js-gpc-navigation
+      .gpc-bumper-prev.gi-carousel-arrow-prev.js-gpc-prev: i.icon-chevron-left
+      .gpc-bumber-next.gi-carousel-arrow-next.js-gpc-next: i.icon-chevron-right
+
+  .gpc-body
+    .gpc-overlays
+      for profile, i in profiles
+        - var show = profile.show
+        .gpc-overlay.js-gpc-overlay( data-idx= i )
+          a.gpc-headline( href= profile.owner.href )
+            = profile.owner.name
+
+          if show
+            a( href= show.href )
+              .gpc-subheadline
+                = show.subname
+              .gpc-subheadline-alt
+                = show.name
+              .gpc-location-dates
+                = show.loccation_width_dates
+
+          button.gpc-follow-button.is-small.avant-garde-follow-button-black.follow-button.js-follow-button(
+            data-id= profile.id
+          )
+
+      - var index = 0
+      .mgr-dots
+        if length > 1
+          for x, i in new Array(length)
+            .mgr-dot.js-gpc-dot(
+              class= (index === i ? 'is-active' : undefined)
+              data-index= i
+            ) •
+
+    .gpc-carousel
+      .gpc-carousel-cells.js-mgr-cells
+        for profile in profiles
+          - var show = profile.show
+          .gpc-carousel-cell.js-mgr-cell
+            - var imageUrl = show.image
+            a.gpc-carousel-figure(
+              href= show.href
+              style='background-image: url(' + imageUrl + ')'
+            )
