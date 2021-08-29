@@ -62,7 +62,7 @@ const HomeFeaturedGalleriesContainer: React.FC = ({ children }) => {
         </Text>
       </Flex>
 
-      <Spacer mt={4} />
+      <Spacer mt={2} />
 
       {children}
     </>

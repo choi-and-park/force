@@ -20,23 +20,26 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
         aspectWidth={4}
         aspectHeight={3}
         maxWidth="100%"
-        bg="black10"
+        bg="white"
       >
         {image && (
           <Image
             src={image.src}
             srcSet={image.srcSet}
-            width="100%"
-            height="100%"
+            mt={1}
+            ml={1}
+            width="90%"
+            height="90%"
             alt=""
           />
         )}
       </ResponsiveBox>
 
-      <Spacer mt={1} />
+      {/* <Spacer mt={1} /> */}
 
       <Text
         variant="md"
+        ml={1}
         mr={1}
         lineClamp={2}
         style={{
@@ -50,6 +53,7 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
       <Text
         variant="md"
         color="black60"
+        ml={1}
         lineClamp={1}
         style={{
           fontFamily: "Gowun Dodum",

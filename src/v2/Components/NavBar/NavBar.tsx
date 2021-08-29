@@ -174,6 +174,10 @@ export const NavBar: React.FC = track(
               </Flex>
               {/* Mobile. Triggers at the `xs` breakpoint. */}
               <Flex display={["flex", "none"]}>
+                <NavBarPrimaryLogo mr={1} />
+                <Flex flex={1} alignItems="center">
+                  <SearchBarQueryRenderer width="100%" />
+                </Flex>
                 <NavBarItemButton
                   ml={1}
                   mr={-1}
@@ -311,13 +315,13 @@ export const NavBar: React.FC = track(
                 <NavBarItemLink>Shows</NavBarItemLink>
 
                 {/* <NavBarItemLink href="/viewing-rooms" onClick={handleClick}> */}
-                <NavBarItemLink>Viewing&nbsp;Rooms</NavBarItemLink>
+                {/* <NavBarItemLink>Viewing&nbsp;Rooms</NavBarItemLink> */}
 
                 <NavBarItemLink>Rental</NavBarItemLink>
                 <NavBarItemLink>F.I.</NavBarItemLink>
                 <NavBarItemLink>NFT</NavBarItemLink>
               </Flex>
-              <Flex flex={1} alignItems="right" pl={1} ml={1}>
+              <Flex flex={1} alignItems="right" pl={4} ml="70px">
                 <SearchBarQueryRenderer width="80%" />
               </Flex>
               {/* 
