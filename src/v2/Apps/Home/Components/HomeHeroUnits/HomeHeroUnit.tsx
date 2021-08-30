@@ -8,7 +8,6 @@ import {
   Button,
   GridColumns,
   Column,
-  HTML,
 } from "@artsy/palette"
 import { Link } from "react-head"
 import { RouterLink } from "v2/System/Router/RouterLink"

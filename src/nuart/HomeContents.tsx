@@ -630,9 +630,9 @@ const artworks_shows = {
   ],
 }
 
-export const homeContents = {
+export const HomeContents = {
   banners: banners,
   events: events,
   categories: categories,
-  artworkModuels: [artworks_artists, artworks_galleries, artworks_shows],
+  artworkModules: [artworks_artists, artworks_galleries, artworks_shows],
 }

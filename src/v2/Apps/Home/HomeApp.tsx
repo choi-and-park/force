@@ -5,7 +5,7 @@ import { HomeFeaturedCategoriesRailQueryRenderer } from "./Components/HomeFeatur
 import { HomeHeroUnitsFragmentContainer } from "./Components/HomeHeroUnits/HomeHeroUnits"
 import { HomeFeaturedEventsRailFragmentContainer } from "./Components/HomeFeaturedEventsRail"
 import { HomeMeta } from "./Components/HomeMeta"
-import { homeContents } from "nuart/HomeContents"
+import { HomeContents } from "nuart/HomeContents"
 
 export const HomeAppFragmentContainer = props => {
   return (
@@ -14,20 +14,20 @@ export const HomeAppFragmentContainer = props => {
 
       <Spacer mt={[1, 0]} />
 
-      <HomeHeroUnitsFragmentContainer heroUnits={homeContents.banners} />
+      <HomeHeroUnitsFragmentContainer heroUnits={HomeContents.banners} />
 
       <Spacer mt={1} />
 
       <Join separator={<Spacer mt={4} />}>
-        {/* <HomeFeaturedEventsRailFragmentContainer events={homeContents.events} />
-        <Separator /> */}
+        <HomeFeaturedEventsRailFragmentContainer events={HomeContents.events} />
+        <Separator />
 
         <HomeFeaturedCategoriesRailQueryRenderer
-          categories={homeContents.categories}
+          categories={HomeContents.categories}
         />
 
         <HomeArtworkModulesFragmentContainer
-          artworkModules={homeContents.artworkModuels}
+          artworkModules={HomeContents.artworkModules}
         />
       </Join>
 

@@ -26,7 +26,7 @@ module.exports = class PrimaryCarousel extends Backbone.View
     promise = fetchProfiles(params.toJSON())
     promise.then (profiles) =>
       @profiles.reset profiles.models
-
+    
   render: ->
     @destroyFlickity()
     @$el.html template profiles: @profiles.models

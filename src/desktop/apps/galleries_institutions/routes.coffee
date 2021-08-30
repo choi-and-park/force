@@ -1,6 +1,6 @@
 _ = require 'underscore'
 { cache } = require('../../../lib/cache')
-metaphysics = require '../../../lib/metaphysics2.coffee'
+# metaphysics = require '../../../lib/metaphysics2.coffee'
 { API_URL } = require('sharify').data
 PartnerCities = require '../../collections/partner_cities'
 PartnerFeaturedCities = require '../../collections/partner_featured_cities'
@@ -10,6 +10,7 @@ partnerTypes = require './queries/partner_types'
 mergeBuckets = require './components/partner_cell_carousel/merge_buckets'
 fetchPrimaryCarousel = require './components/primary_carousel/fetch'
 facetDefaults = require './components/filter_facet/facet_defaults.coffee'
+{ GalleryContents, GalleryProfiles } = require '../../../nuart/GalleryContents'
 
 mapType =
   galleries: 'gallery'
@@ -30,41 +31,48 @@ filterPartnerCategories = (data) ->
 
 fetchPartnerCategories = (type) ->
   new Promise (resolve, reject) ->
-    cache.get "partner_categories:#{type}", (err, cachedData) ->
-      return reject(err) if err
-      return resolve(JSON.parse(cachedData)) if cachedData
+    categories = GalleryContents
+    return resolve(categories)
+  
+  # new Promise (resolve, reject) ->
+  #   cache.get "partner_categories:#{type}", (err, cachedData) ->
+  #     return reject(err) if err
+  #     return resolve(JSON.parse(cachedData)) if cachedData
 
-      metaphysics(
-        query: query
-        variables: _.extend categoryType: type.toUpperCase(), type: partnerTypes[type]
-      ).then (data) ->
-        categories = filterPartnerCategories data
-        cache.set "partner_categories:#{type}", JSON.stringify(categories)
-        resolve(categories)
+  #     metaphysics(
+  #       query: query
+  #       variables: _.extend categoryType: type.toUpperCase(), type: partnerTypes[type]
+  #     ).then (data) ->
+  #       categories = filterPartnerCategories data
+  #       cache.set "partner_categories:#{type}", JSON.stringify(categories)
+  #       console.log("categories", categories)
+  #       resolve(categories)
 
 @index = (req, res, next) ->
   type = mapType[req.params.type]
   searchParams = _.pick(req.query, 'location', 'category')
   params = _.extend type: type, searchParams
-  partnerCities = new PartnerCities()
-  partnerFeaturedCities = new PartnerFeaturedCities()
+  # partnerCities = new PartnerCities()
+  # partnerFeaturedCities = new PartnerFeaturedCities()
 
   Promise.all([
     fetchPrimaryCarousel(params)
-    partnerCities.fetch()
-    partnerFeaturedCities.fetch()
+    # partnerCities.fetch()
+    # partnerFeaturedCities.fetch()
     fetchPartnerCategories(type)
   ])
-    .then ([profiles, partnerCities, partnerFeaturedCities, categories]) ->
+    # .then ([profiles, partnerCities, partnerFeaturedCities, categories]) ->
+    .then ([profiles, categories]) ->
       res.locals.sd.MAIN_PROFILES = profiles.toJSON()
-      res.locals.sd.PARTNER_CITIES = partnerCities
-      res.locals.sd.PARTNER_FEATURED_CITIES = partnerFeaturedCities
+      # res.locals.sd.PARTNER_CITIES = partnerCities
+      # res.locals.sd.PARTNER_FEATURED_CITIES = partnerFeaturedCities
       res.locals.sd.CATEGORIES = _.map(categories, (c) -> _.pick c, 'id', 'name')
 
       res.render 'index',
         ViewHelpers: ViewHelpers
         type: type
-        profiles: profiles.models
+        # profiles: profiles.models
+        profiles: GalleryProfiles
         categories: _.shuffle categories
         facets: facetDefaults(type)
         state: if _.isEmpty(searchParams) then 'landing' else 'search'

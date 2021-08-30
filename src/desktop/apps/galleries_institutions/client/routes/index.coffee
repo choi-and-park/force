@@ -24,10 +24,10 @@ module.exports = class PartnersView extends Backbone.View
       mainCarouselIds = _.pluck MAIN_PROFILES, 'id'
       following.syncFollows mainCarouselIds
 
-    new LandingCarouselView
-      following: following
-      params: @params
-      el: $('.js-partner-category-carousels')
+    # new LandingCarouselView
+    #   following: following
+    #   params: @params
+    #   el: $('.js-partner-category-carousels')
 
     new PrimaryCarousel
       following: following
