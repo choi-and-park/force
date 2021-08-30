@@ -9,14 +9,14 @@ export const GalleryModuleRailFragmentRenderer = ({ galleryModule }) => {
   ): React.ReactElement => {
     return (
       <Flex flexDirection="row">
-        {slideIndex !== 0 && <Spacer ml="15px" />}
+        {slideIndex !== 0 && <Spacer ml="40px" />}
         <Link href={`/viewing-room/${slug}`} key={slug} noUnderline>
           <MediumCard
             image={image.src}
             title=""
             subtitle=""
-            width={280}
-            height={320}
+            width={320}
+            height={200}
           />
           <Text variant="md">{name}</Text>
           <Text variant="xs">{location}</Text>
@@ -29,7 +29,7 @@ export const GalleryModuleRailFragmentRenderer = ({ galleryModule }) => {
     <Box>
       <Text variant="lg">{galleryModule.title}</Text>
       <GalleryModuleCarousel
-        height={340}
+        height={220}
         data={galleryModule.galleries}
         render={carouselItemRender}
         maxWidth="100%"

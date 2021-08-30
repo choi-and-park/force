@@ -117,7 +117,12 @@ const galleries_seoul = {
 
 export const GalleryContents = {
   banners: banners,
-  galleryModules: [galleries_seoul, galleries_seoul],
+  galleryModules: [
+    galleries_seoul,
+    galleries_seoul,
+    galleries_seoul,
+    galleries_seoul,
+  ],
   // events: events,
   // categories: categories,
   // artworkModuels: [artworks_artists, artworks_galleries, artworks_shows],

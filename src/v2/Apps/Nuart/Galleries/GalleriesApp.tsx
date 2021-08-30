@@ -8,7 +8,8 @@ import { GalleryContents } from "nuart/GalleryContents"
 export const GalleriesAppFragmentContainer = props => {
   return (
     <>
-      <Box maxWidth={breakpoints.xl} mx="auto" width="100%">
+      {/* <Box maxWidth={breakpoints.xl} mx="auto" width="100%"> */}
+      <Box maxWidth={1100} mx="auto" width="90%">
         <Box mx={2}>
           {/* <Spacer mt={[2, 4]} />
 
@@ -30,6 +31,7 @@ export const GalleriesAppFragmentContainer = props => {
             galleryModules={GalleryContents.galleryModules}
           />
         </Box>
+        <Spacer mt={[2, 4]} />
       </Box>
     </>
   )
