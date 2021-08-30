@@ -64,15 +64,15 @@ export const partnerRoutes: AppRouteConfig[] = [
     prepare: () => {
       PartnerApp.preload()
     },
-    query: graphql`
-      query partnerRoutes_PartnerQuery($partnerId: String!) {
-        partner(id: $partnerId) @principalField {
-          partnerType
-          displayFullPartnerPage
-          ...PartnerApp_partner
-        }
-      }
-    `,
+    // query: graphql`
+    //   query partnerRoutes_PartnerQuery($partnerId: String!) {
+    //     partner(id: $partnerId) @principalField {
+    //       partnerType
+    //       displayFullPartnerPage
+    //       ...PartnerApp_partner
+    //     }
+    //   }
+    // `,
     render: ({ Component, props, match }) => {
       if (!(Component && props)) {
         return undefined
@@ -103,273 +103,273 @@ export const partnerRoutes: AppRouteConfig[] = [
         prepare: () => {
           OverviewRoute.preload()
         },
-        query: graphql`
-          query partnerRoutes_OverviewQuery($partnerId: String!) {
-            partner(id: $partnerId) @principalField {
-              ...Overview_partner
-            }
-          }
-        `,
+        // query: graphql`
+        //   query partnerRoutes_OverviewQuery($partnerId: String!) {
+        //     partner(id: $partnerId) @principalField {
+        //       ...Overview_partner
+        //     }
+        //   }
+        // `,
       },
-      {
-        getComponent: () => ArticlesRoute,
-        path: "articles",
-        prepare: () => {
-          ArticlesRoute.preload()
-        },
-        ignoreScrollBehavior: true,
-        prepareVariables: (params, { location }) => {
-          return {
-            ...params,
-            page: location.query.page,
-          }
-        },
-        query: graphql`
-          query partnerRoutes_ArticlesQuery($partnerId: String!, $page: Int) {
-            partner(id: $partnerId) @principalField {
-              articles: articlesConnection(first: 0) {
-                totalCount
-              }
-              ...Articles_partner @arguments(page: $page)
-            }
-          }
-        `,
-        render: ({ Component, props, match }) => {
-          if (!(Component && props)) {
-            return
-          }
+      // {
+      //   getComponent: () => ArticlesRoute,
+      //   path: "articles",
+      //   prepare: () => {
+      //     ArticlesRoute.preload()
+      //   },
+      //   ignoreScrollBehavior: true,
+      //   prepareVariables: (params, { location }) => {
+      //     return {
+      //       ...params,
+      //       page: location.query.page,
+      //     }
+      //   },
+      //   query: graphql`
+      //     query partnerRoutes_ArticlesQuery($partnerId: String!, $page: Int) {
+      //       partner(id: $partnerId) @principalField {
+      //         articles: articlesConnection(first: 0) {
+      //           totalCount
+      //         }
+      //         ...Articles_partner @arguments(page: $page)
+      //       }
+      //     }
+      //   `,
+      //   render: ({ Component, props, match }) => {
+      //     if (!(Component && props)) {
+      //       return
+      //     }
 
-          const { partner } = props as any
+      //     const { partner } = props as any
 
-          if (!partner) {
-            return
-          }
+      //     if (!partner) {
+      //       return
+      //     }
 
-          const {
-            articles: { totalCount },
-          } = partner
+      //     const {
+      //       articles: { totalCount },
+      //     } = partner
 
-          if (!totalCount) {
-            throw new RedirectException(
-              `/partner/${match.params.partnerId}`,
-              302
-            )
-          }
+      //     if (!totalCount) {
+      //       throw new RedirectException(
+      //         `/partner/${match.params.partnerId}`,
+      //         302
+      //       )
+      //     }
 
-          return <Component {...props} />
-        },
-      },
-      {
-        getComponent: () => ShowsRoute,
-        path: "shows",
-        ignoreScrollBehavior: true,
-        prepare: () => {
-          ShowsRoute.preload()
-        },
-        query: graphql`
-          query partnerRoutes_ShowsQuery($partnerId: String!) {
-            partner(id: $partnerId) @principalField {
-              counts {
-                displayableShows
-              }
-              ...Shows_partner
-            }
-          }
-        `,
-        render: ({ Component, props, match }) => {
-          if (!(Component && props)) {
-            return
-          }
+      //     return <Component {...props} />
+      //   },
+      // },
+      // {
+      //   getComponent: () => ShowsRoute,
+      //   path: "shows",
+      //   ignoreScrollBehavior: true,
+      //   prepare: () => {
+      //     ShowsRoute.preload()
+      //   },
+      //   query: graphql`
+      //     query partnerRoutes_ShowsQuery($partnerId: String!) {
+      //       partner(id: $partnerId) @principalField {
+      //         counts {
+      //           displayableShows
+      //         }
+      //         ...Shows_partner
+      //       }
+      //     }
+      //   `,
+      //   render: ({ Component, props, match }) => {
+      //     if (!(Component && props)) {
+      //       return
+      //     }
 
-          const { partner } = props as any
+      //     const { partner } = props as any
 
-          if (!partner) {
-            return
-          }
+      //     if (!partner) {
+      //       return
+      //     }
 
-          const {
-            counts: { displayableShows },
-          } = partner
+      //     const {
+      //       counts: { displayableShows },
+      //     } = partner
 
-          if (!displayableShows) {
-            throw new RedirectException(
-              `/partner/${match.params.partnerId}`,
-              302
-            )
-          }
+      //     if (!displayableShows) {
+      //       throw new RedirectException(
+      //         `/partner/${match.params.partnerId}`,
+      //         302
+      //       )
+      //     }
 
-          return <Component {...props} />
-        },
-      },
-      {
-        getComponent: () => WorksRoute,
-        path: "works",
-        prepare: () => {
-          WorksRoute.preload()
-        },
-        prepareVariables: (data, props) => {
-          const filterStateFromUrl = props.location ? props.location.query : {}
-          const aggregations = [
-            "TOTAL",
-            "MEDIUM",
-            "MATERIALS_TERMS",
-            "ARTIST_NATIONALITY",
-            "ARTIST",
-          ]
+      //     return <Component {...props} />
+      //   },
+      // },
+      // {
+      //   getComponent: () => WorksRoute,
+      //   path: "works",
+      //   prepare: () => {
+      //     WorksRoute.preload()
+      //   },
+      //   prepareVariables: (data, props) => {
+      //     const filterStateFromUrl = props.location ? props.location.query : {}
+      //     const aggregations = [
+      //       "TOTAL",
+      //       "MEDIUM",
+      //       "MATERIALS_TERMS",
+      //       "ARTIST_NATIONALITY",
+      //       "ARTIST",
+      //     ]
 
-          if (!!props.context.user) {
-            aggregations.push("FOLLOWED_ARTISTS")
-          }
+      //     if (!!props.context.user) {
+      //       aggregations.push("FOLLOWED_ARTISTS")
+      //     }
 
-          const filterParams = {
-            ...initialArtworkFilterState,
-            ...paramsToCamelCase(filterStateFromUrl),
-          }
+      //     const filterParams = {
+      //       ...initialArtworkFilterState,
+      //       ...paramsToCamelCase(filterStateFromUrl),
+      //     }
 
-          return {
-            aggregations,
-            input: allowedFilters(filterParams),
-            partnerId: data.partnerId,
-            shouldFetchCounts: !!props.context.user,
-          }
-        },
-        ignoreScrollBehavior: true,
-        query: graphql`
-          query partnerRoutes_WorksQuery(
-            $partnerId: String!
-            $input: FilterArtworksInput
-            $aggregations: [ArtworkAggregation]
-            $shouldFetchCounts: Boolean!
-          ) {
-            partner(id: $partnerId) @principalField {
-              ...Works_partner
-                @arguments(
-                  input: $input
-                  aggregations: $aggregations
-                  shouldFetchCounts: $shouldFetchCounts
-                )
-              displayWorksSection
-              counts {
-                eligibleArtworks
-              }
-            }
-          }
-        `,
-        render: ({ Component, props, match }) => {
-          if (!(Component && props)) {
-            return
-          }
+      //     return {
+      //       aggregations,
+      //       input: allowedFilters(filterParams),
+      //       partnerId: data.partnerId,
+      //       shouldFetchCounts: !!props.context.user,
+      //     }
+      //   },
+      //   ignoreScrollBehavior: true,
+      //   query: graphql`
+      //     query partnerRoutes_WorksQuery(
+      //       $partnerId: String!
+      //       $input: FilterArtworksInput
+      //       $aggregations: [ArtworkAggregation]
+      //       $shouldFetchCounts: Boolean!
+      //     ) {
+      //       partner(id: $partnerId) @principalField {
+      //         ...Works_partner
+      //           @arguments(
+      //             input: $input
+      //             aggregations: $aggregations
+      //             shouldFetchCounts: $shouldFetchCounts
+      //           )
+      //         displayWorksSection
+      //         counts {
+      //           eligibleArtworks
+      //         }
+      //       }
+      //     }
+      //   `,
+      //   render: ({ Component, props, match }) => {
+      //     if (!(Component && props)) {
+      //       return
+      //     }
 
-          const { partner } = props as any
+      //     const { partner } = props as any
 
-          if (!partner) {
-            return
-          }
+      //     if (!partner) {
+      //       return
+      //     }
 
-          const {
-            displayWorksSection,
-            counts: { eligibleArtworks },
-          } = partner
+      //     const {
+      //       displayWorksSection,
+      //       counts: { eligibleArtworks },
+      //     } = partner
 
-          if (!displayWorksSection || eligibleArtworks <= 0) {
-            throw new RedirectException(
-              `/partner/${match.params.partnerId}`,
-              302
-            )
-          }
+      //     if (!displayWorksSection || eligibleArtworks <= 0) {
+      //       throw new RedirectException(
+      //         `/partner/${match.params.partnerId}`,
+      //         302
+      //       )
+      //     }
 
-          return <Component {...props} />
-        },
-      },
-      {
-        getComponent: () => ArtistsRoute,
-        path: "artists/:artistId?",
-        prepare: () => {
-          ArtistsRoute.preload()
-        },
-        ignoreScrollBehavior: true,
-        query: graphql`
-          query partnerRoutes_ArtistsQuery($partnerId: String!) {
-            partner(id: $partnerId) @principalField {
-              ...ArtistsRoute_partner
-              displayArtistsSection
-              allArtistsConnection(
-                displayOnPartnerProfile: true
-                hasNotRepresentedArtistWithPublishedArtworks: true
-              ) {
-                totalCount
-              }
-            }
-          }
-        `,
-        render: ({ Component, props, match }) => {
-          const pageProps = props as any
+      //     return <Component {...props} />
+      //   },
+      // },
+      // {
+      //   getComponent: () => ArtistsRoute,
+      //   path: "artists/:artistId?",
+      //   prepare: () => {
+      //     ArtistsRoute.preload()
+      //   },
+      //   ignoreScrollBehavior: true,
+      //   query: graphql`
+      //     query partnerRoutes_ArtistsQuery($partnerId: String!) {
+      //       partner(id: $partnerId) @principalField {
+      //         ...ArtistsRoute_partner
+      //         displayArtistsSection
+      //         allArtistsConnection(
+      //           displayOnPartnerProfile: true
+      //           hasNotRepresentedArtistWithPublishedArtworks: true
+      //         ) {
+      //           totalCount
+      //         }
+      //       }
+      //     }
+      //   `,
+      //   render: ({ Component, props, match }) => {
+      //     const pageProps = props as any
 
-          if (!(Component && pageProps && pageProps.partner)) {
-            return undefined
-          }
+      //     if (!(Component && pageProps && pageProps.partner)) {
+      //       return undefined
+      //     }
 
-          const {
-            partner: { displayArtistsSection, allArtistsConnection: artists },
-          } = pageProps
+      //     const {
+      //       partner: { displayArtistsSection, allArtistsConnection: artists },
+      //     } = pageProps
 
-          if (!(displayArtistsSection && artists && artists.totalCount > 0)) {
-            throw new RedirectException(
-              `/partner/${match.params.partnerId}`,
-              302
-            )
-          }
+      //     if (!(displayArtistsSection && artists && artists.totalCount > 0)) {
+      //       throw new RedirectException(
+      //         `/partner/${match.params.partnerId}`,
+      //         302
+      //       )
+      //     }
 
-          return <Component {...props} />
-        },
-      },
-      {
-        getComponent: () => ContactRoute,
-        path: "contact",
-        prepare: () => {
-          ContactRoute.preload()
-        },
-        ignoreScrollBehavior: true,
-        query: graphql`
-          query partnerRoutes_ContactQuery($partnerId: String!) {
-            partner(id: $partnerId) @principalField {
-              ...Contact_partner
-              locations: locationsConnection(first: 50) {
-                totalCount
-              }
-            }
-          }
-        `,
-        render: ({ Component, props, match }) => {
-          if (!(Component && props)) {
-            return undefined
-          }
+      //     return <Component {...props} />
+      //   },
+      // },
+      // {
+      //   getComponent: () => ContactRoute,
+      //   path: "contact",
+      //   prepare: () => {
+      //     ContactRoute.preload()
+      //   },
+      //   ignoreScrollBehavior: true,
+      //   query: graphql`
+      //     query partnerRoutes_ContactQuery($partnerId: String!) {
+      //       partner(id: $partnerId) @principalField {
+      //         ...Contact_partner
+      //         locations: locationsConnection(first: 50) {
+      //           totalCount
+      //         }
+      //       }
+      //     }
+      //   `,
+      //   render: ({ Component, props, match }) => {
+      //     if (!(Component && props)) {
+      //       return undefined
+      //     }
 
-          const { partner } = props as any
+      //     const { partner } = props as any
 
-          if (!partner) {
-            return undefined
-          }
+      //     if (!partner) {
+      //       return undefined
+      //     }
 
-          if (!partner.locations || partner.locations.totalCount === 0) {
-            throw new RedirectException(
-              `/partner/${match.params.partnerId}`,
-              302
-            )
-          }
+      //     if (!partner.locations || partner.locations.totalCount === 0) {
+      //       throw new RedirectException(
+      //         `/partner/${match.params.partnerId}`,
+      //         302
+      //       )
+      //     }
 
-          return <Component {...props} />
-        },
-      },
-      {
-        path: "overview",
-        render: props => {
-          throw new RedirectException(
-            `/partner/${props.match.params.partnerId}`,
-            302
-          )
-        },
-      },
+      //     return <Component {...props} />
+      //   },
+      // },
+      // {
+      //   path: "overview",
+      //   render: props => {
+      //     throw new RedirectException(
+      //       `/partner/${props.match.params.partnerId}`,
+      //       302
+      //     )
+      //   },
+      // },
     ],
   },
 ]

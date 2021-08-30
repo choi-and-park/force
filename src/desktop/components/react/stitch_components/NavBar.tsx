@@ -39,7 +39,7 @@ export const NavBar: React.FC<NavBarProps> = ({
       user={user}
     >
       <NavBarContainer id="main-layout-header">
-        {showStagingBanner && <StagingBanner />}
+        {/* {showStagingBanner && <StagingBanner />} */}
         <ReactionNavBar />
         <FlashBanner />
       </NavBarContainer>

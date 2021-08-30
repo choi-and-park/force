@@ -42,19 +42,20 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({ partner }) => {
       },
       {
         name: "Events",
-        href: route("/shows"),
+        // href: route("/shows"),
+        href: route("/nuart"),
         exact: true,
         hidden: !counts?.displayableShows,
       },
       {
         name: partnerType === "Brand" ? "Shop" : "Works",
-        href: route("/works"),
+        href: route("/nuart"),
         exact: true,
         hidden: !displayWorksSection || !counts?.eligibleArtworks,
       },
       {
         name: "Artists",
-        href: route("/artists"),
+        href: route("/nuart"),
         exact: false,
         hidden: !(
           displayArtistsSection &&
@@ -64,13 +65,13 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({ partner }) => {
       },
       {
         name: "Articles",
-        href: route("/articles"),
+        href: route("/nuart"),
         exact: true,
         hidden: !articles || !articles.totalCount,
       },
       {
         name: "Contact",
-        href: route("/contact"),
+        href: route("/nuart"),
         exact: true,
         hidden: !locations || !locations.totalCount,
       },
@@ -84,7 +85,13 @@ export const NavigationTabs: React.FC<NavigationTabsProps> = ({ partner }) => {
           selector="#jumpto--PartnerHeader"
           offset={scrollOffset}
         >
-          <RouteTab to={route.href} exact={route.exact}>
+          <RouteTab
+            to={route.href}
+            exact={route.exact}
+            onClick={e => {
+              e.preventDefault()
+            }}
+          >
             {route.name}
           </RouteTab>
         </ScrollIntoView>

@@ -5,12 +5,12 @@ import { usePartnerShowBannersContext } from "v2/Apps/Partner/Utils/PartnerShowB
 import { ShowBannersDesktopCarousel_shows } from "v2/__generated__/ShowBannersDesktopCarousel_shows.graphql"
 import { createFragmentContainer, graphql } from "react-relay"
 
-export interface ShowBannersDesktopCarouselProps {
-  shows: ShowBannersDesktopCarousel_shows
-  onChange?(index: number): void
-}
+// export interface ShowBannersDesktopCarouselProps {
+//   shows: ShowBannersDesktopCarousel_shows
+//   onChange?(index: number): void
+// }
 
-const ShowBannersDesktopCarousel: React.FC<ShowBannersDesktopCarouselProps> = ({
+export const ShowBannersDesktopCarouselFragmentContainer = ({
   shows,
   onChange,
 }) => {
@@ -48,14 +48,14 @@ const ShowBannersDesktopCarousel: React.FC<ShowBannersDesktopCarouselProps> = ({
   )
 }
 
-export const ShowBannersDesktopCarouselFragmentContainer = createFragmentContainer(
-  ShowBannersDesktopCarousel,
-  {
-    shows: graphql`
-      fragment ShowBannersDesktopCarousel_shows on Show @relay(plural: true) {
-        id
-        ...ShowBanner_show
-      }
-    `,
-  }
-)
+// export const ShowBannersDesktopCarouselFragmentContainer = createFragmentContainer(
+//   ShowBannersDesktopCarousel,
+//   {
+//     shows: graphql`
+//       fragment ShowBannersDesktopCarousel_shows on Show @relay(plural: true) {
+//         id
+//         ...ShowBanner_show
+//       }
+//     `,
+//   }
+// )

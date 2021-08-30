@@ -8,9 +8,10 @@ jest.unmock("react-relay")
 const { getWrapper } = setupTestWrapper({
   Component: ({ partner }: any) => {
     return (
-      <ShowBannerFragmentContainer
-        show={partner.showsConnection.edges[0].node}
-      />
+      <>{"nuart"}</>
+      // <ShowBannerFragmentContainer
+      //   show={partner.showsConnection.edges[0].node}
+      // />
     )
   },
   query: graphql`

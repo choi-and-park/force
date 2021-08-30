@@ -4,12 +4,12 @@ import { ShowBannerFragmentContainer } from "../../PartnerShows"
 import { ShowBannersMobileCarousel_shows } from "v2/__generated__/ShowBannersMobileCarousel_shows.graphql"
 import { createFragmentContainer, graphql } from "react-relay"
 
-export interface MobileCarouselProps {
-  shows: ShowBannersMobileCarousel_shows
-  onChange?(index: number): void
-}
+// export interface MobileCarouselProps {
+//   shows: ShowBannersMobileCarousel_shows
+//   onChange?(index: number): void
+// }
 
-const ShowBannersMobileCarousel: React.FC<MobileCarouselProps> = ({
+export const ShowBannersMobileCarouselFragmentContainer = ({
   shows,
   onChange,
 }) => {
@@ -34,20 +34,27 @@ const ShowBannersMobileCarousel: React.FC<MobileCarouselProps> = ({
       }}
     >
       {shows.map((show, i) => {
-        return <ShowBannerFragmentContainer key={show.id} show={show} />
+        return (
+          <ShowBannerFragmentContainer
+            key={show.id}
+            show={show}
+            selected={false}
+            withAnimation={false}
+          />
+        )
       })}
     </Swiper>
   )
 }
 
-export const ShowBannersMobileCarouselFragmentContainer = createFragmentContainer(
-  ShowBannersMobileCarousel,
-  {
-    shows: graphql`
-      fragment ShowBannersMobileCarousel_shows on Show @relay(plural: true) {
-        id
-        ...ShowBanner_show
-      }
-    `,
-  }
-)
+// export const ShowBannersMobileCarouselFragmentContainer = createFragmentContainer(
+//   ShowBannersMobileCarousel,
+//   {
+//     shows: graphql`
+//       fragment ShowBannersMobileCarousel_shows on Show @relay(plural: true) {
+//         id
+//         ...ShowBanner_show
+//       }
+//     `,
+//   }
+// )

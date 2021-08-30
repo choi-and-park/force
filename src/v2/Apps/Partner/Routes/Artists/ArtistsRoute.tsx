@@ -4,7 +4,7 @@ import { Match } from "found"
 import {
   PartnerArtistDetailsListRenderer,
   PartnerArtistDetailsRenderer,
-  PartnerArtistsFragmentContainer,
+  // PartnerArtistsFragmentContainer,
 } from "../../Components/PartnerArtists"
 import { ArtistsRoute_partner } from "v2/__generated__/ArtistsRoute_partner.graphql"
 import { PARTNER_NAV_BAR_HEIGHT } from "../../Components/NavigationTabs"
@@ -49,7 +49,7 @@ export const ArtistsRoute: React.FC<ArtistsRouteProps> = ({
       <Text variant="title" mb={6}>
         Artists
       </Text>
-      <Media greaterThan="xs">
+      {/* <Media greaterThan="xs">
         <PartnerArtistsFragmentContainer
           scrollTo={{
             selector: "#jump--PartnerArtistDetails",
@@ -66,7 +66,7 @@ export const ArtistsRoute: React.FC<ArtistsRouteProps> = ({
           }}
           partner={partner}
         />
-      </Media>
+      </Media> */}
 
       {match.params.artistId ? (
         <PartnerArtistDetailsRenderer

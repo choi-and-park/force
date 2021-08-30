@@ -10,99 +10,58 @@ import { ArtworksRailRenderer } from "../../Components/Overview/ArtworksRail"
 import { ShowBannersRailRenderer } from "../../Components/Overview/ShowBannersRail"
 import { NearbyGalleriesRailRenderer } from "../../Components/Overview/NearbyGalleriesRail"
 
+import { gallery_arario } from "nuart/GalleryContents"
+
 interface OverviewProps {
   partner: Overview_partner
 }
 
-const Overview: React.FC<OverviewProps> = ({ partner }) => {
-  const {
-    slug,
-    partnerType,
-    displayFullPartnerPage,
-    profileBannerDisplay,
-    displayArtistsSection,
-    // @ts-expect-error STRICT_NULL_CHECK
-    articlesConnection: { edges: articles },
-    locationsConnection,
-  } = partner
+export const OverviewFragmentContainer = () => {
+  const gallery = gallery_arario
 
-  const location = locationsConnection?.edges![0]?.node
-
-  const hasArticles = articles.length > 0
-
-  return displayFullPartnerPage ? (
+  return (
     <>
-      {profileBannerDisplay === "Artworks" ? (
-        <ArtworksRailRenderer mt={4} mb={[4, 80]} partnerId={slug} />
-      ) : (
-        <ShowBannersRailRenderer mt={4} mb={[4, 80]} partnerId={slug} />
-      )}
+      <ShowBannersRailRenderer mt={4} mb={[4, 80]} partner={gallery} />
 
-      <AboutPartnerFragmentContainer partner={partner} />
+      <AboutPartnerFragmentContainer partner={gallery} />
 
-      <ShowsRailFragmentContainer mt={4} mb={[4, 80]} partner={partner} />
-      {displayArtistsSection && (
-        <ArtistsRailFragmentContainer mt={4} mb={[4, 80]} partner={partner} />
-      )}
-      {hasArticles && (
-        <ArticlesRailFragmentContainer partnerSlug={slug} articles={articles} />
-      )}
-    </>
-  ) : (
-    <>
-      {partnerType !== "Brand" && (
-        <SubscriberBannerFragmentContainer partner={partner} />
-      )}
+      <ShowsRailFragmentContainer mt={4} mb={[4, 80]} partner={gallery} />
 
-      <AboutPartnerFragmentContainer partner={partner} />
-
-      <ShowsRailFragmentContainer mt={4} mb={[4, 80]} partner={partner} />
-
-      {displayArtistsSection && (
-        <ArtistsRailFragmentContainer mt={4} mb={[4, 80]} partner={partner} />
-      )}
-
-      {location && location.coordinates && (
-        <NearbyGalleriesRailRenderer
-          mt={[4, 6]}
-          near={`${location.coordinates.lat},${location.coordinates.lng}`}
-          city={location.city}
-        />
-      )}
+      <ArtistsRailFragmentContainer mt={4} mb={[4, 80]} partner={gallery} />
     </>
   )
 }
 
-export const OverviewFragmentContainer = createFragmentContainer(Overview, {
-  partner: graphql`
-    fragment Overview_partner on Partner {
-      slug
-      partnerType
-      displayFullPartnerPage
-      profileBannerDisplay
-      displayArtistsSection
-      ...AboutPartner_partner
-      ...ShowsRail_partner
-      ...ArtistsRail_partner
-      ...SubscriberBanner_partner
-      locationsConnection(first: 1) {
-        edges {
-          node {
-            city
-            coordinates {
-              lat
-              lng
-            }
-          }
-        }
-      }
-      articlesConnection(first: 8)
-        @connection(key: "ArticlesQuery_articlesConnection") {
-        totalCount
-        edges {
-          ...ArticlesRail_articles
-        }
-      }
-    }
-  `,
-})
+// export const OverviewFragmentContainer = createFragmentContainer(Overview, {
+//   partner: graphql`
+//     fragment Overview_partner on Partner {
+//       slug
+//       partnerType
+//       displayFullPartnerPage
+//       profileBannerDisplay
+//       displayArtistsSection
+//       ...AboutPartner_partner
+//       ...ShowsRail_partner
+//       ...ArtistsRail_partner
+//       ...SubscriberBanner_partner
+//       locationsConnection(first: 1) {
+//         edges {
+//           node {
+//             city
+//             coordinates {
+//               lat
+//               lng
+//             }
+//           }
+//         }
+//       }
+//       articlesConnection(first: 8)
+//         @connection(key: "ArticlesQuery_articlesConnection") {
+//         totalCount
+//         edges {
+//           ...ArticlesRail_articles
+//         }
+//       }
+//     }
+//   `,
+// })

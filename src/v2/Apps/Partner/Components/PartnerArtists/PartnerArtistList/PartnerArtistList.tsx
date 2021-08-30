@@ -9,13 +9,7 @@ import { PartnerArtistItemFragmentContainer as PartnerArtistItem } from "./Partn
 import { Carousel } from "v2/Components/Carousel"
 import { ScrollIntoViewProps } from "v2/Utils/scrollHelpers"
 
-export interface PartnerArtistListProps {
-  artists: PartnerArtistList_artists
-  distinguishRepresentedArtists: boolean
-  partnerSlug: string
-  scrollTo: ScrollIntoViewProps
-  displayFullPartnerPage: boolean
-}
+import { gallery_arario } from "nuart/GalleryContents"
 
 export const PartnerArtistListContainer: React.FC = ({ children }) => {
   return (
@@ -28,20 +22,19 @@ export const PartnerArtistListContainer: React.FC = ({ children }) => {
   )
 }
 
-export const PartnerArtistList: React.FC<PartnerArtistListProps> = ({
+export const PartnerArtistListFragmentContainer = ({
   artists,
-  distinguishRepresentedArtists,
-  partnerSlug,
   scrollTo,
-  displayFullPartnerPage,
+  partnerSlug,
 }) => {
   if (!artists) return null
 
-  const groups = groupArtists(
-    artists,
-    distinguishRepresentedArtists && displayFullPartnerPage
-  )
+  // const groups = groupArtists(
+  //   artists,
+  //   distinguishRepresentedArtists && displayFullPartnerPage
+  // )
 
+  const groups = gallery_arario.artists
   return (
     <PartnerArtistListContainer>
       <GridColumns minWidth={["270vw", "auto"]} pr={[2, 0]} gridColumnGap={1}>
@@ -54,20 +47,8 @@ export const PartnerArtistList: React.FC<PartnerArtistListProps> = ({
                 </Text>
               )}
               <Box style={{ columnCount: group.columnSize }}>
-                {/* @ts-expect-error STRICT_NULL_CHECK */}
-                {group.artists.map(({ node, counts: { artworks } }) => {
-                  return (
-                    <PartnerArtistItem
-                      scrollTo={scrollTo}
-                      // @ts-expect-error STRICT_NULL_CHECK
-                      key={node.internalID}
-                      // @ts-expect-error STRICT_NULL_CHECK
-                      artist={node}
-                      partnerSlug={partnerSlug}
-                      hasPublishedArtworks={artworks > 0}
-                      displayFullPartnerPage={displayFullPartnerPage}
-                    />
-                  )
+                {group.artists.map(node => {
+                  return <PartnerArtistItem scrollTo={scrollTo} artist={node} />
                 })}
               </Box>
             </Column>
@@ -78,21 +59,21 @@ export const PartnerArtistList: React.FC<PartnerArtistListProps> = ({
   )
 }
 
-export const PartnerArtistListFragmentContainer = createFragmentContainer(
-  PartnerArtistList,
-  {
-    artists: graphql`
-      fragment PartnerArtistList_artists on ArtistPartnerEdge
-        @relay(plural: true) {
-        representedBy
-        counts {
-          artworks
-        }
-        node {
-          internalID
-          ...PartnerArtistItem_artist
-        }
-      }
-    `,
-  }
-)
+// export const PartnerArtistListFragmentContainer = createFragmentContainer(
+//   PartnerArtistList,
+//   {
+//     artists: graphql`
+//       fragment PartnerArtistList_artists on ArtistPartnerEdge
+//         @relay(plural: true) {
+//         representedBy
+//         counts {
+//           artworks
+//         }
+//         node {
+//           internalID
+//           ...PartnerArtistItem_artist
+//         }
+//       }
+//     `,
+//   }
+// )

@@ -37,9 +37,9 @@ export const Shows: React.FC<PartnerShowsProps> = ({
 
   return (
     <>
-      {isEventFeatured && (
+      {/* {isEventFeatured && (
         <ShowBannerFragmentContainer my={4} show={firstFeaturedEvent!} />
-      )}
+      )} */}
       {isCurrentEventsExist && (
         <ShowEventsFragmentContainer
           edges={filteredCurrentEvents}

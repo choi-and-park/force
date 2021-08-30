@@ -14,6 +14,7 @@ import { createFragmentContainer, graphql } from "react-relay"
 import styled from "styled-components"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { ShowBanner_show } from "v2/__generated__/ShowBanner_show.graphql"
+import { gallery_arario } from "nuart/GalleryContents"
 
 const statusLabelsMap = {
   running: "current",
@@ -39,37 +40,27 @@ const SlideBox = styled(Box)`
   `};
 `
 
-interface ShowBannerProps extends BoxProps {
-  show: ShowBanner_show
-  selected?: boolean
-  withAnimation?: boolean
-}
+// interface ShowBannerProps extends BoxProps {
+//   show: ShowBanner_show
+//   selected?: boolean
+//   withAnimation?: boolean
+// }
 
-const ShowBanner: React.FC<ShowBannerProps> = ({
+export const ShowBannerFragmentContainer = ({
   show,
   selected,
   withAnimation,
   ...rest
-}): JSX.Element => {
-  const {
-    coverImage,
-    name,
-    isFairBooth,
-    location,
-    exhibitionPeriod,
-    status,
-    description,
-    href,
-  } = show
-  // @ts-expect-error STRICT_NULL_CHECK
-  const showType = `${statusLabelsMap[status]} ${
-    isFairBooth ? "fair booth" : "show"
-  }`
+}) => {
+  // const newShows = gallery_arario.shows[0]
+  // // @ts-expect-error STRICT_NULL_CHECK
+  // const showType = `${statusLabelsMap[status]} ${
+  //   isFairBooth ? "fair booth" : "show"
+  // }`
   const [active, setActive] = useState(!withAnimation)
 
   useEffect(() => {
     if (withAnimation && selected !== active) {
-      // @ts-expect-error STRICT_NULL_CHECK
       setActive(selected)
     }
   }, [withAnimation, selected])
@@ -79,53 +70,63 @@ const ShowBanner: React.FC<ShowBannerProps> = ({
       <Column span={6}>
         <FadeBox opacity={active ? 1 : 0}>
           <Text textTransform="capitalize" variant="mediumText" mb={1}>
-            {showType}
+            {show.showType}
           </Text>
-          <RouterLink to={href} textDecoration="none">
-            {name && <Text variant="largeTitle">{name}</Text>}
-            {exhibitionPeriod && (
+          <RouterLink
+            to={show.href}
+            textDecoration="none"
+            onClick={e => {
+              e.preventDefault()
+            }}
+          >
+            {show.name && <Text variant="largeTitle">{show.name}</Text>}
+            {show.exhibitionPeriod && (
               <Text color="black60" variant="title">
-                {exhibitionPeriod}
+                {show.exhibitionPeriod}
               </Text>
             )}
-            {location && location.city && (
+            {show.location && show.location.city && (
               <Text
                 color="black60"
                 variant="subtitle"
                 textTransform="capitalize"
               >
-                {location.city}
+                {show.location.city}
               </Text>
             )}
-            {description && (
+            {show.description && (
               <Text mt={1}>
-                <ReadMore maxChars={280} content={description} />
+                <ReadMore maxChars={280} content={show.description} />
               </Text>
             )}
           </RouterLink>
 
           <GridColumns mt={[2, 3]}>
             <Column span={6}>
-              <RouterLink to={href}>
+              <RouterLink
+                to={show.href}
+                onClick={e => {
+                  e.preventDefault()
+                }}
+              >
                 <Button width="100%">View More</Button>
               </RouterLink>
             </Column>
           </GridColumns>
         </FadeBox>
       </Column>
-      {coverImage && coverImage.medium && (
+      {show.coverImage && show.coverImage.medium && (
         <Column height={[280, 480]} position="relative" span={6}>
           <SlideBox
             width="100%"
             opacity={active ? 1 : 0}
             right={active ? 0 : "-100%"}
           >
-            <RouterLink to={href}>
+            <RouterLink to={show.href}>
               <Image
-                src={coverImage.medium.src}
-                srcSet={coverImage.medium.srcSet}
-                // @ts-expect-error STRICT_NULL_CHECK
-                alt={name}
+                src={show.coverImage.medium.src}
+                srcSet={show.coverImage.medium.srcSet}
+                alt={show.name}
                 width="100%"
                 height={[280, 480]}
                 style={{ objectFit: "cover", objectPosition: "center" }}
@@ -138,25 +139,25 @@ const ShowBanner: React.FC<ShowBannerProps> = ({
   )
 }
 
-export const ShowBannerFragmentContainer = createFragmentContainer(ShowBanner, {
-  show: graphql`
-    fragment ShowBanner_show on Show {
-      slug
-      name
-      href
-      isFairBooth
-      exhibitionPeriod
-      status
-      description
-      location {
-        city
-      }
-      coverImage {
-        medium: cropped(width: 600, height: 480) {
-          src
-          srcSet
-        }
-      }
-    }
-  `,
-})
+// export const ShowBannerFragmentContainer = createFragmentContainer(ShowBanner, {
+//   show: graphql`
+//     fragment ShowBanner_show on Show {
+//       slug
+//       name
+//       href
+//       isFairBooth
+//       exhibitionPeriod
+//       status
+//       description
+//       location {
+//         city
+//       }
+//       coverImage {
+//         medium: cropped(width: 600, height: 480) {
+//           src
+//           srcSet
+//         }
+//       }
+//     }
+//   `,
+// })
