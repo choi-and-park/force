@@ -105,16 +105,16 @@ export const OtherWorks = track()(
                     columnCount={[2, 3, 4, 4]}
                     mediator={props.mediator}
                     contextModule={contextModule}
-                    onBrickClick={() =>
-                      tracking.trackEvent({
-                        type: Schema.Type.ArtworkBrick,
-                        action_type: Schema.ActionType.Click,
-                        context_module: contextGridTypeToContextModule(
-                          // @ts-expect-error STRICT_NULL_CHECK
-                          grid.__typename
-                        ),
-                      })
-                    }
+                    // onBrickClick={() =>
+                    //   tracking.trackEvent({
+                    //     type: Schema.Type.ArtworkBrick,
+                    //     action_type: Schema.ActionType.Click,
+                    //     context_module: contextGridTypeToContextModule(
+                    //       // @ts-expect-error STRICT_NULL_CHECK
+                    //       grid.__typename
+                    //     ),
+                    //   })
+                    // }
                   />
                 </Box>
               )
@@ -122,7 +122,7 @@ export const OtherWorks = track()(
           </Join>
         )}
 
-        {!(
+        {/* {!(
           context &&
           context.__typename === "ArtworkContextAuction" &&
           !(sale && sale.is_closed)
@@ -138,7 +138,7 @@ export const OtherWorks = track()(
             <Spacer mt={6} />
             <OtherAuctionsQueryRenderer />
           </>
-        )}
+        )} */}
       </>
     )
   }

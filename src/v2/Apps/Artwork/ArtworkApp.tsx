@@ -11,7 +11,7 @@ import { ArtworkImageBrowserFragmentContainer } from "./Components/ArtworkImageB
 import { ArtworkMetaFragmentContainer } from "./Components/ArtworkMeta"
 // import { ArtworkRelatedArtistsPaginationContainer } from "./Components/ArtworkRelatedArtists"
 import { ArtworkSidebarFragmentContainer } from "./Components/ArtworkSidebar"
-// import { OtherWorksFragmentContainer } from "./Components/OtherWorks"
+import { OtherWorksFragmentContainer } from "./Components/OtherWorks"
 import { ArtworkArtistSeriesFragmentContainer } from "./Components/ArtworkArtistSeries"
 import { PricingContextFragmentContainer } from "./Components/PricingContext"
 import { withSystemContext } from "v2/System"
@@ -195,15 +195,15 @@ export class ArtworkApp extends React.Component<Props> {
 
           <Media lessThan="sm">{BelowTheFoldArtworkDetails}</Media>
 
-          <Spacer mt={6} />
-          {/* 
-          <ArtworkArtistSeriesFragmentContainer artwork={artwork} />
+          {/* <Spacer mt={6} />
 
-          <Spacer mt={6} /> */}
+          <ArtworkArtistSeriesFragmentContainer artwork={artwork} /> */}
 
-          {/* <OtherWorksFragmentContainer artwork={artwork} />
+          {/* <Spacer mt={6} />
 
-          {artwork.artist && (
+          <OtherWorksFragmentContainer artwork={artwork} /> */}
+
+          {/* {artwork.artist && (
             <>
               <Spacer mt={6} />
 

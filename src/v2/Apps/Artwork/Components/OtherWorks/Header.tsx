@@ -19,9 +19,9 @@ export const Header: React.FC<HeaderProps> = props => {
 
       {buttonHref && (
         <Box ml={2} flexShrink={0}>
-          <RouterLink to={buttonHref}>
-            <Text variant="md">View all</Text>
-          </RouterLink>
+          {/* <RouterLink to={buttonHref}> */}
+          <Text variant="md">View all</Text>
+          {/* </RouterLink> */}
         </Box>
       )}
 
