@@ -16,9 +16,10 @@ import { useSystemContext } from "v2/System"
 import { ContextModule } from "@artsy/cohesion"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { PartnerHeader_partner } from "v2/__generated__/PartnerHeader_partner.graphql"
+import { gallery_arario } from "nuart/GalleryContents"
 
 export interface PartnerHeaderProps {
-  partner: PartnerHeader_partner
+  // partner: PartnerHeader_partner
 }
 
 export const HeaderImage = styled(Image)`
@@ -26,10 +27,12 @@ export const HeaderImage = styled(Image)`
   object-fit: contain;
 `
 
-export const PartnerHeader: React.FC<PartnerHeaderProps> = ({ partner }) => {
+// export const PartnerHeader: React.FC<PartnerHeaderProps> = ({partner}) => {
+export const PartnerHeaderFragmentContainer = ({ partner }) => {
+  // const partner = gallery_arario
+
   const { user } = useSystemContext()
-  // @ts-expect-error STRICT_NULL_CHECK
-  const hasLocations = partner.locations?.totalCount > 0
+  // const hasLocations = partner.locations?.totalCount > 0
   // TODO: Remove after page migration.
   const partnerUrl = `/partner/${partner.slug}`
   const canFollow =
@@ -46,11 +49,10 @@ export const PartnerHeader: React.FC<PartnerHeaderProps> = ({ partner }) => {
                 style={{ display: "flex", textDecoration: "none" }}
               >
                 <HeaderImage
-                  // @ts-expect-error STRICT_NULL_CHECK
+                  // // @ts-expect-error STRICT_NULL_CHECK
                   src={partner.profile.icon.resized.src}
-                  // @ts-expect-error STRICT_NULL_CHECK
+                  // // @ts-expect-error STRICT_NULL_CHECK
                   srcSet={partner.profile.icon.resized.srcSet}
-                  // @ts-expect-error STRICT_NULL_CHECK
                   alt={partner.name}
                   width={[60, 80]}
                   height={[60, 80]}
@@ -69,25 +71,25 @@ export const PartnerHeader: React.FC<PartnerHeaderProps> = ({ partner }) => {
                 {partner.name}
               </RouterLink>
             </Text>
-            {hasLocations && (
-              <Text color="black60" variant="text">
-                {/* @ts-expect-error STRICT_NULL_CHECK */}
-                <PartnerHeaderAddress {...partner.locations} />
-              </Text>
-            )}
+
+            <Text color="black60" variant="text">
+              {partner.locations[0].city}
+            </Text>
           </Box>
         </Flex>
       </Column>
       <Column span={[12, 2]}>
         {canFollow && (
           <FollowProfileButton
-            // @ts-expect-error STRICT_NULL_CHECK
             profile={partner.profile}
             user={user}
             contextModule={ContextModule.partnerHeader}
             buttonProps={{
               variant: "secondaryOutline",
               width: "100%",
+            }}
+            onClick={e => {
+              e.preventDefault()
             }}
           />
         )}
@@ -96,32 +98,32 @@ export const PartnerHeader: React.FC<PartnerHeaderProps> = ({ partner }) => {
   )
 }
 
-export const PartnerHeaderFragmentContainer = createFragmentContainer(
-  PartnerHeader,
-  {
-    partner: graphql`
-      fragment PartnerHeader_partner on Partner {
-        name
-        type
-        slug
-        profile {
-          icon {
-            resized(width: 80, height: 80, version: "square140") {
-              src
-              srcSet
-            }
-          }
-          ...FollowProfileButton_profile
-        }
-        locations: locationsConnection(first: 20) {
-          totalCount
-          edges {
-            node {
-              city
-            }
-          }
-        }
-      }
-    `,
-  }
-)
+// export const PartnerHeaderFragmentContainer = createFragmentContainer(
+//   PartnerHeader,
+//   {
+//     partner: graphql`
+//       fragment PartnerHeader_partner on Partner {
+//         name
+//         type
+//         slug
+//         profile {
+//           icon {
+//             resized(width: 80, height: 80, version: "square140") {
+//               src
+//               srcSet
+//             }
+//           }
+//           ...FollowProfileButton_profile
+//         }
+//         locations: locationsConnection(first: 20) {
+//           totalCount
+//           edges {
+//             node {
+//               city
+//             }
+//           }
+//         }
+//       }
+//     `,
+//   }
+// )

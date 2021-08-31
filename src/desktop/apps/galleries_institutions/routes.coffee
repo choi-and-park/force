@@ -73,7 +73,8 @@ fetchPartnerCategories = (type) ->
         type: type
         # profiles: profiles.models
         profiles: GalleryProfiles
-        categories: _.shuffle categories
+        # categories: _.shuffle categories
+        categories: categories
         facets: facetDefaults(type)
         state: if _.isEmpty(searchParams) then 'landing' else 'search'
 

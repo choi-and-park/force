@@ -8,83 +8,51 @@ import {
 } from "../PartnerArtists"
 import { ViewAllButton } from "./ViewAllButton"
 
-interface ArtistsRailProps extends BoxProps {
-  partner: ArtistsRail_partner
-}
+// interface ArtistsRailProps extends BoxProps {
+//   partner: ArtistsRail_partner
+// }
 
-const ArtistsRail: React.FC<ArtistsRailProps> = ({ partner, ...rest }) => {
+export const ArtistsRailFragmentContainer = ({ partner, ...rest }) => {
   if (!partner) {
     return null
   }
 
-  const {
-    slug,
-    profileArtistsLayout,
-    displayFullPartnerPage,
-    artistsWithPublishedArtworks,
-    representedArtistsWithoutPublishedArtworks,
-  } = partner
-
-  const artistsWithPublishedArtworksTotalCount =
-    artistsWithPublishedArtworks?.totalCount || 0
-  const representedWithoutPublishedArtworksTotalCount =
-    representedArtistsWithoutPublishedArtworks?.totalCount || 0
-
-  const isCarouselRender =
-    profileArtistsLayout === "Grid" && displayFullPartnerPage
-
-  if (
-    isCarouselRender
-      ? !artistsWithPublishedArtworksTotalCount
-      : !artistsWithPublishedArtworksTotalCount &&
-        !representedWithoutPublishedArtworksTotalCount
-  ) {
-    return null
-  }
+  const { slug } = partner
 
   return (
     <Box {...rest}>
       <Flex mb={6} justifyContent="space-between" alignItems="center">
-        <Text variant="title">
-          {profileArtistsLayout === "Grid" ? "Featured Artists" : "Artists"}
-        </Text>
-
-        {displayFullPartnerPage && (
-          <ViewAllButton to={`/partner/${slug}/artists`} />
-        )}
+        <Text variant="title">Artists</Text>
+        <ViewAllButton to={""} />
       </Flex>
 
-      {isCarouselRender ? (
-        <PartnerArtistsCarouselRenderer partnerId={slug} />
-      ) : (
-        <PartnerArtistsRenderer partnerId={slug} />
-      )}
+      <PartnerArtistsRenderer partner={partner} />
     </Box>
   )
 }
 
-export const ArtistsRailFragmentContainer = createFragmentContainer(
-  ArtistsRail,
-  {
-    partner: graphql`
-      fragment ArtistsRail_partner on Partner {
-        slug
-        profileArtistsLayout
-        displayFullPartnerPage
-        artistsWithPublishedArtworks: artistsConnection(
-          hasPublishedArtworks: true
-          displayOnPartnerProfile: true
-        ) {
-          totalCount
-        }
-        representedArtistsWithoutPublishedArtworks: artistsConnection(
-          representedBy: true
-          hasPublishedArtworks: false
-          displayOnPartnerProfile: true
-        ) {
-          totalCount
-        }
-      }
-    `,
-  }
-)
+// export const ArtistsRailFragmentContainer = createFragmentContainer(
+//   ArtistsRail,
+//   {
+//     partner: graphql`
+//       fragment ArtistsRail_partner on Partner {
+//         slug
+//         profileArtistsLayout
+//         displayFullPartnerPage
+//         artistsWithPublishedArtworks: artistsConnection(
+//           hasPublishedArtworks: true
+//           displayOnPartnerProfile: true
+//         ) {
+//           totalCount
+//         }
+//         representedArtistsWithoutPublishedArtworks: artistsConnection(
+//           representedBy: true
+//           hasPublishedArtworks: false
+//           displayOnPartnerProfile: true
+//         ) {
+//           totalCount
+//         }
+//       }
+//     `,
+//   }
+// )

@@ -13,46 +13,36 @@ const Name = styled(Text).attrs({ py: 0.5 })`
   width: 100%;
 `
 
-export interface PartnerArtistItemProps {
-  artist: PartnerArtistItem_artist
-  hasPublishedArtworks: boolean
-  partnerSlug: string
-  scrollTo: ScrollIntoViewProps
-  displayFullPartnerPage: boolean
-}
+// export interface PartnerArtistItemProps {
+//   artist: PartnerArtistItem_artist
+//   hasPublishedArtworks: boolean
+//   partnerSlug: string
+//   scrollTo: ScrollIntoViewProps
+//   displayFullPartnerPage: boolean
+// }
 
-export const PartnerArtistItem: React.FC<PartnerArtistItemProps> = ({
+export const PartnerArtistItemFragmentContainer = ({
   artist: { name, slug, href },
-  hasPublishedArtworks,
-  partnerSlug,
   scrollTo,
-  displayFullPartnerPage,
 }) => {
-  const artistHref = displayFullPartnerPage
-    ? // TODO: Use partner.href instead after page migration
-      `/partner/${partnerSlug}/artists/${slug}`
-    : href || `/artists/${slug}`
-
-  return hasPublishedArtworks ? (
+  return (
     <ScrollIntoView {...scrollTo}>
-      <RouterLink noUnderline to={artistHref}>
+      <RouterLink noUnderline to={href} onClick={e => e.preventDefault()}>
         <Name color="black100">{name}</Name>
       </RouterLink>
     </ScrollIntoView>
-  ) : (
-    <Name color="black60">{name}</Name>
   )
 }
 
-export const PartnerArtistItemFragmentContainer = createFragmentContainer(
-  PartnerArtistItem,
-  {
-    artist: graphql`
-      fragment PartnerArtistItem_artist on Artist {
-        name
-        slug
-        href
-      }
-    `,
-  }
-)
+// export const PartnerArtistItemFragmentContainer = createFragmentContainer(
+//   PartnerArtistItem,
+//   {
+//     artist: graphql`
+//       fragment PartnerArtistItem_artist on Artist {
+//         name
+//         slug
+//         href
+//       }
+//     `,
+//   }
+// )

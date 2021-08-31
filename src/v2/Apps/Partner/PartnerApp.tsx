@@ -10,6 +10,7 @@ import { PartnerMetaFragmentContainer } from "./Components/PartnerMeta"
 import { StickyProvider } from "v2/Components/Sticky"
 import { PartnerArtistsLoadingContextProvider } from "./Utils/PartnerArtistsLoadingContext"
 import { HttpError } from "found"
+import { gallery_arario } from "nuart/GalleryContents"
 
 export interface PartnerAppProps {
   partner: PartnerApp_partner
@@ -43,16 +44,16 @@ export const PartnerApp: React.FC<PartnerAppProps> = ({
   return (
     <PartnerArtistsLoadingContextProvider>
       <StickyProvider>
-        {profile && displayFullPartnerPage && (
+        {/* {profile && displayFullPartnerPage && (
           <PartnerHeaderImage profile={profile} />
-        )}
+        )} */}
 
         <Flex position="relative" flexDirection="column">
           <Foreground />
           <Box zIndex={1} position="relative">
-            <PartnerMetaFragmentContainer partner={partner} />
+            {/* <PartnerMetaFragmentContainer partner={partner} /> */}
 
-            <PartnerHeader partner={partner} />
+            <PartnerHeader partner={gallery_arario} />
 
             <FullBleed mb={[2, 4]}>
               <Separator />
