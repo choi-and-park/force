@@ -52,113 +52,68 @@ export const Footer: React.FC<FooterProps> = props => {
 
       <footer>
         <GridColumns pt={tokens.pt} pb={tokens.pb} gridRowGap={[4, 0]}>
-          <Column span={3}>
+          <Column span={4}>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
               About us
             </Text>
 
             <Text variant={tokens.body}>
-              <FooterLink my={2} to="/about">
+              <FooterLink my={2} to="/">
                 About
               </FooterLink>
 
-              <FooterLink my={2} to="/about/jobs">
-                Jobs
-              </FooterLink>
-
-              <FooterLink my={2} to="/about/press">
+              <FooterLink my={2} to="/">
                 Press
               </FooterLink>
 
-              <FooterLink mt={2} to="/contact">
+              <FooterLink mt={2} to="/">
                 Contact
               </FooterLink>
             </Text>
           </Column>
 
-          <Column span={3}>
-            <Text variant={tokens.header} fontWeight="bold" mb={2}>
-              Resources
-            </Text>
-
-            <Text variant={tokens.body}>
-              <FooterLink my={2} to="https://artsy.github.io/open-source">
-                Open Source
-              </FooterLink>
-
-              <FooterLink my={2} to="https://medium.com/artsy-blog">
-                Blog
-              </FooterLink>
-
-              <FooterLink my={2} to="/categories">
-                The Art Genome Project
-              </FooterLink>
-
-              <FooterLink mt={2} to="/artsy-education">
-                Education
-              </FooterLink>
-            </Text>
-          </Column>
-
-          <Column span={3}>
+          <Column span={4}>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
               Partnerships
             </Text>
 
             <Text variant={tokens.body}>
-              <FooterLink my={2} to="https://partners.artsy.net">
-                Artsy for Galleries
+              <FooterLink my={2} to="/">
+                Galleries
               </FooterLink>
 
-              <FooterLink my={2} to="/institution-partnerships">
-                Artsy for Museums
+              <FooterLink my={2} to="/">
+                Artists
               </FooterLink>
 
-              <FooterLink mt={2} to="/auction-partnerships">
-                Artsy for Auctions
+              <FooterLink my={2} to="/">
+                Collectors
+              </FooterLink>
+
+              <FooterLink mt={2} to="/">
+                Auctions
               </FooterLink>
             </Text>
           </Column>
 
-          <Column span={3} wrap>
+          <Column span={4} wrap>
             <Text variant={tokens.header} fontWeight="bold" mb={2}>
               Support
             </Text>
 
             <Text variant={tokens.body}>
-              <FooterLink my={2} to="https://support.artsy.net">
-                Visit our Help Center
+              <FooterLink my={2} to="/">
+                Help Centre
               </FooterLink>
 
-              <FooterLink
-                mt={2}
-                to="https://support.artsy.net/hc/en-us/categories/360003689513-Buy"
-              >
-                Buying on Artsy
+              <FooterLink mt={2} to="/">
+                Terms of Service
+              </FooterLink>
+
+              <FooterLink mt={2} to="/">
+                Privacy Policy
               </FooterLink>
             </Text>
-
-            <Media greaterThan="xs">
-              <Text variant={tokens.header} fontWeight="bold" mt={4} mb={1}>
-                Get the App
-              </Text>
-
-              <Text variant={tokens.body}>
-                <FooterLink
-                  mt={2}
-                  to="https://apps.apple.com/us/app/artsy-buy-sell-original-art/id703796080"
-                >
-                  iOS App
-                </FooterLink>
-
-                <FooterLink
-                  mt={2}
-                  to="https://play.google.com/store/apps/details?id=net.artsy.app"
-                >
-                  Android App
-                </FooterLink>
-              </Text>
-            </Media>
           </Column>
 
           <Column span={12} display={["flex", "none"]} flexWrap="wrap">
@@ -175,17 +130,17 @@ export const Footer: React.FC<FooterProps> = props => {
           m="auto"
           py={2}
         >
-          <Media at="xs">
+          {/* <Media at="xs">
             <Flex flexShrink={0}>
               <ArtsyMarkIcon title="Artsy" width={20} height={20} mr={2} />
             </Flex>
-          </Media>
+          </Media> */}
 
           <Media greaterThan="xs">
             <Flex alignItems="center">
-              <Flex flexShrink={0}>
+              {/* <Flex flexShrink={0}>
                 <ArtsyMarkIcon title="Artsy" width={30} height={30} mr={2} />
-              </Flex>
+              </Flex> */}
 
               <Flex flexDirection="row">
                 <PolicyLinks />
@@ -194,19 +149,19 @@ export const Footer: React.FC<FooterProps> = props => {
           </Media>
 
           <Flex alignItems="center">
-            <WeChat>
+            {/* <WeChat>
               <WeChatIcon width={20} height={20} mr={2} />
-            </WeChat>
+            </WeChat> */}
 
-            <FooterLink to="https://twitter.com/artsy">
+            <FooterLink to="https://twitter.com/">
               <TwitterIcon width={20} height={20} mr={2} />
             </FooterLink>
 
-            <FooterLink to="https://www.facebook.com/artsy">
+            <FooterLink to="https://www.facebook.com/">
               <FacebookIcon width={20} height={20} mr={2} />
             </FooterLink>
 
-            <FooterLink to="https://www.instagram.com/artsy/">
+            <FooterLink to="https://www.instagram.com/">
               <InstagramIcon width={20} height={20} />
             </FooterLink>
           </Flex>
@@ -240,29 +195,25 @@ const PolicyLinks = () => {
       alignItems="center"
       flexWrap="wrap"
     >
-      <Flex mr={1}>© {new Date().getFullYear()} Artsy</Flex>
+      <Flex mr={1}>© {new Date().getFullYear()} Nuart</Flex>
 
-      <FooterLink color="black60" mr={1} to="/terms">
+      <FooterLink color="black60" mr={1} to="/">
         Terms of Use
       </FooterLink>
 
-      <FooterLink color="black60" mr={1} to="/privacy">
+      <FooterLink color="black60" mr={1} to="/">
         Privacy Policy
       </FooterLink>
 
-      <FooterLink color="black60" mr={1} to="/security">
+      <FooterLink color="black60" mr={1} to="/">
         Security
       </FooterLink>
 
-      <FooterLink color="black60" mr={1} to="/conditions-of-sale">
+      <FooterLink color="black60" mr={1} to="/">
         Conditions of Sale
       </FooterLink>
 
-      <FooterLink
-        color="black60"
-        mr={1}
-        to="/page/artsy-curated-auctions-listing-agreement"
-      >
+      <FooterLink color="black60" mr={1} to="/">
         ACA Seller’s Agreement
       </FooterLink>
 

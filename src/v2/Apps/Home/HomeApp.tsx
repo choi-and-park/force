@@ -19,8 +19,8 @@ export const HomeAppFragmentContainer = props => {
       <Spacer mt={1} />
 
       <Join separator={<Spacer mt={4} />}>
-        <HomeFeaturedEventsRailFragmentContainer events={HomeContents.events} />
-        <Separator />
+        {/* <HomeFeaturedEventsRailFragmentContainer events={HomeContents.events} />
+        <Separator /> */}
 
         <HomeFeaturedCategoriesRailQueryRenderer
           categories={HomeContents.categories}
