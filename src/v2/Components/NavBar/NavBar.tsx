@@ -290,7 +290,9 @@ export const NavBar: React.FC = track(
                 </Dropdown>
 
                 {/* <NavBarItemLink href="/galleries" onClick={handleClick}> */}
-                <NavBarItemLink>Galleries</NavBarItemLink>
+                <NavBarItemLink href="/galleries" onClick={handleClick}>
+                  Galleries
+                </NavBarItemLink>
 
                 <NavBarItemLink
                   // Hide link at smaller viewports — corresponding display inside of `MoreNavMenu`
