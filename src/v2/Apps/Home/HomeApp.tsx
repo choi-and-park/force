@@ -31,7 +31,7 @@ export const HomeAppFragmentContainer = props => {
         />
       </Join>
 
-      <Spacer mt={4} />
+      <Spacer mt={1} />
     </>
   )
 }

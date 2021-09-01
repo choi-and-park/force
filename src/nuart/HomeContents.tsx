@@ -129,16 +129,16 @@ const categories = [
     slug: "sculpture",
     title: "조각",
     image: {
-      src: "/images/home/categories/sculpture.png",
-      srcSet: "/images/home/categories/sculpture.png 1x",
+      src: "/images/home/categories/jk.jpg",
+      srcSet: "/images/home/categories/jk.jpg 1x",
     },
   },
   {
     slug: "media-art",
     title: "미디어아트",
     image: {
-      src: "/images/home/categories/street-art.png",
-      srcSet: "/images/home/categories/street-art.png 1x",
+      src: "/images/home/categories/ma.jpg",
+      srcSet: "/images/home/categories/ma.jpg 1x",
     },
   },
 ]
@@ -208,8 +208,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular1.png",
-          srcSet: "/images/home/popular_artists/popular1.png x1",
+          src: "/images/home/popular_artists/popular1.jpg",
+          srcSet: "/images/home/popular_artists/popular1.jpg x1",
           width: 200,
           // height: 302
         },
@@ -232,14 +232,14 @@ const artworks_artists = {
           name: "줄리안 오피",
         },
       ],
-      href: "/",
+      href: "/artwork/julian-opie-running-women-30",
       id: "id_artwork",
       image: {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular2.png",
-          srcSet: "/images/home/popular_artists/popular2.png x1",
+          src: "/images/home/popular_artists/popular2.jpg",
+          srcSet: "/images/home/popular_artists/popular2.jpg x1",
           width: 200,
           // height: 302
         },
@@ -268,8 +268,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular3.png",
-          srcSet: "/images/home/popular_artists/popular3.png x1",
+          src: "/images/home/popular_artists/popular3.jpg",
+          srcSet: "/images/home/popular_artists/popular3.jpg x1",
           width: 200,
           // height: 302
         },
@@ -298,8 +298,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular4.png",
-          srcSet: "/images/home/popular_artists/popular4.png x1",
+          src: "/images/home/popular_artists/popular4.jpg",
+          srcSet: "/images/home/popular_artists/popular4.jpg x1",
           width: 200,
           // height: 302
         },
@@ -328,8 +328,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular5.png",
-          srcSet: "/images/home/popular_artists/popular5.png x1",
+          src: "/images/home/popular_artists/popular5.jpg",
+          srcSet: "/images/home/popular_artists/popular5.jpg x1",
           width: 200,
           // height: 302
         },
@@ -358,8 +358,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular6.png",
-          srcSet: "/images/home/popular_artists/popular6.png x1",
+          src: "/images/home/popular_artists/popular6.jpg",
+          srcSet: "/images/home/popular_artists/popular6.jpg x1",
           width: 200,
           // height: 302
         },
@@ -388,8 +388,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular7.png",
-          srcSet: "/images/home/popular_artists/popular7.png x1",
+          src: "/images/home/popular_artists/popular7.jpg",
+          srcSet: "/images/home/popular_artists/popular7.jpg x1",
           width: 200,
           // height: 302
         },
@@ -418,8 +418,8 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular8.png",
-          srcSet: "/images/home/popular_artists/popular8.png x1",
+          src: "/images/home/popular_artists/popular8.jpg",
+          srcSet: "/images/home/popular_artists/popular8.jpg x1",
           width: 200,
           // height: 302
         },
@@ -515,8 +515,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show1.png",
-          srcSet: "/images/home/featured_shows/show1.png 1x",
+          src: "/images/home/featured_shows/show1.jpg",
+          srcSet: "/images/home/featured_shows/show1.jpg 1x",
           width: 300,
           // height: 302
         },
@@ -535,8 +535,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show2.png",
-          srcSet: "/images/home/featured_shows/show2.png 1x",
+          src: "/images/home/featured_shows/show2.jpg",
+          srcSet: "/images/home/featured_shows/show2.jpg 1x",
           width: 300,
           // height: 302
         },
@@ -555,8 +555,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show3.png",
-          srcSet: "/images/home/featured_shows/show3.png 1x",
+          src: "/images/home/featured_shows/show3.jpg",
+          srcSet: "/images/home/featured_shows/show3.jpg 1x",
           width: 300,
           // height: 302
         },
@@ -575,9 +575,9 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show4.png",
-          srcSet: "/images/home/featured_shows/show4.png 1x",
-          width: 300,
+          src: "/images/home/featured_shows/show4.jpeg",
+          srcSet: "/images/home/featured_shows/show4.jpeg 1x",
+          width: 200,
           // height: 302
         },
       },

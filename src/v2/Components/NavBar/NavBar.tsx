@@ -303,6 +303,7 @@ export const NavBar: React.FC = track(
                   )}
                 </Dropdown>
 
+                {/* <NavBarItemLink href="/galleries" onClick={handleClick}> */}
                 <NavBarItemLink href="/galleries" onClick={handleClick}>
                   Galleries
                 </NavBarItemLink>
