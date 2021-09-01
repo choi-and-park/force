@@ -1,37 +1,36 @@
 const banners = [
   {
     heading: "EXCLUSIVELY ON NUART",
-    title: "이건희컬렉션 특별전\n한국미술명작",
-    subtitle:
-      "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
+    title: "아트 오브 뱅크시",
+    subtitle: "더서울라이티움\n2021.8.20 - 2022.2.6",
+    // "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     image: {
-      src: "/images/home/banner/mmca.png",
-      srcSet: "/images/home/banner/mmca.png 1x",
+      src: "/images/home/banner/banner1.jpg",
+      srcSet: "/images/home/banner/banner1.jpg 1x",
     },
     linkText: "Browse Works",
   },
   {
-    heading: "FEATURED COLLECTION",
-    title: "최석환 화백 특별전",
-    subtitle:
-      "Choi Seok-Hwan Collection\nThe korean art gallery\n2021.5.21.-2022.6.13.",
+    heading: "FEATURED FESTIVAL",
+    title: "KIAF 2021",
+    subtitle: "COEX HALL A&B\n2021.10.14 - 2021.10.17",
+    // "Choi Seok-Hwan Collection\nThe korean art gallery\n2021.5.21.-2022.6.13.",
     href: "/",
     image: {
-      src: "/images/home/banner/korea.jpeg",
-      srcSet: "/images/home/banner/korea.jpeg 1x",
+      src: "/images/home/banner/banner2.jpg",
+      srcSet: "/images/home/banner/banner2.jpg 1x",
     },
     linkText: "Buy now",
   },
   {
     heading: "FEATURED FESTIVAL",
-    title: "서울 도심에서 펼쳐지는\n스트리트 아트 페스티벌",
-    subtitle:
-      "Hongdae\nThe Street Art To Find There\nThe Soul of Seoul\n2021.5.21.-2022.6.13.",
+    title: "2021 어반브레이크",
+    subtitle: "COEX HALL B\n2021.7.29 - 2021.8.1",
     href: "/",
     image: {
-      src: "/images/home/banner/korea2.jpeg",
-      srcSet: "/images/home/banner/korea2.jpeg 1x",
+      src: "/images/home/banner/banner3.jpg.jpeg",
+      srcSet: "/images/home/banner/banner3.jpg 1x",
     },
     linkText: "Buy ticket",
   },

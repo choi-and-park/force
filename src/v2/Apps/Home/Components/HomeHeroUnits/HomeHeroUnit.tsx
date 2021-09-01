@@ -13,6 +13,7 @@ import { Link } from "react-head"
 import { RouterLink } from "v2/System/Router/RouterLink"
 import { Media } from "v2/Utils/Responsive"
 import { HomeHeroUnitCredit } from "./HomeHeroUnitCredit"
+import { bold } from "chalk"
 
 export const HomeHeroUnitFragmentContainer = ({
   heroUnit,
@@ -138,14 +139,15 @@ export const HomeHeroUnitFragmentContainer = ({
                     textTransform="uppercase"
                     color={colorScheme.heading}
                     style={{
-                      fontFamily: "Alegreya",
+                      // fontFamily: "Alegreya",
+                      fontFamily: "Noto Sans KR",
                       // fontFamily: "Times New Roman",
                     }}
                   >
                     {heroUnit.heading}
                   </Text>
 
-                  <Spacer mt={2} />
+                  <Spacer mt={1} />
                 </>
               )}
             </Media>
@@ -156,7 +158,10 @@ export const HomeHeroUnitFragmentContainer = ({
               color={colorScheme.title}
               style={{
                 whiteSpace: "pre-line",
-                fontFamily: "Gowun Dodum",
+                fontFamily: "Noto Sans KR",
+                // fontFamily: "Nanum Gothic",
+                fontSize: 38,
+                fontWeight: 600,
               }}
             >
               {heroUnit.title}
@@ -169,7 +174,10 @@ export const HomeHeroUnitFragmentContainer = ({
                   variant={["xs", "md", "lg"]}
                   style={{
                     whiteSpace: "pre-line",
-                    fontFamily: "Alegreya",
+                    // fontFamily: "Alegreya",
+                    fontFamily: "Noto Sans KR",
+                    fontSize: 18,
+                    fontWeight: 400,
                   }}
                   color={colorScheme.subtitle}
                   // html={heroUnit.subtitle}
@@ -189,7 +197,7 @@ export const HomeHeroUnitFragmentContainer = ({
                 />
 
                 <GridColumns>
-                  <Column span={[12, 12, 6]}>
+                  <Column span={[12, 6, 6]}>
                     <Button
                       variant={colorScheme.button as any}
                       // @ts-ignore
@@ -211,7 +219,8 @@ export const HomeHeroUnitFragmentContainer = ({
                     variant="xs"
                     color={colorScheme.linkText}
                     style={{
-                      fontFamily: "Alegreya",
+                      // fontFamily: "Alegreya",
+                      fontFamily: "Noto Sans KR",
                     }}
                   >
                     {heroUnit.linkText}

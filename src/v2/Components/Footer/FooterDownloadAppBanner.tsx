@@ -65,10 +65,13 @@ export const FooterDownloadAppBanner = () => {
           mb={1}
           style={{
             whiteSpace: "pre-line",
-            fontFamily: "Gowun Dodum",
+            // fontFamily: "Gowun Dodum",
+            fontFamily: "Noto Sans KR",
+            // fontFamily: "Nanum Gothic",
           }}
         >
-          누아트(Nu art) 어플리케이션 사전 예약!
+          누아트(Nu art) <br />
+          어플리케이션 사전 예약!
         </Text>
         <Text
           variant="xs"
@@ -76,11 +79,12 @@ export const FooterDownloadAppBanner = () => {
           mb={1}
           style={{
             whiteSpace: "pre-line",
-            fontFamily: "Gowun Dodum",
+            // fontFamily: "Gowun Dodum",
+            fontFamily: "Noto Sans KR",
           }}
         >
-          대한민국의 새로운 미술시장을 여는 누아트의 어플리케이션을 미리
-          만나보세요.
+          대한민국의 새로운 미술시장을 여는 <br />
+          누아트의 어플리케이션을 미리 만나보세요.
         </Text>
 
         <Spacer mt={2} />
@@ -89,15 +93,18 @@ export const FooterDownloadAppBanner = () => {
           justifyContent="center"
           style={{
             whiteSpace: "pre-line",
-            fontFamily: "Gowun Dodum",
+            // fontFamily: "Gowun Dodum",
+            fontFamily: "Noto Sans KR",
           }}
         >
           <Input
             style={{
               whiteSpace: "pre-line",
-              fontFamily: "Gowun Dodum",
+              // fontFamily: "Gowun Dodum",
+              fontFamily: "Noto Sans KR",
+              fontSize: 13,
             }}
-            width="100%"
+            width="90%"
             height="35px"
             placeholder="이메일을 적어주세요."
           />

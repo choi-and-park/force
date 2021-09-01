@@ -10,7 +10,7 @@ const gallery_seoul = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/arario.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -21,7 +21,7 @@ const gallery_seoul = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/hakojae.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -32,7 +32,7 @@ const gallery_seoul = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/opera.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -51,7 +51,7 @@ const gallery_photography = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/ryu.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -62,7 +62,7 @@ const gallery_photography = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/space55.jpeg",
         href: "/partner/hakgojae",
       },
     },
@@ -73,7 +73,7 @@ const gallery_photography = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/rucida.jpeg",
         href: "/partner/hakgojae",
       },
     },
@@ -92,7 +92,7 @@ const gallery_prints = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/pintz.jpeg",
         href: "/partner/hakgojae",
       },
     },
@@ -103,7 +103,7 @@ const gallery_prints = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/space9.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -114,7 +114,7 @@ const gallery_prints = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/artnedition.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -133,7 +133,7 @@ const gallery_contemporary = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/arario.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -144,7 +144,7 @@ const gallery_contemporary = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/hakojae.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -155,7 +155,7 @@ const gallery_contemporary = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/gallery2.jpeg",
+        image: "/images/home/featured_galleries/opera.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -177,10 +177,10 @@ export const GalleryProfiles = [
     },
     show: {
       name: "Show",
-      subname: "Wow Show",
+      subname: "학고재 갤러리",
       href: "/partner/hakgojae",
       location_with_dates: "서울, jan - feb",
-      image: "/images/home/featured_galleries/gallery2.jpeg",
+      image: "/images/home/featured_galleries/hakojae.jpg",
     },
     id: "follow-id",
   },
@@ -191,10 +191,10 @@ export const GalleryProfiles = [
     },
     show: {
       name: "Show",
-      subname: "Wow Show",
+      subname: "SPACE55",
       href: "/partner/hakgojae",
       location_with_dates: "서울, jan - feb",
-      image: "/images/home/featured_galleries/gallery2.jpeg",
+      image: "/images/home/featured_galleries/space55.jpeg",
     },
     id: "follow-id",
   },
@@ -218,14 +218,14 @@ export const gallery_arario = {
     {
       id: "show1",
       showType: "Current Show",
-      name: "Tongue & Nail",
+      name: "KANG Eun Young: Windows",
       href: "",
-      exhibitionPeriod: "7월 - 8월",
+      exhibitionPeriod: "Aug 18 -31",
       location: {
         city: "서울",
       },
       description:
-        "임시 임시 Tongue & Nail, a solo exhibition of KOO Jiyoon, describes the psychological landscape of a city through abstract painting.",
+        "KANG Eun Young was born in Seoul, 1985. She received her Bachelor's degree in Printmaking with a Minor in Oriental Painting at Hongik University in 2011. She completed her Master's degree in Printmaking in the same school in 2014. She has held solo exhibitions at Dimension Variable (Seoul) Open-beta space Vanziha (Seoul), etc. She participated in group exhibitions held at National Museum of Modern and Contemporary Art (Gwacheon, Korea), Art Sonje Center (Seoul), Sejong Center for the Performing Arts (Seoul), Jeon Tae-il Memorial Hall (Seoul), etc. She also participated in the 7th Gwangju Design Biennale: Futures. Along with working as an artist, KANG also runs a plant store named 'Singmul Store.'",
       coverImage: {
         medium: {
           src: "/images/home/featured_galleries/gallery2.jpeg",
@@ -236,14 +236,14 @@ export const gallery_arario = {
     {
       id: "show2",
       showType: "Current Show",
-      name: "Tongue & Nail 2222",
+      name: "CHOI Xooang: Unfold",
       href: "",
-      exhibitionPeriod: "7월 - 8월",
+      exhibitionPeriod: "Jul 28 - Aug 29",
       location: {
-        city: "서울",
+        city: "Seoul",
       },
       description:
-        "임시 임시 Tongue & Nail, a solo exhibition of KOO Jiyoon, describes the psychological landscape of a city through abstract painting.",
+        "Hakgojae Gallery is pleased to present works by CHOI Xooang (b. 1975) in his solo exhibition, 'Unfold' at Hakgojae Gallery, from July 28th (Wed) to August 29th (Sun), 2021. This is CHOI Xooang’s first solo exhibition at Hakgojae Gallery. This exhibition is an opportunity to examine the artist’s recent works that tried to make changes in working habits which were his daily life as social distancing has prompted us to reconsider daily life more these days. CHOI, who has been restlessly working since the early 2000s, has had a two-year hiatus since his solo exhibition, Unbodied Objects, at Bongsan Cultural Center (Daegu, Korea). He unfolds the inner journey so far in the 21 works on view at Hakgojae Gallery. CHOI Xooang has been creating realistic sculptures of the body, modified or dismantled. He embodied the narratives of emotions that occur between completely private life and firm social norms in these figures. In this exhibition, CHOI presents new works, including paintings, sculptures, and installations, using different methods from the past. CHOI explores the gap between knowledge and reality. The exhibition will cool down the hot summer by removing the skin of reconstruction. Independent curator Maeng Jee Young wrote the introductory essay.",
       coverImage: {
         medium: {
           src: "/images/home/featured_galleries/gallery2.jpeg",
@@ -253,14 +253,14 @@ export const gallery_arario = {
     },
   ],
   fullBio:
-    "Since 1989, Arario Gallery has been endeavoring to promote talented Asian artists internationally. It has 3 branches in Seoul(Korea), Cheonan(Korea), and Shanghai(China) and representing more than 50 Asian artists from diverse Asian countries such as Korea, Japan, China, Philippine, Indonesia and India. The boundary between East and West is getting blurred, and its exhibition programs and artists representing are also getting more international.",
-  website: "http://www.arariogallery.com",
+    "The gallery's name derives from the saying, 'to review the old to learn the new' in the Analects of Confucius. However, gaining knowledge of the past is not necessarily equivalent to studying of historical facts. In fact, the process of learning the past in Korea, where tragic history of being victimized by the Japanese colonialism and the division of the country is very much alive, accompanies excruciating self-reflection. Nonetheless, to be able to confidently reach out to readily participate in the global cultural flow despite its past struggles is the true philosophy behind the saying, 'to review the old to learn the new.' This is the very ideology and orientation that makes Hakgojae Gallery unique, bringing together the old and the new, and connecting the region to the world.",
+  website: "http://www.hakgojae.com/",
   events: [
     {
       id: "events1",
       showType: "show",
-      name: "POST ARCHIVE FACTION...",
-      exhibitionPeriod: "8월-9월",
+      name: "KANG Eun Young: Windows",
+      exhibitionPeriod: "Aug 18 - 31",
       href: "",
       coverImage: {
         medium: {
@@ -274,8 +274,8 @@ export const gallery_arario = {
     {
       id: "events2",
       showType: "show",
-      name: "POST ARCHIVE FACTION...",
-      exhibitionPeriod: "8월-9월",
+      name: "CHOI Xooang: Unfold",
+      exhibitionPeriod: "Jul 28 - Aug 29",
       href: "",
       coverImage: {
         medium: {
@@ -289,8 +289,8 @@ export const gallery_arario = {
     {
       id: "events3",
       showType: "show",
-      name: "POST ARCHIVE FACTION...",
-      exhibitionPeriod: "8월-9월",
+      name: "KIM Gil-hu: The Night of Chaos",
+      exhibitionPeriod: "Jul 21 - Aug 22",
       href: "",
       coverImage: {
         medium: {
@@ -304,8 +304,8 @@ export const gallery_arario = {
     {
       id: "events4",
       showType: "show",
-      name: "POST ARCHIVE FACTION...",
-      exhibitionPeriod: "8월-9월",
+      name: "LIM Jimin: Although it's an ordinary day like this",
+      exhibitionPeriod: "Jul 7 - 28",
       href: "",
       coverImage: {
         medium: {
@@ -321,43 +321,73 @@ export const gallery_arario = {
     {
       artists: [
         {
-          name: "안창홍",
+          name: "Tom Anholt",
           href: "",
           slug: "",
         },
         {
-          name: "안창홍",
+          name: "Sun Goo Im",
           href: "",
           slug: "",
         },
         {
-          name: "안창홍",
+          name: "Dong Hyuk Lee",
           href: "",
           slug: "",
         },
         {
-          name: "안창홍",
+          name: "Giuseppe Penone",
           href: "",
           slug: "",
         },
         {
-          name: "안창홍",
+          name: "Chae Rim",
+          href: "",
+          slug: "",
+        },
+        {
+          name: "Ma Liuming",
           href: "",
           slug: "",
         },
       ],
-      columnSize: 5,
+      columnSize: 3,
       columnName: "Represented Artists",
     },
     {
       artists: [
         {
-          name: "Erika COX",
+          name: "김현식",
+          href: "",
+          slug: "",
+        },
+        {
+          name: "장재민",
+          href: "",
+          slug: "",
+        },
+        {
+          name: "강요배",
+          href: "",
+          slug: "",
+        },
+        {
+          name: "이영백",
+          href: "",
+          slug: "",
+        },
+        {
+          name: "이진영",
+          href: "",
+          slug: "",
+        },
+        {
+          name: "이우성",
           href: "",
           slug: "",
         },
       ],
-      columnSize: 1,
+      columnSize: 3,
       columnName: "Works Available by",
     },
   ],
