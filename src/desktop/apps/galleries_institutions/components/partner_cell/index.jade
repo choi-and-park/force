@@ -20,7 +20,7 @@ if profile
         = ViewHelpers.displayLocations(partner.locations, preferredCity) || ''
 
     button.partner-cell-follow-button.is-small.avant-garde-follow-button-black.follow-button.js-follow-button(
-      data-id= profile.id
+      data-id= profile.href
     )
 else
   .partner-featured-image

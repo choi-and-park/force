@@ -11,7 +11,7 @@ const gallery_seoul = {
       profile: {
         id: "id_gallery1",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery1",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -22,7 +22,7 @@ const gallery_seoul = {
       profile: {
         id: "id_gallery2",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery2",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -33,7 +33,7 @@ const gallery_seoul = {
       profile: {
         id: "id_gallery3",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery3",
+        href: "/partner/hakgojae",
       },
     },
   ],
@@ -52,7 +52,7 @@ const gallery_photography = {
       profile: {
         id: "id_gallery1",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery1",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -63,7 +63,7 @@ const gallery_photography = {
       profile: {
         id: "id_gallery2",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery2",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -74,7 +74,7 @@ const gallery_photography = {
       profile: {
         id: "id_gallery3",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery3",
+        href: "/partner/hakgojae",
       },
     },
   ],
@@ -93,7 +93,7 @@ const gallery_prints = {
       profile: {
         id: "id_gallery1",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery1",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -104,7 +104,7 @@ const gallery_prints = {
       profile: {
         id: "id_gallery2",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery2",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -115,7 +115,7 @@ const gallery_prints = {
       profile: {
         id: "id_gallery3",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery3",
+        href: "/partner/hakgojae",
       },
     },
   ],
@@ -134,7 +134,7 @@ const gallery_contemporary = {
       profile: {
         id: "id_gallery1",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery1",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -145,7 +145,7 @@ const gallery_contemporary = {
       profile: {
         id: "id_gallery2",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery2",
+        href: "/partner/hakgojae",
       },
     },
     {
@@ -156,7 +156,7 @@ const gallery_contemporary = {
       profile: {
         id: "id_gallery3",
         image: "/images/home/featured_galleries/gallery2.jpeg",
-        href: "/gallery3",
+        href: "/partner/hakgojae",
       },
     },
   ],
@@ -173,12 +173,12 @@ export const GalleryProfiles = [
   {
     owner: {
       name: "Gallery",
-      href: "/",
+      href: "/partner/hakgojae",
     },
     show: {
       name: "Show",
       subname: "Wow Show",
-      href: "/",
+      href: "/partner/hakgojae",
       location_with_dates: "서울, jan - feb",
       image: "/images/home/featured_galleries/gallery2.jpeg",
     },
@@ -187,12 +187,12 @@ export const GalleryProfiles = [
   {
     owner: {
       name: "Gallery",
-      href: "/",
+      href: "/partner/hakgojae",
     },
     show: {
       name: "Show",
       subname: "Wow Show",
-      href: "/",
+      href: "/partner/hakgojae",
       location_with_dates: "서울, jan - feb",
       image: "/images/home/featured_galleries/gallery2.jpeg",
     },

@@ -101,6 +101,20 @@ export const NavBar: React.FC = track(
   const handleClick = (
     event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
+    const link = event.currentTarget
+    const text = (link.textContent || link.getAttribute("data-label")) ?? ""
+    const href = link.getAttribute("href")!
+
+    trackEvent({
+      action_type: AnalyticsSchema.ActionType.Click,
+      destination_path: href,
+      subject: text,
+    })
+  }
+
+  const handleClickNone = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     event.preventDefault()
   }
 
@@ -251,7 +265,7 @@ export const NavBar: React.FC = track(
                     >
                       <NavBarItemUnfocusableAnchor
                         href="/"
-                        onClick={handleClick}
+                        onClick={handleClickNone}
                         data-label="Artists"
                       />
                       Artists
@@ -281,7 +295,7 @@ export const NavBar: React.FC = track(
                     >
                       <NavBarItemUnfocusableAnchor
                         href="/"
-                        onClick={handleClick}
+                        onClick={handleClickNone}
                         data-label="Artworks"
                       />
                       Artworks
@@ -289,15 +303,16 @@ export const NavBar: React.FC = track(
                   )}
                 </Dropdown>
 
-                {/* <NavBarItemLink href="/galleries" onClick={handleClick}> */}
-                <NavBarItemLink>Galleries</NavBarItemLink>
+                <NavBarItemLink href="/galleries" onClick={handleClick}>
+                  Galleries
+                </NavBarItemLink>
 
                 <NavBarItemLink
                   // Hide link at smaller viewports — corresponding display inside of `MoreNavMenu`
                   // If we need to do this again, consider a more abstract solution
                   display={["none", "none", "flex", "flex"]}
                   href="/"
-                  onClick={handleClick}
+                  onClick={handleClickNone}
                 >
                   Museums
                 </NavBarItemLink>
@@ -305,16 +320,16 @@ export const NavBar: React.FC = track(
                 {}
                 <NavBarItemLink>Collectors</NavBarItemLink>
 
-                {/* <NavBarItemLink href="/auctions" onClick={handleClick}> */}
+                {/* <NavBarItemLink href="/auctions" onClick={handleClickNone}> */}
                 <NavBarItemLink>Auctions</NavBarItemLink>
 
-                {/* <NavBarItemLink href="/fairs" onClick={handleClick}> */}
+                {/* <NavBarItemLink href="/fairs" onClick={handleClickNone}> */}
                 <NavBarItemLink>Fairs</NavBarItemLink>
 
-                {/* <NavBarItemLink href="/Shows" onClick={handleClick}> */}
+                {/* <NavBarItemLink href="/Shows" onClick={handleClickNone}> */}
                 <NavBarItemLink>Shows</NavBarItemLink>
 
-                {/* <NavBarItemLink href="/viewing-rooms" onClick={handleClick}> */}
+                {/* <NavBarItemLink href="/viewing-rooms" onClick={handleClickNone}> */}
                 {/* <NavBarItemLink>Viewing&nbsp;Rooms</NavBarItemLink> */}
 
                 <NavBarItemLink>Rental</NavBarItemLink>
