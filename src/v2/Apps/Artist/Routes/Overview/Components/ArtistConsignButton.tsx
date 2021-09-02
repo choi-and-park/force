@@ -63,7 +63,8 @@ export const ArtistConsignButtonLarge: React.FC<
 
   return (
     <RouterLink
-      to={consignURL}
+      // to={consignURL}
+      to={"/"}
       style={{
         textDecoration: "none",
       }}
@@ -112,7 +113,8 @@ export const ArtistConsignButtonSmall: React.FC<
 
   return (
     <RouterLink
-      to={consignURL}
+      // to={consignURL}
+      to={"/"}
       style={{
         textDecoration: "none",
       }}

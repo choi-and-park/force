@@ -13,8 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Gowun+Dodum&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- Create preload tags for dynamic chunks -->
   <%- htmlWebpackPlugin.tags.bodyTags.map((originalTag) => { const tag = { ...originalTag, attributes: { ...originalTag.attributes } }; tag.tagName = 'link'; tag.attributes['href'] = "<" + "%= cdnUrl %" + ">" + originalTag.attributes['src']; tag.attributes['rel'] = 'preload'; tag.attributes['as'] = 'script'; delete tag.attributes.src; return tag; }) %>

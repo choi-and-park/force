@@ -38,22 +38,23 @@ const ArtistNotableWorksRail: React.FC<ArtistNotableWorksRailProps> = ({
         </Text>
 
         <RouterLink
-          to={`/artist/${artist.slug}/works-for-sale`}
+          // to={`/artist/${artist.slug}/works-for-sale`}
+          to={`/`}
           onClick={() => {
             scrollToTop()
 
-            tracking.trackEvent(
-              clickedEntityGroup({
-                contextModule: ContextModule.topWorksRail,
-                contextPageOwnerId,
-                contextPageOwnerSlug,
-                contextPageOwnerType: contextPageOwnerType!,
-                destinationPageOwnerType: OwnerType.artist,
-                destinationPageOwnerId: artist.internalID,
-                destinationPageOwnerSlug: artist.slug,
-                type: "viewAll",
-              })
-            )
+            // tracking.trackEvent(
+            //   clickedEntityGroup({
+            //     contextModule: ContextModule.topWorksRail,
+            //     contextPageOwnerId,
+            //     contextPageOwnerSlug,
+            //     contextPageOwnerType: contextPageOwnerType!,
+            //     destinationPageOwnerType: OwnerType.artist,
+            //     destinationPageOwnerId: artist.internalID,
+            //     destinationPageOwnerSlug: artist.slug,
+            //     type: "viewAll",
+            //   })
+            // )
           }}
         >
           <Text variant="sm">View all works</Text>
@@ -72,21 +73,21 @@ const ArtistNotableWorksRail: React.FC<ArtistNotableWorksRailProps> = ({
               showExtended={false}
               showMetadata
               lazyLoad
-              onClick={() => {
-                tracking.trackEvent(
-                  clickedEntityGroup({
-                    contextModule: ContextModule.topWorksRail,
-                    contextPageOwnerId,
-                    contextPageOwnerSlug,
-                    contextPageOwnerType: contextPageOwnerType!,
-                    destinationPageOwnerType: OwnerType.artwork,
-                    destinationPageOwnerId: node.internalID,
-                    destinationPageOwnerSlug: node.slug,
-                    horizontalSlidePosition: index + 1,
-                    type: "thumbnail",
-                  })
-                )
-              }}
+              // onClick={() => {
+              //   tracking.trackEvent(
+              //     clickedEntityGroup({
+              //       contextModule: ContextModule.topWorksRail,
+              //       contextPageOwnerId,
+              //       contextPageOwnerSlug,
+              //       contextPageOwnerType: contextPageOwnerType!,
+              //       destinationPageOwnerType: OwnerType.artwork,
+              //       destinationPageOwnerId: node.internalID,
+              //       destinationPageOwnerSlug: node.slug,
+              //       horizontalSlidePosition: index + 1,
+              //       type: "thumbnail",
+              //     })
+              //   )
+              // }}
             />
           )
         })}

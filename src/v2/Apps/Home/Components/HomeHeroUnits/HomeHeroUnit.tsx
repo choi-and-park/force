@@ -147,7 +147,8 @@ export const HomeHeroUnitFragmentContainer = ({
                 textTransform="uppercase"
                 color={colorScheme.heading}
                 style={{
-                  fontFamily: "Alegreya",
+                  // fontFamily: "Alegreya",
+                  fontFamily: "Noto Sans KR",
                   // fontFamily: "Times New Roman",
                 }}
               >
@@ -164,7 +165,8 @@ export const HomeHeroUnitFragmentContainer = ({
             color={colorScheme.title}
             style={{
               whiteSpace: "pre-line",
-              fontFamily: "Gowun Dodum",
+              // fontFamily: "Gowun Dodum",
+              fontFamily: "Noto Sans KR",
             }}
           >
             {heroUnit.title}
@@ -174,10 +176,11 @@ export const HomeHeroUnitFragmentContainer = ({
               <Spacer mt={[1, 2]} />
 
               <Text
-                variant={["xs", "md", "lg"]}
+                variant={["xs", "md", "md"]}
                 style={{
                   whiteSpace: "pre-line",
-                  fontFamily: "Alegreya",
+                  // fontFamily: "Alegreya",
+                  fontFamily: "Noto Sans KR",
                 }}
                 color={colorScheme.subtitle}
                 // html={heroUnit.subtitle}
@@ -197,7 +200,7 @@ export const HomeHeroUnitFragmentContainer = ({
               />
 
               <GridColumns>
-                <Column span={[12, 12, 6]}>
+                <Column span={[12, 6, 6]}>
                   <Button
                     variant={colorScheme.button as any}
                     // @ts-ignore

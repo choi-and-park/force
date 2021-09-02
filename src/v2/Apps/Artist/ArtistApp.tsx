@@ -60,7 +60,8 @@ const ArtistApp: React.FC<ArtistAppProps> = ({ artist, children, match }) => {
         )}
 
         {showArtworksTab && (
-          <RouteTab to={`/artist/${artist.slug}/works-for-sale`}>
+          // <RouteTab to={`/artist/${artist.slug}/works-for-sale`}>
+          <RouteTab to={`/`}>
             {artist?.counts?.forSaleArtworks! > 0
               ? `Works for Sale (${artist?.counts?.forSaleArtworks?.toLocaleString()})`
               : "Artworks"}
@@ -68,9 +69,8 @@ const ArtistApp: React.FC<ArtistAppProps> = ({ artist, children, match }) => {
         )}
 
         {showAuctionLotsTab && (
-          <RouteTab to={`/artist/${artist.slug}/auction-results`}>
-            Auction results
-          </RouteTab>
+          // <RouteTab to={`/artist/${artist.slug}/auction-results`}>
+          <RouteTab to={`/`}>Auction results</RouteTab>
         )}
       </RouteTabs>
 

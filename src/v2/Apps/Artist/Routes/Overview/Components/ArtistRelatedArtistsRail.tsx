@@ -47,7 +47,8 @@ const ArtistRelatedArtistsRail: React.FC<ArtistRelatedArtistsRailProps> = ({
           return (
             <React.Fragment key={index}>
               <RouterLink
-                to={node.href}
+                // to={node.href}
+                to={"/"}
                 display="block"
                 textDecoration="none"
                 onClick={() => {
@@ -80,29 +81,30 @@ const ArtistRelatedArtistsRail: React.FC<ArtistRelatedArtistsRailProps> = ({
                 width={325}
                 name={node.name!}
                 imageUrl={node?.image?.cropped?.url}
-                href={`/artist/${node.slug}`}
+                // href={`/artist/${node.slug}`}
+                href={"/"}
                 meta={
                   node.nationality && node.birthday
                     ? `${node.nationality}, b. ${node.birthday}`
                     : undefined
                 }
-                FollowButton={
-                  <ArtistFollowArtistButton
-                    artist={{
-                      internalID: node.internalID,
-                      slug: node.slug,
-                      name: node.name,
-                      isFollowed: node.isFollowed,
-                      " $refType": "ArtistFollowArtistButton_artist",
-                    }}
-                    contextModule={ContextModule.featuredArtistsRail}
-                    buttonProps={{
-                      size: "small",
-                      variant: "secondaryOutline",
-                      width: null,
-                    }}
-                  />
-                }
+                // FollowButton={
+                //   <ArtistFollowArtistButton
+                //     artist={{
+                //       internalID: node.internalID,
+                //       slug: node.slug,
+                //       name: node.name,
+                //       isFollowed: node.isFollowed,
+                //       " $refType": "ArtistFollowArtistButton_artist",
+                //     }}
+                //     contextModule={ContextModule.featuredArtistsRail}
+                //     buttonProps={{
+                //       size: "small",
+                //       variant: "secondaryOutline",
+                //       width: null,
+                //     }}
+                //   />
+                // }
               />
             </React.Fragment>
           )

@@ -47,10 +47,11 @@ const ShelfArtwork: React.FC<ShelfArtworkProps> = ({
   return (
     <>
       <RouterLink
-        to={artwork?.href}
+        // to={artwork?.href}
+        to={"/"}
         display="block"
         textDecoration="none"
-        onClick={onClick}
+        // onClick={onClick}
         data-test="artworkShelfArtwork"
         {...containerProps}
       >

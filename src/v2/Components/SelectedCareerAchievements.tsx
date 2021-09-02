@@ -167,7 +167,8 @@ export class SelectedCareerAchievements extends React.Component<
 
             <Spacer my={2} />
 
-            <RouterLink to={`${this.props.artist.slug}/cv`}>
+            {/* <RouterLink to={`${this.props.artist.slug}/cv`}> */}
+            <RouterLink to={`/`}>
               <ChevronButton>See all past shows and fair booths</ChevronButton>
             </RouterLink>
           </>

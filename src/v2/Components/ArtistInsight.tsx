@@ -89,10 +89,10 @@ export class ArtistInsight extends React.Component<ArtistInsightProps> {
           {entities.length > 1 && (
             <>
               , and{" "}
-              <Link onClick={this.handleExpand.bind(this)}>
+              {/* <Link onClick={this.handleExpand.bind(this)}>
                 {entities.length - 1}
                 &nbsp;more
-              </Link>
+              </Link> */}
             </>
           )}
         </TextWrapper>

@@ -29,7 +29,8 @@ const ArtistGenes: React.FC<ArtistGenesProps> = ({ artist }) => {
           <Pill
             as={RouterLink}
             // @ts-ignore
-            to={pill.href}
+            // to={pill.href}
+            to={"/"}
             key={index}
             mr={1}
             mb={1}

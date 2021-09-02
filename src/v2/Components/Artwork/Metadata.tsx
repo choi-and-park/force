@@ -26,7 +26,8 @@ export const Metadata: React.FC<MetadataProps> = ({
 }) => {
   return (
     <RouterLink
-      to={artwork.href}
+      // to={artwork.href}
+      to={"/"}
       display="block"
       textDecoration="none"
       textAlign="left"

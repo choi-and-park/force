@@ -36,7 +36,8 @@ const ArtistCurrentArticlesRail: React.FC<ArtistCurrentArticlesRailProps> = ({
         </Text>
 
         <RouterLink
-          to={`/artist/${artist.slug}/articles`}
+          // to={`/artist/${artist.slug}/articles`}
+          to={"/"}
           onClick={() => {
             tracking.trackEvent(
               clickedEntityGroup({
@@ -60,7 +61,8 @@ const ArtistCurrentArticlesRail: React.FC<ArtistCurrentArticlesRailProps> = ({
           return (
             <Box maxWidth={345} key={index}>
               <RouterLink
-                to={node.href!}
+                // to={node.href!}
+                to={"/"}
                 key={index}
                 noUnderline
                 onClick={() => {
