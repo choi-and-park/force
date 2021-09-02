@@ -163,7 +163,7 @@ const artworks_artists = {
     artists: [
       {
         name: "김창열",
-        href: "/",
+        href: "/artist/kim-tschang-yeul",
       },
       {
         name: "이우환",
@@ -448,7 +448,7 @@ const artworks_artists = {
 }
 
 const artworks_galleries = {
-  title: "Featured galleries",
+  title: "Suggested Galleries to Follow",
   id: "id_featured_galleries",
   key: "featured_galleries",
   context: {
@@ -511,7 +511,7 @@ const artworks_galleries = {
 }
 
 const artworks_shows = {
-  title: "Featrued shows",
+  title: "Featrued Shows",
   id: "id_featured_shows",
   key: "featured_shows",
   context: {
@@ -521,42 +521,22 @@ const artworks_shows = {
     {
       __typename: "show",
       href: "/",
-      id: "id_show1",
+      id: "id_show4",
       image: {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/5_featured_shows/show1.jpg",
-          srcSet: "/images/home/5_featured_shows/show1.jpg 1x",
-          width: 300,
+          src: "/images/home/5_featured_shows/show4.jpeg",
+          srcSet: "/images/home/5_featured_shows/show4.jpeg 1x",
+          width: 200,
           // height: 302
         },
       },
-      imageTitle: "show1",
-      internalID: "InternalID1",
-      title: "JAN-OLE SCHIEMANN: 'SYNTHETIC HORIZONS'",
-      gallery: "초이앤라거 서울",
-      date: "2018. 7. 18. ~ 2018. 8. 26.",
-    },
-    {
-      __typename: "show",
-      href: "/",
-      id: "id_show2",
-      image: {
-        aspectRatio: 0.76,
-        height: 1080,
-        resized: {
-          src: "/images/home/5_featured_shows/show2.jpg",
-          srcSet: "/images/home/5_featured_shows/show2.jpg 1x",
-          width: 300,
-          // height: 302
-        },
-      },
-      imageTitle: "show2",
-      internalID: "InternalID2",
-      title: "ANDREAS BLANK & HELENA PARADA KIM",
-      gallery: "초이앤라거 서울",
-      date: "2018. 2. 28. ~ 2018. 3. 28.",
+      imageTitle: "show4",
+      internalID: "InternalID4",
+      title: "구지윤: Tongue & Nail",
+      gallery: "아라리오 갤러리",
+      date: "2021. 8. 3. ~ 2021. 9. 25.",
     },
     {
       __typename: "show",
@@ -581,22 +561,22 @@ const artworks_shows = {
     {
       __typename: "show",
       href: "/",
-      id: "id_show4",
+      id: "id_show1",
       image: {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/5_featured_shows/show4.jpeg",
-          srcSet: "/images/home/5_featured_shows/show4.jpeg 1x",
-          width: 200,
+          src: "/images/home/5_featured_shows/show1.jpg",
+          srcSet: "/images/home/5_featured_shows/show1.jpg 1x",
+          width: 300,
           // height: 302
         },
       },
-      imageTitle: "show4",
-      internalID: "InternalID4",
-      title: "구지윤: Tongue & Nail",
-      gallery: "아라리오 갤러리",
-      date: "2021. 8. 3. ~ 2021. 9. 25.",
+      imageTitle: "show1",
+      internalID: "InternalID1",
+      title: "JAN-OLE SCHIEMANN: 'SYNTHETIC HORIZONS'",
+      gallery: "초이앤라거 서울",
+      date: "2018. 7. 18. ~ 2018. 8. 26.",
     },
     {
       __typename: "show",
@@ -614,6 +594,26 @@ const artworks_shows = {
       },
       imageTitle: "show5",
       internalID: "InternalID5",
+      title: "ANDREAS BLANK & HELENA PARADA KIM",
+      gallery: "초이앤라거 서울",
+      date: "2018. 2. 28. ~ 2018. 3. 28.",
+    },
+    {
+      __typename: "show",
+      href: "/",
+      id: "id_show2",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/5_featured_shows/show2.jpg",
+          srcSet: "/images/home/5_featured_shows/show2.jpg 1x",
+          width: 300,
+          // height: 302
+        },
+      },
+      imageTitle: "show2",
+      internalID: "InternalID2",
       title: "ANDREAS BLANK & HELENA PARADA KIM",
       gallery: "초이앤라거 서울",
       date: "2018. 2. 28. ~ 2018. 3. 28.",
@@ -641,9 +641,185 @@ const artworks_shows = {
   ],
 }
 
+const artworks_collectors = {
+  title: "Suggested Collectors to Follow",
+  id: "id_suggested_collectors",
+  key: "suggested_collectors",
+  context: {
+    __typename: "TrendingArtists",
+  },
+  items: [
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector3",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector3.png",
+          srcSet: "/images/home/6_collectors/collector3.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector3",
+      internalID: "InternalID3",
+      title: "Bech Risvig Collection",
+      location: "Denmark",
+      collections: "111 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector1",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector1.png",
+          srcSet: "/images/home/6_collectors/collector1.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector1",
+      internalID: "InternalID1",
+      title: "Robert Mollers",
+      location: "United States",
+      collections: "176 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector2",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector2.png",
+          srcSet: "/images/home/6_collectors/collector2.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector2",
+      internalID: "InternalID2",
+      title: "Charles Riva Collection",
+      location: "Belgium",
+      collections: "139 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector4",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector4.png",
+          srcSet: "/images/home/6_collectors/collector4.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector4",
+      internalID: "InternalID4",
+      title: "Garzon Garcia Collection",
+      location: "Spain",
+      collections: "54 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector8",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector8.png",
+          srcSet: "/images/home/6_collectors/collector8.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector8",
+      internalID: "InternalID8",
+      title: "Eirik Stensrud",
+      location: "Norway",
+      collections: "63 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector7",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector7.png",
+          srcSet: "/images/home/6_collectors/collector7.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector7",
+      internalID: "InternalID7",
+      title: "Edwin Oostmeijer",
+      location: "Netherlands",
+      collections: "26 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector5",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector5.png",
+          srcSet: "/images/home/6_collectors/collector5.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector5",
+      internalID: "InternalID5",
+      title: "Daniel Kutz",
+      location: "United States",
+      collections: "9 artworks",
+    },
+    {
+      __typename: "collector",
+      href: "/",
+      id: "id_collector6",
+      image: {
+        aspectRatio: 0.76,
+        height: 1080,
+        resized: {
+          src: "/images/home/6_collectors/collector6.png",
+          srcSet: "/images/home/6_collectors/collector6.png 1x",
+          width: 200,
+          // height: 302
+        },
+      },
+      imageTitle: "collector6",
+      internalID: "InternalID6",
+      title: "David Moran",
+      location: "Spain",
+      collections: "21 artworks",
+    },
+  ],
+}
+
 export const HomeContents = {
   banners: banners,
   events: events,
   categories: categories,
-  artworkModules: [artworks_artists, artworks_galleries, artworks_shows],
+  artworkModules: [
+    artworks_artists,
+    artworks_galleries,
+    artworks_shows,
+    artworks_collectors,
+  ],
 }

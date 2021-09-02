@@ -68,9 +68,9 @@ export const HomeArtworkModuleContextFragmentContainer = ({
                     fontFamily: "Gowun Dodum",
                     // fontWeight: 700,
                   }}
-                  onClick={e => {
-                    e.preventDefault()
-                  }}
+                  // onClick={e => {
+                  //   e.preventDefault()
+                  // }}
                 >
                   {artist.name}
                 </BaseTab>

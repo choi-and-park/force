@@ -16,7 +16,7 @@ import { HomeFeaturedGalleryFragmentContainer } from "./HomeFeaturedGallery_Nuar
 
 const HomeFeaturedGalleriesQueryRenderer = ({ artworkModule }) => {
   return (
-    <HomeFeaturedGalleriesContainer>
+    <HomeFeaturedGalleriesContainer title={artworkModule.title}>
       <GridColumns gridRowGap={6}>
         {artworkModule.items.map(gallery => {
           return (
@@ -30,7 +30,9 @@ const HomeFeaturedGalleriesQueryRenderer = ({ artworkModule }) => {
   )
 }
 
-const HomeFeaturedGalleriesContainer: React.FC = ({ children }) => {
+const HomeFeaturedGalleriesContainer: React.FC<{
+  title: string | JSX.Element
+}> = ({ title, children }) => {
   return (
     <>
       <Flex justifyContent="space-between">
@@ -42,7 +44,7 @@ const HomeFeaturedGalleriesContainer: React.FC = ({ children }) => {
             // fontWeight: 700,
           }}
         >
-          Featured galleries
+          {title}
         </Text>
 
         <Text
@@ -70,7 +72,7 @@ const HomeFeaturedGalleriesContainer: React.FC = ({ children }) => {
 }
 
 const PLACEHOLDER = (
-  <HomeFeaturedGalleriesContainer>
+  <HomeFeaturedGalleriesContainer title={"Featured Galleries"}>
     <Skeleton>
       <GridColumns gridRowGap={6}>
         {[...new Array(6)].map((_, i) => {
