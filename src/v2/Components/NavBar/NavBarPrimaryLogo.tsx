@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { RouterLink, RouterLinkProps } from "v2/System/Router/RouterLink"
 import { themeGet } from "@styled-system/theme-get"
-import NuArtIcon from "./logo2.svg"
+import NuArtIcon from "./NUARTlogo3.svg"
 
 export const NavBarPrimaryLogo: React.FC<Omit<
   RouterLinkProps,

@@ -646,7 +646,7 @@ const artworks_collectors = {
   id: "id_suggested_collectors",
   key: "suggested_collectors",
   context: {
-    __typename: "TrendingArtists",
+    __typename: "FeaturedShows",
   },
   items: [
     {
