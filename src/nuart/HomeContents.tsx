@@ -6,12 +6,12 @@ const banners = [
     // "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     image: {
-      src: "/images/home/banner/banner1_1920.png",
-      srcSet: "/images/home/banner/banner1_1920.png 1x",
+      src: "/images/home/1_banners/banner1_1920_1080.png",
+      srcSet: "/images/home/1_banners/banner1_1920_1080.png 1x",
     },
     image_mobile: {
-      src: "/images/home/banner/banner1_1440.png",
-      srcSet: "/images/home/banner/banner1_1440.png 1x",
+      src: "/images/home/1_banners/banner1_1440_1080.png",
+      srcSet: "/images/home/1_banners/banner1_1440_1080.png 1x",
     },
     linkText: "Browse Works",
   },
@@ -22,12 +22,12 @@ const banners = [
     // "Choi Seok-Hwan Collection\nThe korean art gallery\n2021.5.21.-2022.6.13.",
     href: "/",
     image: {
-      src: "/images/home/banner/banner2_1920.png",
-      srcSet: "/images/home/banner/banner2_1920.png 1x",
+      src: "/images/home/1_banners/banner2_1920_1080.png",
+      srcSet: "/images/home/1_banners/banner2_1920_1080.png 1x",
     },
     image_mobile: {
-      src: "/images/home/banner/banner2_1440.png",
-      srcSet: "/images/home/banner/banner2_1440.png 1x",
+      src: "/images/home/1_banners/banner2_1440_1080.png",
+      srcSet: "/images/home/1_banners/banner2_1440_1080.png 1x",
     },
     linkText: "Buy now",
   },
@@ -37,12 +37,12 @@ const banners = [
     subtitle: "COEX HALL B\n2021.7.29 - 2021.8.1",
     href: "/",
     image: {
-      src: "/images/home/banner/banner3_1920.png.jpeg",
-      srcSet: "/images/home/banner/banner3_1920.png 1x",
+      src: "/images/home/1_banners/banner3_1920_1080.png.jpeg",
+      srcSet: "/images/home/1_banners/banner3_1920_1080.png 1x",
     },
     image_mobile: {
-      src: "/images/home/banner/banner3_1440.png",
-      srcSet: "/images/home/banner/banner3_1440.png 1x",
+      src: "/images/home/1_banners/banner3_1440_1080.png",
+      srcSet: "/images/home/1_banners/banner3_1440_1080.png 1x",
     },
     linkText: "Buy ticket",
   },
@@ -108,48 +108,48 @@ const categories = [
     slug: "painting",
     title: "회화",
     image: {
-      src: "/images/home/categories/hh.jpg",
-      srcSet: "/images/home/categories/hh.jpg 1x",
+      src: "/images/home/2_categories/cat1_hh.jpg",
+      srcSet: "/images/home/2_categories/cat1_hh.jpg 1x",
     },
   },
   {
     slug: "photography",
     title: "사진",
     image: {
-      src: "/images/home/categories/sj.png",
-      srcSet: "/images/home/categories/sj.png 1x",
+      src: "/images/home/2_categories/cat2_sj.png",
+      srcSet: "/images/home/2_categories/cat2_sj.png 1x",
     },
   },
   {
     slug: "drawing",
     title: "드로잉",
     image: {
-      src: "/images/home/categories/drw.png",
-      srcSet: "/images/home/categories/drw.png 1x",
+      src: "/images/home/2_categories/cat3_drw.png",
+      srcSet: "/images/home/2_categories/cat3_drw.png 1x",
     },
   },
   {
     slug: "engraving",
     title: "판화",
     image: {
-      src: "/images/home/categories/ph.png",
-      srcSet: "/images/home/categories/ph.png 1x",
+      src: "/images/home/2_categories/cat4_ph.png",
+      srcSet: "/images/home/2_categories/cat4_ph.png 1x",
     },
   },
   {
     slug: "sculpture",
     title: "조각",
     image: {
-      src: "/images/home/categories/jk.jpg",
-      srcSet: "/images/home/categories/jk.jpg 1x",
+      src: "/images/home/2_categories/cat5_jk.jpg",
+      srcSet: "/images/home/2_categories/cat5_jk.jpg 1x",
     },
   },
   {
     slug: "media-art",
     title: "미디어아트",
     image: {
-      src: "/images/home/categories/ma.jpg",
-      srcSet: "/images/home/categories/ma.jpg 1x",
+      src: "/images/home/2_categories/cat6_ma.jpg",
+      srcSet: "/images/home/2_categories/cat6_ma.jpg 1x",
     },
   },
 ]
@@ -219,13 +219,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular1.jpg",
-          srcSet: "/images/home/popular_artists/popular1.jpg x1",
+          src: "/images/home/3_popular_artists/artist1.jpg",
+          srcSet: "/images/home/3_popular_artists/artist1.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular1",
+      imageTitle: "artist1",
       internalID: "InternalID",
       sale_message: "35,000,000,000원",
       slug: "",
@@ -249,13 +249,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular2.jpg",
-          srcSet: "/images/home/popular_artists/popular2.jpg x1",
+          src: "/images/home/3_popular_artists/artist2.jpg",
+          srcSet: "/images/home/3_popular_artists/artist2.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular2",
+      imageTitle: "artist2",
       internalID: "InternalID",
       sale_message: "39,000,000,000원",
       slug: "",
@@ -279,13 +279,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular3.jpg",
-          srcSet: "/images/home/popular_artists/popular3.jpg x1",
+          src: "/images/home/3_popular_artists/artist3.jpg",
+          srcSet: "/images/home/3_popular_artists/artist3.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular3",
+      imageTitle: "artist3",
       internalID: "InternalID",
       sale_message: "2,370,000,000원",
       slug: "",
@@ -309,13 +309,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular4.jpg",
-          srcSet: "/images/home/popular_artists/popular4.jpg x1",
+          src: "/images/home/3_popular_artists/artist4.jpg",
+          srcSet: "/images/home/3_popular_artists/artist4.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular4",
+      imageTitle: "artist4",
       internalID: "InternalID",
       sale_message: "Contact for Price",
       slug: "",
@@ -339,13 +339,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular5.jpg",
-          srcSet: "/images/home/popular_artists/popular5.jpg x1",
+          src: "/images/home/3_popular_artists/artist5.jpg",
+          srcSet: "/images/home/3_popular_artists/artist5.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular5",
+      imageTitle: "artist5",
       internalID: "InternalID",
       sale_message: "33,852,840원",
       slug: "",
@@ -369,13 +369,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular6.jpg",
-          srcSet: "/images/home/popular_artists/popular6.jpg x1",
+          src: "/images/home/3_popular_artists/artist6.jpg",
+          srcSet: "/images/home/3_popular_artists/artist6.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular6",
+      imageTitle: "artist6",
       internalID: "InternalID",
       sale_message: "Contact for Price",
       slug: "",
@@ -399,13 +399,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular7.jpg",
-          srcSet: "/images/home/popular_artists/popular7.jpg x1",
+          src: "/images/home/3_popular_artists/artist7.jpg",
+          srcSet: "/images/home/3_popular_artists/artist7.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular7",
+      imageTitle: "artist7",
       internalID: "InternalID",
       sale_message: "1,569,300원",
       slug: "",
@@ -429,13 +429,13 @@ const artworks_artists = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/popular_artists/popular8.jpg",
-          srcSet: "/images/home/popular_artists/popular8.jpg x1",
+          src: "/images/home/3_popular_artists/artist8.jpg",
+          srcSet: "/images/home/3_popular_artists/artist8.jpg x1",
           width: 200,
           // height: 302
         },
       },
-      imageTitle: "popular8",
+      imageTitle: "artist8",
       internalID: "InternalID",
       sale_message: "22,080,000원",
       slug: "",
@@ -463,8 +463,8 @@ const artworks_galleries = {
       location: "서울",
       coverImage: {
         cropped: {
-          src: "/images/home/featured_galleries/gallery1.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery1.jpeg 1x",
+          src: "/images/home/4_featured_galleries/gallery1.jpeg",
+          srcSet: "/images/home/4_featured_galleries/gallery1.jpeg 1x",
         },
       },
     },
@@ -476,8 +476,8 @@ const artworks_galleries = {
       location: "서울",
       coverImage: {
         cropped: {
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg 1x",
+          src: "/images/home/4_featured_galleries/gallery2.jpeg",
+          srcSet: "/images/home/4_featured_galleries/gallery2.jpeg 1x",
         },
       },
     },
@@ -489,8 +489,8 @@ const artworks_galleries = {
       location: "서울",
       coverImage: {
         cropped: {
-          src: "/images/home/featured_galleries/gallery3.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery3.jpeg 1x",
+          src: "/images/home/4_featured_galleries/gallery3.jpeg",
+          srcSet: "/images/home/4_featured_galleries/gallery3.jpeg 1x",
         },
       },
     },
@@ -502,8 +502,8 @@ const artworks_galleries = {
       location: "서울",
       coverImage: {
         cropped: {
-          src: "/images/home/featured_galleries/gallery4.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery4.jpeg 1x",
+          src: "/images/home/4_featured_galleries/gallery4.jpeg",
+          srcSet: "/images/home/4_featured_galleries/gallery4.jpeg 1x",
         },
       },
     },
@@ -526,8 +526,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show1.jpg",
-          srcSet: "/images/home/featured_shows/show1.jpg 1x",
+          src: "/images/home/5_featured_shows/show1.jpg",
+          srcSet: "/images/home/5_featured_shows/show1.jpg 1x",
           width: 300,
           // height: 302
         },
@@ -546,8 +546,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show2.jpg",
-          srcSet: "/images/home/featured_shows/show2.jpg 1x",
+          src: "/images/home/5_featured_shows/show2.jpg",
+          srcSet: "/images/home/5_featured_shows/show2.jpg 1x",
           width: 300,
           // height: 302
         },
@@ -566,8 +566,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show3.jpg",
-          srcSet: "/images/home/featured_shows/show3.jpg 1x",
+          src: "/images/home/5_featured_shows/show3.jpg",
+          srcSet: "/images/home/5_featured_shows/show3.jpg 1x",
           width: 300,
           // height: 302
         },
@@ -586,8 +586,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show4.jpeg",
-          srcSet: "/images/home/featured_shows/show4.jpeg 1x",
+          src: "/images/home/5_featured_shows/show4.jpeg",
+          srcSet: "/images/home/5_featured_shows/show4.jpeg 1x",
           width: 200,
           // height: 302
         },
@@ -606,8 +606,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show5.png",
-          srcSet: "/images/home/featured_shows/show5.png 1x",
+          src: "/images/home/5_featured_shows/show5.png",
+          srcSet: "/images/home/5_featured_shows/show5.png 1x",
           width: 300,
           // height: 302
         },
@@ -626,8 +626,8 @@ const artworks_shows = {
         aspectRatio: 0.76,
         height: 1080,
         resized: {
-          src: "/images/home/featured_shows/show6.png",
-          srcSet: "/images/home/featured_shows/show6.png 1x",
+          src: "/images/home/5_featured_shows/show6.png",
+          srcSet: "/images/home/5_featured_shows/show6.png 1x",
           width: 300,
           // height: 302
         },

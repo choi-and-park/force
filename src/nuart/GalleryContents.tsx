@@ -10,7 +10,7 @@ const gallery_seoul = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/arario.jpg",
+        image: "/images/galleries/2_featured_galleries/arario.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -21,7 +21,7 @@ const gallery_seoul = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/hakojae.jpg",
+        image: "/images/galleries/2_featured_galleries/hakojae.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -32,7 +32,7 @@ const gallery_seoul = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/opera.jpg",
+        image: "/images/galleries/2_featured_galleries/opera.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -51,7 +51,7 @@ const gallery_photography = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/ryu.jpg",
+        image: "/images/galleries/3_photography/ryu.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -62,7 +62,7 @@ const gallery_photography = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/space55.jpeg",
+        image: "/images/galleries/3_photography/space55.jpeg",
         href: "/partner/hakgojae",
       },
     },
@@ -73,7 +73,7 @@ const gallery_photography = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/rucida.jpeg",
+        image: "/images/galleries/3_photography/rucida.jpeg",
         href: "/partner/hakgojae",
       },
     },
@@ -92,7 +92,7 @@ const gallery_prints = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/pintz.jpeg",
+        image: "/images/galleries/4_prints/pintz.jpeg",
         href: "/partner/hakgojae",
       },
     },
@@ -103,7 +103,7 @@ const gallery_prints = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/space9.jpg",
+        image: "/images/galleries/4_prints/space9.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -114,7 +114,7 @@ const gallery_prints = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/artnedition.jpg",
+        image: "/images/galleries/4_prints/artnedition.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -133,7 +133,7 @@ const gallery_contemporary = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery1",
-        image: "/images/home/featured_galleries/arario.jpg",
+        image: "/images/galleries/5_contemporary/arario.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -144,7 +144,7 @@ const gallery_contemporary = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery2",
-        image: "/images/home/featured_galleries/hakojae.jpg",
+        image: "/images/galleries/5_contemporary/hakojae.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -155,7 +155,7 @@ const gallery_contemporary = {
       locations: [{ city: "서울" }],
       profile: {
         id: "id_gallery3",
-        image: "/images/home/featured_galleries/opera.jpg",
+        image: "/images/galleries/5_contemporary/opera.jpg",
         href: "/partner/hakgojae",
       },
     },
@@ -180,7 +180,7 @@ export const GalleryProfiles = [
       subname: "학고재 갤러리",
       href: "/partner/hakgojae",
       location_with_dates: "서울, jan - feb",
-      image: "/images/home/featured_galleries/hakojae.jpg",
+      image: "/images/galleries/1_banners/hakojae.jpg",
     },
     id: "follow-id",
   },
@@ -194,7 +194,7 @@ export const GalleryProfiles = [
       subname: "SPACE55",
       href: "/partner/hakgojae",
       location_with_dates: "서울, jan - feb",
-      image: "/images/home/featured_galleries/space55.jpeg",
+      image: "/images/galleries/1_banners/space55.jpeg",
     },
     id: "follow-id",
   },
@@ -205,8 +205,8 @@ export const gallery_arario = {
   profile: {
     icon: {
       resized: {
-        src: "/images/home/featured_galleries/gallery2.jpeg",
-        srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+        src: "/images/gallery_hakgojae/1_banners/banner1.jpg",
+        srcSet: "/images/gallery_hakgojae/1_banners/banner1.jpg 1x",
       },
     },
   },
@@ -228,8 +228,8 @@ export const gallery_arario = {
         "KANG Eun Young was born in Seoul, 1985. She received her Bachelor's degree in Printmaking with a Minor in Oriental Painting at Hongik University in 2011. She completed her Master's degree in Printmaking in the same school in 2014. She has held solo exhibitions at Dimension Variable (Seoul) Open-beta space Vanziha (Seoul), etc. She participated in group exhibitions held at National Museum of Modern and Contemporary Art (Gwacheon, Korea), Art Sonje Center (Seoul), Sejong Center for the Performing Arts (Seoul), Jeon Tae-il Memorial Hall (Seoul), etc. She also participated in the 7th Gwangju Design Biennale: Futures. Along with working as an artist, KANG also runs a plant store named 'Singmul Store.'",
       coverImage: {
         medium: {
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+          src: "/images/gallery_hakgojae/1_banners/banner1.jpg",
+          srcSet: "/images/gallery_hakgojae/1_banners/banner1.jpg 1x",
         },
       },
     },
@@ -246,8 +246,8 @@ export const gallery_arario = {
         "Hakgojae Gallery is pleased to present works by CHOI Xooang (b. 1975) in his solo exhibition, 'Unfold' at Hakgojae Gallery, from July 28th (Wed) to August 29th (Sun), 2021. This is CHOI Xooang’s first solo exhibition at Hakgojae Gallery. This exhibition is an opportunity to examine the artist’s recent works that tried to make changes in working habits which were his daily life as social distancing has prompted us to reconsider daily life more these days. CHOI, who has been restlessly working since the early 2000s, has had a two-year hiatus since his solo exhibition, Unbodied Objects, at Bongsan Cultural Center (Daegu, Korea). He unfolds the inner journey so far in the 21 works on view at Hakgojae Gallery. CHOI Xooang has been creating realistic sculptures of the body, modified or dismantled. He embodied the narratives of emotions that occur between completely private life and firm social norms in these figures. In this exhibition, CHOI presents new works, including paintings, sculptures, and installations, using different methods from the past. CHOI explores the gap between knowledge and reality. The exhibition will cool down the hot summer by removing the skin of reconstruction. Independent curator Maeng Jee Young wrote the introductory essay.",
       coverImage: {
         medium: {
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+          src: "/images/gallery_hakgojae/1_banners/banner2.jpg",
+          srcSet: "/images/gallery_hakgojae/1_banners/banner2.jpg 1x",
         },
       },
     },
@@ -266,8 +266,8 @@ export const gallery_arario = {
         medium: {
           width: 263,
           height: 222,
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+          src: "/images/gallery_hakgojae/2_events/event1.jpg",
+          srcSet: "/images/gallery_hakgojae/2_events/event1.jpg 1x",
         },
       },
     },
@@ -281,8 +281,8 @@ export const gallery_arario = {
         medium: {
           width: 263,
           height: 222,
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+          src: "/images/gallery_hakgojae/2_events/event2.jpg",
+          srcSet: "/images/gallery_hakgojae/2_events/event2.jpg 1x",
         },
       },
     },
@@ -296,8 +296,8 @@ export const gallery_arario = {
         medium: {
           width: 263,
           height: 222,
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+          src: "/images/gallery_hakgojae/2_events/event3.jpg",
+          srcSet: "/images/gallery_hakgojae/2_events/event3.jpg 1x",
         },
       },
     },
@@ -311,8 +311,8 @@ export const gallery_arario = {
         medium: {
           width: 263,
           height: 222,
-          src: "/images/home/featured_galleries/gallery2.jpeg",
-          srcSet: "/images/home/featured_galleries/gallery2.jpeg",
+          src: "/images/gallery_hakgojae/2_events/event4.jpg",
+          srcSet: "/images/gallery_hakgojae/2_events/event4.jpg 1x",
         },
       },
     },
