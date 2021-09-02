@@ -6,8 +6,12 @@ const banners = [
     // "MMCA\nLee Kun-hee Collection\nMasterpieces of Korean Art\n2021.7.21.-2022.3.13.",
     href: "/",
     image: {
-      src: "/images/home/banner/banner1.jpg",
-      srcSet: "/images/home/banner/banner1.jpg 1x",
+      src: "/images/home/banner/banner1_1920.png",
+      srcSet: "/images/home/banner/banner1_1920.png 1x",
+    },
+    image_mobile: {
+      src: "/images/home/banner/banner1_1440.png",
+      srcSet: "/images/home/banner/banner1_1440.png 1x",
     },
     linkText: "Browse Works",
   },
@@ -18,8 +22,12 @@ const banners = [
     // "Choi Seok-Hwan Collection\nThe korean art gallery\n2021.5.21.-2022.6.13.",
     href: "/",
     image: {
-      src: "/images/home/banner/banner2.jpg",
-      srcSet: "/images/home/banner/banner2.jpg 1x",
+      src: "/images/home/banner/banner2_1920.png",
+      srcSet: "/images/home/banner/banner2_1920.png 1x",
+    },
+    image_mobile: {
+      src: "/images/home/banner/banner2_1440.png",
+      srcSet: "/images/home/banner/banner2_1440.png 1x",
     },
     linkText: "Buy now",
   },
@@ -29,8 +37,12 @@ const banners = [
     subtitle: "COEX HALL B\n2021.7.29 - 2021.8.1",
     href: "/",
     image: {
-      src: "/images/home/banner/banner3.jpg.jpeg",
-      srcSet: "/images/home/banner/banner3.jpg 1x",
+      src: "/images/home/banner/banner3_1920.png.jpeg",
+      srcSet: "/images/home/banner/banner3_1920.png 1x",
+    },
+    image_mobile: {
+      src: "/images/home/banner/banner3_1440.png",
+      srcSet: "/images/home/banner/banner3_1440.png 1x",
     },
     linkText: "Buy ticket",
   },

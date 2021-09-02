@@ -22,99 +22,28 @@ export const HomeHeroUnitFragmentContainer = ({
   index,
 }) => {
   const colorScheme = {
-    black5: {
-      heading: "black100",
-      title: "black100",
-      subtitle: "black60",
-      button: "secondaryOutline",
-      linkText: "black100",
-    },
-    black100: {
-      heading: "white100",
-      title: "white100",
-      subtitle: "white100",
-      button: "primaryWhite",
-      linkText: "white100",
-    },
-  }[bg]
+    heading: "white100",
+    title: "white100",
+    subtitle: "white100",
+    button: "primaryWhite",
+    linkText: "white100",
+  }
 
-  const figure = (
-    <Column span={6} bg="white100">
-      <RouterLink
-        to={heroUnit.href ?? ""}
-        style={{
-          display: "block",
-          width: "100%",
-          height: "100%",
-        }}
-        tabIndex={-1}
-        onClick={e => {
-          e.preventDefault()
-        }}
-      >
-        {heroUnit.image && (
-          <>
-            <Media at="xs">
-              <ResponsiveBox
-                aspectWidth={3}
-                aspectHeight={2}
-                maxWidth="100%"
-                bg="black10"
-              >
-                <Image
-                  src={heroUnit.image.src}
-                  srcSet={heroUnit.image.srcSet}
-                  width="100%"
-                  height="100%"
-                  lazyLoad={index > 0}
-                />
-              </ResponsiveBox>
-            </Media>
-
-            <Media greaterThan="xs">
-              {className => (
-                <Box
-                  className={className}
-                  height={[300, 400, 500]}
-                  position="relative"
-                >
-                  <Image
-                    src={heroUnit.image.src}
-                    srcSet={heroUnit.image.srcSet}
-                    width="100%"
-                    height="100%"
-                    style={{ objectFit: "cover" }}
-                    lazyLoad={index > 0}
-                  />
-
-                  {heroUnit.creditLine && (
-                    <Box
-                      position="absolute"
-                      px={2}
-                      pb={1}
-                      pt={6}
-                      width="100%"
-                      bottom={0}
-                      background="linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);"
-                      {...(layout === "a" ? { left: 0 } : { right: 0 })}
-                    >
-                      <HomeHeroUnitCredit>
-                        {heroUnit.creditLine}
-                      </HomeHeroUnitCredit>
-                    </Box>
-                  )}
-                </Box>
-              )}
-            </Media>
-          </>
-        )}
-      </RouterLink>
-    </Column>
+  const figure_mobile = (
+    <Box backgroundColor="black100">
+      <Image
+        src={heroUnit.image_mobile.src}
+        srcSet={heroUnit.image_mobile.srcSet}
+        width="100%"
+        // height="100%"
+        // lazyLoad={index > 0}
+      />
+    </Box>
   )
 
-  const description = (
-    <Column span={6}>
-      <GridColumns height="100%">
+  const description_mobile = (
+    <Box backgroundColor="black100">
+      <GridColumns width="100%" height="100%">
         <Column
           start={[2, 3]}
           span={[10, 8]}
@@ -131,27 +60,6 @@ export const HomeHeroUnitFragmentContainer = ({
               e.preventDefault()
             }}
           >
-            <Media greaterThan="xs">
-              {heroUnit.heading && (
-                <>
-                  <Text
-                    variant="xs"
-                    textTransform="uppercase"
-                    color={colorScheme.heading}
-                    style={{
-                      // fontFamily: "Alegreya",
-                      fontFamily: "Noto Sans KR",
-                      // fontFamily: "Times New Roman",
-                    }}
-                  >
-                    {heroUnit.heading}
-                  </Text>
-
-                  <Spacer mt={1} />
-                </>
-              )}
-            </Media>
-
             <Text
               as={index === 0 ? "h1" : "h2"}
               variant={["lg", "xl", "xxl"]}
@@ -190,27 +98,6 @@ export const HomeHeroUnitFragmentContainer = ({
 
           {heroUnit.linkText && heroUnit.href && (
             <>
-              <Media greaterThan="xs">
-                <Spacer
-                  // Unconventional value here to keep visual rhythm
-                  mt="30px"
-                />
-
-                <GridColumns>
-                  <Column span={[12, 6, 6]}>
-                    <Button
-                      variant={colorScheme.button as any}
-                      // @ts-ignore
-                      as={RouterLink}
-                      to={heroUnit.href}
-                      width="100%"
-                    >
-                      {heroUnit.linkText}
-                    </Button>
-                  </Column>
-                </GridColumns>
-              </Media>
-
               <Media at="xs">
                 <Spacer mt={1} />
 
@@ -231,6 +118,171 @@ export const HomeHeroUnitFragmentContainer = ({
           )}
         </Column>
       </GridColumns>
+    </Box>
+  )
+
+  const description_desktop = (
+    // <Column span={6}>
+    <GridColumns height="100%">
+      <Column
+        start={[2, 3]}
+        span={[10, 8]}
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
+        py={4}
+      >
+        <RouterLink
+          to={heroUnit.href ?? ""}
+          tabIndex={-1}
+          style={{ display: "block", textDecoration: "none" }}
+          onClick={e => {
+            e.preventDefault()
+          }}
+        >
+          {heroUnit.heading && (
+            <>
+              <Text
+                variant="xs"
+                textTransform="uppercase"
+                color={colorScheme.heading}
+                style={{
+                  fontFamily: "Alegreya",
+                  // fontFamily: "Times New Roman",
+                }}
+              >
+                {heroUnit.heading}
+              </Text>
+
+              <Spacer mt={2} />
+            </>
+          )}
+
+          <Text
+            as={index === 0 ? "h1" : "h2"}
+            variant={["lg", "xl", "xxl"]}
+            color={colorScheme.title}
+            style={{
+              whiteSpace: "pre-line",
+              fontFamily: "Gowun Dodum",
+            }}
+          >
+            {heroUnit.title}
+          </Text>
+          {heroUnit.subtitle && (
+            <>
+              <Spacer mt={[1, 2]} />
+
+              <Text
+                variant={["xs", "md", "lg"]}
+                style={{
+                  whiteSpace: "pre-line",
+                  fontFamily: "Alegreya",
+                }}
+                color={colorScheme.subtitle}
+                // html={heroUnit.subtitle}
+              >
+                {heroUnit.subtitle}
+              </Text>
+            </>
+          )}
+        </RouterLink>
+
+        {heroUnit.linkText && heroUnit.href && (
+          <>
+            <Media greaterThan="xs">
+              <Spacer
+                // Unconventional value here to keep visual rhythm
+                mt="30px"
+              />
+
+              <GridColumns>
+                <Column span={[12, 12, 6]}>
+                  <Button
+                    variant={colorScheme.button as any}
+                    // @ts-ignore
+                    as={RouterLink}
+                    to={heroUnit.href}
+                    width="100%"
+                  >
+                    {heroUnit.linkText}
+                  </Button>
+                </Column>
+              </GridColumns>
+            </Media>
+          </>
+        )}
+      </Column>
+    </GridColumns>
+    // </Column>
+  )
+
+  const figure_desktop = (
+    <Column span={12} bg="white100">
+      <RouterLink
+        to={heroUnit.href ?? ""}
+        style={{
+          display: "block",
+          width: "100%",
+          height: "100%",
+        }}
+        tabIndex={-1}
+        onClick={e => {
+          e.preventDefault()
+        }}
+      >
+        {heroUnit.image && (
+          <>
+            <Media greaterThan="xs">
+              {className => (
+                <Box
+                  className={className}
+                  height={[300, 400, 500]}
+                  position="relative"
+                >
+                  <Image
+                    src={heroUnit.image.src}
+                    srcSet={heroUnit.image.srcSet}
+                    width="100%"
+                    // height="100%"
+                    style={{ objectFit: "cover" }}
+                    lazyLoad={index > 0}
+                  />
+
+                  <Box
+                    position="absolute"
+                    width="100%"
+                    height="100%"
+                    bottom={0}
+                    background="linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);"
+                  >
+                    <GridColumns height="100%">
+                      <Column span={6}>{description_desktop}</Column>
+                    </GridColumns>
+                  </Box>
+
+                  {heroUnit.creditLine && (
+                    <Box
+                      position="absolute"
+                      px={2}
+                      pb={1}
+                      pt={6}
+                      width="100%"
+                      bottom={0}
+                      background="linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%);"
+                      {...(layout === "a" ? { left: 0 } : { right: 0 })}
+                    >
+                      <HomeHeroUnitCredit>
+                        {heroUnit.creditLine}
+                      </HomeHeroUnitCredit>
+                    </Box>
+                  )}
+                </Box>
+              )}
+            </Media>
+          </>
+        )}
+      </RouterLink>
     </Column>
   )
 
@@ -245,19 +297,14 @@ export const HomeHeroUnitFragmentContainer = ({
         />
       )}
 
-      <GridColumns bg={bg} width="100%">
-        {layout === "a" ? (
-          <>
-            {figure}
-            {description}
-          </>
-        ) : (
-          <>
-            {description}
-            {figure}
-          </>
-        )}
-      </GridColumns>
+      <Media at="xs">
+        {figure_mobile}
+        {description_mobile}
+      </Media>
+
+      <Media greaterThan="xs">
+        <GridColumns width="100%">{figure_desktop}</GridColumns>
+      </Media>
     </>
   )
 }

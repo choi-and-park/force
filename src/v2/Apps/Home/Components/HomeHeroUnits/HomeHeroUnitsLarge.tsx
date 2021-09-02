@@ -63,21 +63,21 @@ export const HomeHeroUnitsLargeFragmentContainer = ({ heroUnits }) => {
 
   return (
     <div ref={containerRef as any}>
-      <FullBleed>
-        <HomeCarousel initialIndex={index}>
-          {heroUnits.map((heroUnit, i) => {
-            return (
-              <HomeHeroUnitFragmentContainer
-                key={i}
-                index={i}
-                heroUnit={heroUnit}
-                layout={i % 2 === 0 ? "b" : "a"}
-                bg={!isLoggedIn && i === 0 ? "black100" : "black5"}
-              />
-            )
-          })}
-        </HomeCarousel>
-      </FullBleed>
+      {/* <FullBleed> */}
+      <HomeCarousel initialIndex={index}>
+        {heroUnits.map((heroUnit, i) => {
+          return (
+            <HomeHeroUnitFragmentContainer
+              key={i}
+              index={i}
+              heroUnit={heroUnit}
+              layout={"b"}
+              bg={"black100"}
+            />
+          )
+        })}
+      </HomeCarousel>
+      {/* </FullBleed> */}
 
       <Spacer mt={4} />
 

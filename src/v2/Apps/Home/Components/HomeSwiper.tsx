@@ -13,8 +13,8 @@ interface HomeSwiperProps extends SwiperProps {}
 export const HomeSwiper: React.FC<HomeSwiperProps> = props => {
   return (
     <Swiper
-      bg="black5"
-      borderRadius={3}
+      bg="white"
+      borderRadius={0}
       snap="center"
       Cell={Cell}
       Rail={Rail}
