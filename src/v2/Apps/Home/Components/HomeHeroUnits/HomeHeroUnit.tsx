@@ -221,7 +221,7 @@ export const HomeHeroUnitFragmentContainer = ({
   )
 
   const figure_desktop = (
-    <Column span={12} bg="white100">
+    <Column span={12} bg="white100" justifyContent="center">
       <RouterLink
         to={heroUnit.href ?? ""}
         style={{
