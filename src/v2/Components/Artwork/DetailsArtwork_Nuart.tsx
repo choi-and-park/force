@@ -17,7 +17,7 @@ const ArtistLine = ({ artwork }) => {
         variant={tokens.variant}
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
         }}
       >
         {artwork.artists.map((artist, i) => {
@@ -54,7 +54,7 @@ const TitleLine = ({ artwork }) => {
         color="black60"
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >
@@ -82,7 +82,7 @@ const SizeLine = ({ artwork }) => {
         color="black60"
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >
@@ -109,7 +109,7 @@ const GalleryLine = ({ artwork }) => {
         color="black60"
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >
@@ -142,7 +142,7 @@ const SaleInfoLine = ({ artwork }) => {
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >

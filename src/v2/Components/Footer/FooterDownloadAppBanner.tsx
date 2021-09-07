@@ -65,9 +65,7 @@ export const FooterDownloadAppBanner = () => {
           mb={1}
           style={{
             whiteSpace: "pre-line",
-            // fontFamily: "Gowun Dodum",
             fontFamily: "Noto Sans KR",
-            // fontFamily: "Nanum Gothic",
           }}
         >
           누아트(Nu art) <br />
@@ -79,7 +77,6 @@ export const FooterDownloadAppBanner = () => {
           mb={1}
           style={{
             whiteSpace: "pre-line",
-            // fontFamily: "Gowun Dodum",
             fontFamily: "Noto Sans KR",
           }}
         >
@@ -108,14 +105,7 @@ export const FooterDownloadAppBanner = () => {
             height="35px"
             placeholder="이메일을 적어주세요."
           />
-          <Button
-            variant="primaryBlack"
-            size="small"
-            m={0.5}
-            style={{
-              fontFamily: "Gowun Dodum",
-            }}
-          >
+          <Button variant="primaryBlack" size="small" m={0.5}>
             사전예약
           </Button>
         </Flex>

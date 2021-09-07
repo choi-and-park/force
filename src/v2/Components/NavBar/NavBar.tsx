@@ -235,7 +235,7 @@ export const NavBar: React.FC = track(
               variant="md"
               lineHeight={1}
               style={{
-                fontFamily: "Alegreya",
+                fontFamily: "Noto Sans KR",
                 // fontWeight: 400,
               }}
             >

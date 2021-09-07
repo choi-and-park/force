@@ -53,11 +53,23 @@ export const Footer: React.FC<FooterProps> = props => {
       <footer>
         <GridColumns pt={tokens.pt} pb={tokens.pb} gridRowGap={[4, 0]}>
           <Column span={4}>
-            <Text variant={tokens.header} fontWeight="bold" mb={2}>
+            <Text
+              variant={tokens.header}
+              fontWeight="bold"
+              mb={2}
+              style={{
+                fontFamily: "Noto Sans KR",
+              }}
+            >
               About us
             </Text>
 
-            <Text variant={tokens.body}>
+            <Text
+              variant={tokens.body}
+              style={{
+                fontFamily: "Noto Sans KR",
+              }}
+            >
               <FooterLink my={2} to="/">
                 About
               </FooterLink>
@@ -73,11 +85,23 @@ export const Footer: React.FC<FooterProps> = props => {
           </Column>
 
           <Column span={4}>
-            <Text variant={tokens.header} fontWeight="bold" mb={2}>
+            <Text
+              variant={tokens.header}
+              fontWeight="bold"
+              mb={2}
+              style={{
+                fontFamily: "Noto Sans KR",
+              }}
+            >
               Partnerships
             </Text>
 
-            <Text variant={tokens.body}>
+            <Text
+              variant={tokens.body}
+              style={{
+                fontFamily: "Noto Sans KR",
+              }}
+            >
               <FooterLink my={2} to="/">
                 Galleries
               </FooterLink>
@@ -97,11 +121,23 @@ export const Footer: React.FC<FooterProps> = props => {
           </Column>
 
           <Column span={4} wrap>
-            <Text variant={tokens.header} fontWeight="bold" mb={2}>
+            <Text
+              variant={tokens.header}
+              fontWeight="bold"
+              mb={2}
+              style={{
+                fontFamily: "Noto Sans KR",
+              }}
+            >
               Support
             </Text>
 
-            <Text variant={tokens.body}>
+            <Text
+              variant={tokens.body}
+              style={{
+                fontFamily: "Noto Sans KR",
+              }}
+            >
               <FooterLink my={2} to="/">
                 Help Centre
               </FooterLink>
@@ -194,6 +230,9 @@ const PolicyLinks = () => {
       display="flex"
       alignItems="center"
       flexWrap="wrap"
+      style={{
+        fontFamily: "Noto Sans KR",
+      }}
     >
       <Flex mr={1}>© {new Date().getFullYear()} Nuart</Flex>
 

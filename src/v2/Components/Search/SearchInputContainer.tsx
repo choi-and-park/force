@@ -36,7 +36,8 @@ export const SearchInputContainer: React.ForwardRefExoticComponent<
       width="100%"
       height={40}
       style={{
-        fontFamily: "Gowun Dodum",
+        fontFamily: "Noto Sans KR",
+        fontSize: 14,
       }}
       label={
         <SearchButton

@@ -39,9 +39,8 @@ const HomeFeaturedGalleriesContainer: React.FC<{
         <Text
           variant="xl"
           style={{
-            fontFamily: "Alegreya",
-            fontSize: 30,
-            // fontWeight: 700,
+            fontFamily: "Playfair Display",
+            fontSize: 35,
           }}
         >
           {title}
@@ -56,11 +55,10 @@ const HomeFeaturedGalleriesContainer: React.FC<{
             e.preventDefault()
           }}
           style={{
-            fontFamily: "Alegreya",
-            // fontWeight: 700,
+            fontFamily: "Playfair Display",
           }}
         >
-          Explore All Galleries
+          View All
         </Text>
       </Flex>
 

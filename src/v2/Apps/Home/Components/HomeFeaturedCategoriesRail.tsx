@@ -35,8 +35,8 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
                   <Image
                     src={collection.image.src}
                     srcSet={collection.image.srcSet}
-                    width="85%"
-                    height="85%"
+                    width="90%"
+                    height="90%"
                     lazyLoad
                     alt=""
                     style={{ display: "block" }}
@@ -52,14 +52,14 @@ export const HomeFeaturedCategoriesRail = ({ marketingCollections }) => {
                 variant="md"
                 mr={1}
                 style={{
-                  fontFamily: "Gowun Dodum",
+                  fontFamily: "Noto Sans KR",
                   // fontSize: 18,
                 }}
               >
                 {collection.title}
               </Text>
 
-              <Spacer mt={0.5} />
+              <Spacer mt={1} />
 
               {/* <Text variant="md" lineClamp={2} mr={1}>
                 {SUBTITLES[collection.slug]}
@@ -79,8 +79,8 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
         <Text
           variant="xl"
           style={{
-            fontFamily: "Alegreya",
-            fontSize: 30,
+            fontFamily: "Playfair Display",
+            fontSize: 35,
           }}
         >
           Categories
@@ -93,7 +93,7 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
               e.preventDefault()
             }}
             style={{
-              fontFamily: "Alegreya",
+              fontFamily: "Playfair Display",
             }}
           >
             View All Categories

@@ -24,9 +24,9 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               noUnderline
               style={{
-                fontFamily: "Alegreya",
-                fontSize: 30,
-                // fontWeight: 700,
+                fontFamily: "Playfair Display",
+                fontSize: 35,
+                // fontWeight: 500,
               }}
               onClick={e => {
                 e.preventDefault()
@@ -42,8 +42,8 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               ml={1}
               style={{
-                fontFamily: "Alegreya",
-                // fontWeight: 700,
+                fontFamily: "Playfair Display",
+                // fontSize: 35,
               }}
               onClick={e => {
                 e.preventDefault()
@@ -53,7 +53,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
             </Text>
           </Flex>
 
-          <Spacer mt={4} />
+          <Spacer mt={2} />
 
           <BaseTabs>
             {(context.artists ?? []).map((artist, i) => {
@@ -65,7 +65,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
                   // @ts-ignore
                   to={artist.href}
                   style={{
-                    fontFamily: "Gowun Dodum",
+                    fontFamily: "Noto Sans KR",
                     // fontWeight: 700,
                   }}
                   // onClick={e => {
@@ -92,8 +92,8 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               noUnderline
               style={{
-                fontFamily: "Alegreya",
-                fontSize: 30,
+                fontFamily: "Playfair Display",
+                fontSize: 35,
                 // fontWeight: 700,
               }}
               onClick={e => {
@@ -110,8 +110,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               to="/works-for-you"
               ml={1}
               style={{
-                fontFamily: "Alegreya",
-                // fontWeight: 700,
+                fontFamily: "Playfair Display",
               }}
               onClick={e => {
                 e.preventDefault()
@@ -131,8 +130,8 @@ export const HomeArtworkModuleContextFragmentContainer = ({
         <Text
           variant="lg"
           style={{
-            fontFamily: "Alegreya",
-            fontSize: 30,
+            fontFamily: "Playfair Display",
+            fontSize: 35,
           }}
         >
           {title}

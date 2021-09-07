@@ -17,8 +17,7 @@ const CollectorLine = ({ artwork }) => {
         variant={tokens.variant}
         overflowEllipsis
         style={{
-          fontFamily: "Alegreya",
-          // fontWeight: 700,
+          fontFamily: "Noto Sans KR",
         }}
       >
         {artwork.title}
@@ -44,8 +43,7 @@ const LocationLine = ({ artwork }) => {
         color="black60"
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Dodum",
-          // fontWeight: 700,
+          fontFamily: "Noto Sans KR",
         }}
       >
         {artwork.location}
@@ -77,7 +75,7 @@ const CollectionLine = ({ artwork }) => {
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >

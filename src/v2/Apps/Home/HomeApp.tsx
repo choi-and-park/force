@@ -25,13 +25,13 @@ export const HomeAppFragmentContainer = props => {
         <HomeFeaturedCategoriesRailQueryRenderer
           categories={HomeContents.categories}
         />
-
+        <Spacer mt={2} />
         <HomeArtworkModulesFragmentContainer
           artworkModules={HomeContents.artworkModules}
         />
       </Join>
 
-      <Spacer mt={1} />
+      <Spacer mt={2} />
     </>
   )
 }

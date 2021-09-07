@@ -17,7 +17,7 @@ const TitleLine = ({ artwork }) => {
         variant={tokens.variant}
         overflowEllipsis
         style={{
-          fontFamily: "Alegreya",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >
@@ -44,7 +44,7 @@ const GalleryLine = ({ artwork }) => {
         color="black60"
         overflowEllipsis
         style={{
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >
@@ -77,7 +77,7 @@ const DateLine = ({ artwork }) => {
         overflowEllipsis
         style={{
           whiteSpace: "pre-line",
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
           // fontWeight: 700,
         }}
       >

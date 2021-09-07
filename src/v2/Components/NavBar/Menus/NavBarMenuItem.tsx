@@ -8,7 +8,7 @@ const navBarMenuItemMixin = css`
   align-items: center;
   width: 100%;
   text-decoration: none;
-  font-family: "Gowun Dodum";
+  font-family: "Noto Sans KR";
   /* font-size: small; */
 
   &:hover,

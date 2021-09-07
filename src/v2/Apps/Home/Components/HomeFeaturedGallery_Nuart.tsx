@@ -17,8 +17,8 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
       }}
     >
       <ResponsiveBox
-        aspectWidth={4}
-        aspectHeight={3}
+        aspectWidth={3}
+        aspectHeight={2}
         maxWidth="100%"
         bg="white"
       >
@@ -43,8 +43,8 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
         mr={1}
         lineClamp={2}
         style={{
-          fontFamily: "Alegreya",
-          // fontWeight: 700,
+          fontFamily: "Noto Sans KR",
+          fontWeight: 400,
         }}
       >
         {gallery.name}
@@ -56,7 +56,7 @@ export const HomeFeaturedGalleryFragmentContainer = ({ gallery }) => {
         ml={1}
         lineClamp={1}
         style={{
-          fontFamily: "Gowun Dodum",
+          fontFamily: "Noto Sans KR",
         }}
       >
         {gallery.location}

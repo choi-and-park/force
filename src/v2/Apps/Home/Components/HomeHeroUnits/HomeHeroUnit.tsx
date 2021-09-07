@@ -67,8 +67,8 @@ export const HomeHeroUnitFragmentContainer = ({
               style={{
                 whiteSpace: "pre-line",
                 fontFamily: "Noto Sans KR",
-                // fontFamily: "Nanum Gothic",
-                fontSize: 38,
+                // fontFamily: "Nanum Myeongjo",
+                // fontSize: 32,
                 fontWeight: 600,
               }}
             >
@@ -84,8 +84,9 @@ export const HomeHeroUnitFragmentContainer = ({
                     whiteSpace: "pre-line",
                     // fontFamily: "Alegreya",
                     fontFamily: "Noto Sans KR",
-                    fontSize: 18,
-                    fontWeight: 400,
+                    // fontFamily: "Nanum Myeongjo",
+                    // fontSize: 18,
+                    // fontWeight: 400,
                   }}
                   color={colorScheme.subtitle}
                   // html={heroUnit.subtitle}
@@ -108,6 +109,7 @@ export const HomeHeroUnitFragmentContainer = ({
                     style={{
                       // fontFamily: "Alegreya",
                       fontFamily: "Noto Sans KR",
+                      // fontFamily: "Nanum Myeongjo",
                     }}
                   >
                     {heroUnit.linkText}
@@ -125,8 +127,8 @@ export const HomeHeroUnitFragmentContainer = ({
     // <Column span={6}>
     <GridColumns height="100%">
       <Column
-        start={[2, 3]}
-        span={[10, 8]}
+        start={[3, 4]}
+        span={[9, 8]}
         display="flex"
         justifyContent="center"
         flexDirection="column"
@@ -143,13 +145,12 @@ export const HomeHeroUnitFragmentContainer = ({
           {heroUnit.heading && (
             <>
               <Text
-                variant="xs"
+                variant="sm"
                 textTransform="uppercase"
                 color={colorScheme.heading}
                 style={{
                   // fontFamily: "Alegreya",
-                  fontFamily: "Noto Sans KR",
-                  // fontFamily: "Times New Roman",
+                  fontFamily: "Playfair Display",
                 }}
               >
                 {heroUnit.heading}
@@ -167,6 +168,7 @@ export const HomeHeroUnitFragmentContainer = ({
               whiteSpace: "pre-line",
               // fontFamily: "Gowun Dodum",
               fontFamily: "Noto Sans KR",
+              fontWeight: 600,
             }}
           >
             {heroUnit.title}
@@ -240,7 +242,7 @@ export const HomeHeroUnitFragmentContainer = ({
               {className => (
                 <Box
                   className={className}
-                  height={[300, 400, 500]}
+                  height={[250, 350, 450]}
                   position="relative"
                 >
                   <Image
@@ -257,7 +259,7 @@ export const HomeHeroUnitFragmentContainer = ({
                     width="100%"
                     height="100%"
                     bottom={0}
-                    background="linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);"
+                    background="linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(20, 20, 20, 0.6) 50%, rgba(0, 0, 0, 0) 100%);"
                   >
                     <GridColumns height="100%">
                       <Column span={6}>{description_desktop}</Column>
