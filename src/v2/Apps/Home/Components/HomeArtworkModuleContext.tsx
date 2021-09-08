@@ -25,7 +25,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
               noUnderline
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: 35,
+                fontSize: 28,
                 // fontWeight: 500,
               }}
               onClick={e => {
@@ -86,14 +86,14 @@ export const HomeArtworkModuleContextFragmentContainer = ({
         <>
           <Flex justifyContent="space-between">
             <Text
-              variant="xl"
+              variant="lg"
               as={RouterLink}
               // @ts-ignore
               to="/works-for-you"
               noUnderline
               style={{
                 fontFamily: "Playfair Display",
-                fontSize: 35,
+                fontSize: 28,
                 // fontWeight: 700,
               }}
               onClick={e => {
@@ -131,7 +131,7 @@ export const HomeArtworkModuleContextFragmentContainer = ({
           variant="lg"
           style={{
             fontFamily: "Playfair Display",
-            fontSize: 35,
+            // fontSize: 2,
           }}
         >
           {title}

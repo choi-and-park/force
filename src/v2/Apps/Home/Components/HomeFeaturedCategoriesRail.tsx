@@ -80,7 +80,7 @@ const HomeFeaturedCategories: React.FC = ({ children }) => {
           variant="xl"
           style={{
             fontFamily: "Playfair Display",
-            fontSize: 35,
+            fontSize: 28,
           }}
         >
           Categories
