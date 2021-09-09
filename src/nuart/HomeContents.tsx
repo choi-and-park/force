@@ -213,7 +213,7 @@ const artworks_artists = {
           name: "김창열",
         },
       ],
-      href: "/artwork/kim-tschang-yeul-recurrence-2186",
+      href: "/artwork/kim-tschang-yeul-recurrence-2240",
       id: "id_artwork",
       image: {
         aspectRatio: 0.76,
