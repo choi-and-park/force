@@ -18,7 +18,7 @@ const banners = [
   {
     heading: "Featured Festival",
     title: "하나의 점, 모든 장소",
-    subtitle: "금호미술관\n2021.8.27 - 2021.9.18",
+    subtitle: "금호미술관\n 2021.8.27 - 2021.9.18",
     // "Choi Seok-Hwan Collection\nThe korean art gallery\n2021.5.21.-2022.6.13.",
     href: "/",
     image: {

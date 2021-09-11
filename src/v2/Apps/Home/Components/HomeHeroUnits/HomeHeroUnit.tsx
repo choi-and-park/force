@@ -178,13 +178,13 @@ export const HomeHeroUnitFragmentContainer = ({
               <Spacer mt={[1, 2]} />
 
               <Text
-                variant={["xs", "md", "md"]}
+                variant={["xs", "md", "lg"]}
                 style={{
                   whiteSpace: "pre-line",
                   // fontFamily: "Alegreya",
                   fontFamily: "Noto Sans KR",
                 }}
-                color={colorScheme.subtitle}
+                color={"black15"}
                 // html={heroUnit.subtitle}
               >
                 {heroUnit.subtitle}
